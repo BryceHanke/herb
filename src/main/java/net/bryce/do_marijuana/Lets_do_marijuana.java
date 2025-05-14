@@ -1,5 +1,7 @@
 package net.bryce.do_marijuana;
 
+import net.bryce.do_marijuana.item.ModItemGroups;
+import net.bryce.do_marijuana.item.ModItems;
 import net.fabricmc.api.ModInitializer;
 
 import org.slf4j.Logger;
@@ -20,5 +22,9 @@ public class Lets_do_marijuana implements ModInitializer {
 		// Proceed with mild caution.
 
 		LOGGER.info("let's do marijuana!");
+
+		ModItemGroups.registerItemGroups();
+		ModItems.registerModItems();
+
 	}
 }
