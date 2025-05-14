@@ -1,0 +1,37 @@
+{
+	"schemaVersion": 1,
+	"id": "do_marijuana",
+	"version": "${version}",
+	"name": "lets_do_marijuana",
+	"description": "A let's do style mod that adds marijuana!",
+	"authors": [
+		"ecyrb"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "MIT",
+	"icon": "assets/do_marijuana/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"net.bryce.do_marijuana.Lets_do_marijuana"
+		],
+		"fabric-datagen": [
+			"net.bryce.do_marijuana.Lets_do_marijuanaDataGenerator"
+		]
+	},
+	"mixins": [
+		"do_marijuana.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.16.14",
+		"minecraft": "~1.20.1",
+		"java": ">=17",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
