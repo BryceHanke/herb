@@ -1,0 +1,43 @@
+{
+  "schemaVersion": 1,
+  "id": "doapi",
+  "version": "${version}",
+  "name": "[Let's Do] API",
+  "description": "This is an API for the Let's do mods",
+  "authors": [
+    "Cristelknight",
+    "BaumeisterJO"
+  ],
+  "contact": {
+    "homepage": "https://www.curseforge.com/minecraft/mc-mods/do-api",
+    "sources": "https://github.com/Cristelknight999/DoAPI"
+  },
+  "license": "LGPL-3.0-only",
+  "environment": "*",
+  "icon": "pack.png",
+  "entrypoints": {
+    "main": [
+      "de.cristelknight.doapi.fabric.DoApiFabric"
+    ],
+    "client": [
+      "de.cristelknight.doapi.fabric.client.DoApiClientFabric"
+    ]
+  },
+  "mixins": [
+    "doapi.mixins.json",
+    "doapi-common.mixins.json"
+  ],
+  "custom": {
+    "modmenu": {
+      "links": {
+        "modmenu.discord": "https://discord.gg/Vqu6wYZwdZ"
+      }
+    }
+  },
+  "depends": {
+    "fabric": "*",
+    "minecraft": ">=1.20",
+    "architectury": ">=9.0.8",
+    "terraform-wood-api-v1": ">=7.0.1"
+  }
+}

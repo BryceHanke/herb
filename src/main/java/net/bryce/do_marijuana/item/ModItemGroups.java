@@ -1,6 +1,7 @@
 package net.bryce.do_marijuana.item;
 
 import net.bryce.do_marijuana.Lets_do_marijuana;
+import net.bryce.do_marijuana.block.ModBlocks;
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
@@ -15,8 +16,12 @@ public class ModItemGroups {
             new Identifier(Lets_do_marijuana.MOD_ID, "weed"),
             FabricItemGroup.builder().displayName(Text.translatable("itemgroup.weed"))
                     .icon(() -> new ItemStack(ModItems.NUG)).entries((displayContext, entries) -> {
-                        entries.add(new ItemStack(ModItems.NUG));
-                        entries.add(new ItemStack(ModItems.DRY_NUG));
+                        entries.add(ModItems.NUG);
+                        entries.add(ModItems.DRY_NUG);
+                        entries.add(ModBlocks.NUG_BLOCK);
+                        entries.add(ModBlocks.DRY_NUG_BLOCK);
+                        entries.add(ModItems.MARIJUANA_SEEDS);
+                        entries.add(ModItems.JOINT);
                     }).build());
 
     public static void registerItemGroups(){

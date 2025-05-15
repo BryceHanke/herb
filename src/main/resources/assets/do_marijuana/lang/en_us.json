@@ -1,6 +1,12 @@
 {
   "item.do_marijuana.nug": "Nug",
-  "item.do_marijuana.nug": "Dry_Nug",
+  "item.do_marijuana.dry_nug": "Dry Nug",
+
+  "item.do_marijuana.marijuana_seeds": "Marijuana Seeds",
+  "item.do_marijuana.joint": "Joint",
+
+  "block.do_marijuana.nug_block": "Block of Nugs",
+  "block.do_marijuana.dry_nug_block": "Block of Dry Nugs",
 
   "itemgroup.weed": "Weed Group"
 

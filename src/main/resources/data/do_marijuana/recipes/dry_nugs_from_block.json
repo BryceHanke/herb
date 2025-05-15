@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients":
+  [
+    {
+      "item": "do_marijuana:dry_nug_block"
+    }
+  ],
+  "result": {
+    "item": "do_marijuana:dry_nug",
+    "count": 9
+  }
+}
