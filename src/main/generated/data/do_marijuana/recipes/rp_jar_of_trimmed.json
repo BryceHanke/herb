@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "J": {
+      "item": "do_marijuana:jar"
+    },
+    "N": {
+      "item": "do_marijuana:rp_trimmed_nug"
+    }
+  },
+  "pattern": [
+    "NJN",
+    "NNN"
+  ],
+  "result": {
+    "item": "do_marijuana:rp_jar_of_trimmed"
+  },
+  "show_notification": true
+}

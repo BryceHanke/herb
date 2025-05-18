@@ -18,6 +18,9 @@
 		"main": [
 			"net.bryce.do_marijuana.Lets_do_marijuana"
 		],
+		"client": [
+			"net.bryce.do_marijuana.Lets_do_marijuanaClient"
+		],
 		"fabric-datagen": [
 			"net.bryce.do_marijuana.Lets_do_marijuanaDataGenerator"
 		]

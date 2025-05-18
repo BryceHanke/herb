@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "do_marijuana:gdp_untrimmed_nug"
+    },
+    {
+      "item": "do_marijuana:trimming_scissors",
+      "remainder": { "item": "do_marijuana:trimming_scissors" }
+    }
+  ],
+  "result": {
+    "item": "do_marijuana:gdp_trimmed_nug"
+  }
+}

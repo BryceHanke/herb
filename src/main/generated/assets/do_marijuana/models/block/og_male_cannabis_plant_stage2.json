@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cross",
+  "textures": {
+    "cross": "do_marijuana:block/og_male_cannabis_plant_stage2"
+  }
+}

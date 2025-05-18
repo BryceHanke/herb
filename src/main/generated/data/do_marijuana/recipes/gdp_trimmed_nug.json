@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "do_marijuana:trimmed_gdp_pound"
+    }
+  ],
+  "result": {
+    "count": 9,
+    "item": "do_marijuana:gdp_trimmed_nug"
+  }
+}

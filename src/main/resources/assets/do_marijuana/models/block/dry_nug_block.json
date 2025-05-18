@@ -1,6 +1,0 @@
-{
-  "parent": "block/cube_all",
-  "textures": {
-    "all": "do_marijuana:block/dry_nug_block"
-  }
-}

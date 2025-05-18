@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "G": {
+      "item": "minecraft:glass"
+    },
+    "I": {
+      "item": "minecraft:iron_ingot"
+    }
+  },
+  "pattern": [
+    "GIG",
+    "G G",
+    "GGG"
+  ],
+  "result": {
+    "item": "do_marijuana:jar"
+  },
+  "show_notification": true
+}

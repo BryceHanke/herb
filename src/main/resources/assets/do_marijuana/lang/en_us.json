@@ -1,13 +1,59 @@
 {
-  "item.do_marijuana.nug": "Nug",
-  "item.do_marijuana.dry_nug": "Dry Nug",
 
-  "item.do_marijuana.marijuana_seeds": "Marijuana Seeds",
-  "item.do_marijuana.joint": "Joint",
+  "item.do_marijuana.og_untrimmed_nug": "Untrimmed OG Nug",
+  "item.do_marijuana.og_trimmed_nug": "Trimmed OG Nug",
+  "item.do_marijuana.og_cured_nug": "Cured OG Nug",
+  "item.do_marijuana.og_bud": "OG Bud",
+  "item.do_marijuana.og_ground_weed": "Ground OG",
+  "item.do_marijuana.og_jar_of_untrimmed": "Jar of Untrimmed OG",
+  "item.do_marijuana.og_jar_of_trimmed": "Jar of Trimmed OG",
+  "item.do_marijuana.og_jar_of_cured": "Jar of Cured OG",
+  "item.do_marijuana.og_cannabis_seeds": "OG Seeds",
+  "item.do_marijuana.og_joint": "OG Joint",
+  "item.do_marijuana.og_lit_joint": "Lit OG Joint",
+  "item.do_marijuana.og_roach": "OG Roach",
 
-  "block.do_marijuana.nug_block": "Block of Nugs",
-  "block.do_marijuana.dry_nug_block": "Block of Dry Nugs",
+  "item.do_marijuana.gdp_untrimmed_nug": "Untrimmed GDP Nug",
+  "item.do_marijuana.gdp_trimmed_nug": "Trimmed GDP Nug",
+  "item.do_marijuana.gdp_cured_nug": "Cured GDP Nug",
+  "item.do_marijuana.gdp_bud": "GDP Bud",
+  "item.do_marijuana.gdp_ground_weed": "Ground GDP",
+  "item.do_marijuana.gdp_jar_of_untrimmed": "Jar of Untrimmed GDP",
+  "item.do_marijuana.gdp_jar_of_trimmed": "Jar of Trimmed GDP",
+  "item.do_marijuana.gdp_jar_of_cured": "Jar of Cured GDP",
+  "item.do_marijuana.gdp_cannabis_seeds": "GDP Seeds",
+  "item.do_marijuana.gdp_joint": "GDP Joint",
+  "item.do_marijuana.gdp_lit_joint": "Lit GDP Joint",
+  "item.do_marijuana.gdp_roach": "GDP Roach",
 
-  "itemgroup.weed": "Weed Group"
+  "item.do_marijuana.rp_untrimmed_nug": "Untrimmed RP Nug",
+  "item.do_marijuana.rp_trimmed_nug": "Trimmed RP Nug",
+  "item.do_marijuana.rp_cured_nug": "Cured RP Nug",
+  "item.do_marijuana.rp_bud": "RP Bud",
+  "item.do_marijuana.rp_ground_weed": "Ground RP",
+  "item.do_marijuana.rp_jar_of_untrimmed": "Jar of Untrimmed RP",
+  "item.do_marijuana.rp_jar_of_trimmed": "Jar of Trimmed RP",
+  "item.do_marijuana.rp_jar_of_cured": "Jar of Cured RP",
+  "item.do_marijuana.rp_cannabis_seeds": "RP Seeds",
+  "item.do_marijuana.rp_joint": "RP Joint",
+  "item.do_marijuana.rp_lit_joint": "Lit RP Joint",
+  "item.do_marijuana.rp_roach": "RP Roach",
+
+  "item.do_marijuana.jar": "Jar",
+  "item.do_marijuana.grinder": "Grinder",
+  "item.do_marijuana.dirty_grinder": "Dirty Grinder",
+  "item.do_marijuana.rolling_paper": "Rolling Paper",
+  "item.do_marijuana.trimming_scissors": "Trimming Scissors",
+  "item.do_marijuana.dirty_trimming_scissors": "Dirty Trimming Scissors",
+
+  "block.do_marijuana.trimmed_pound": "Pound of Trimmed Flower",
+  "block.do_marijuana.cured_pound": "Pound of Cured Flower",
+
+  "effect.do_marijuana.high":  "High",
+  "effect.do_marijuana.drowsy":  "Drowsy",
+  "effect.do_marijuana.focused":  "Focused",
+  "effect.do_marijuana.relaxed":  "Relaxed",
+
+  "itemgroup.LETSDOMARIJUANA": "[Let's Do] Marijuana"
 
 }
