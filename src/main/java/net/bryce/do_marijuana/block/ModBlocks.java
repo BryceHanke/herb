@@ -28,21 +28,59 @@ public class ModBlocks {
 
     public static final Block OG_FEMALE_CANNABIS_PLANT = Registry.register(Registries.BLOCK, new Identifier(Lets_do_marijuana.MOD_ID, "og_female_cannabis_plant")
             , new OG_Female_Cannabis_Plant(FabricBlockSettings.copyOf(Blocks.WHEAT)));
-
-    public static final Block GDP_FEMALE_CANNABIS_PLANT = Registry.register(Registries.BLOCK, new Identifier(Lets_do_marijuana.MOD_ID, "gdp_female_cannabis_plant")
-            , new GDP_Female_Cannabis_Plant(FabricBlockSettings.copyOf(Blocks.WHEAT)));
-
-    public static final Block RP_FEMALE_CANNABIS_PLANT = Registry.register(Registries.BLOCK, new Identifier(Lets_do_marijuana.MOD_ID, "rp_female_cannabis_plant")
-            , new RP_Female_Cannabis_Plant(FabricBlockSettings.copyOf(Blocks.WHEAT)));
-
     public static final Block OG_MALE_CANNABIS_PLANT = Registry.register(Registries.BLOCK, new Identifier(Lets_do_marijuana.MOD_ID, "og_male_cannabis_plant")
             , new OG_Male_Cannabis_Plant(FabricBlockSettings.copyOf(Blocks.WHEAT)));
 
+    public static final Block GDP_FEMALE_CANNABIS_PLANT = Registry.register(Registries.BLOCK, new Identifier(Lets_do_marijuana.MOD_ID, "gdp_female_cannabis_plant")
+            , new GDP_Female_Cannabis_Plant(FabricBlockSettings.copyOf(Blocks.WHEAT)));
     public static final Block GDP_MALE_CANNABIS_PLANT = Registry.register(Registries.BLOCK, new Identifier(Lets_do_marijuana.MOD_ID, "gdp_male_cannabis_plant")
             , new GDP_Male_Cannabis_Plant(FabricBlockSettings.copyOf(Blocks.WHEAT)));
 
+    public static final Block RP_FEMALE_CANNABIS_PLANT = Registry.register(Registries.BLOCK, new Identifier(Lets_do_marijuana.MOD_ID, "rp_female_cannabis_plant")
+            , new RP_Female_Cannabis_Plant(FabricBlockSettings.copyOf(Blocks.WHEAT)));
     public static final Block RP_MALE_CANNABIS_PLANT = Registry.register(Registries.BLOCK, new Identifier(Lets_do_marijuana.MOD_ID, "rp_male_cannabis_plant")
             , new RP_Male_Cannabis_Plant(FabricBlockSettings.copyOf(Blocks.WHEAT)));
+
+    public static final Block AFG_FEMALE_CANNABIS_PLANT = Registry.register(Registries.BLOCK, new Identifier(Lets_do_marijuana.MOD_ID, "afg_female_cannabis_plant")
+            , new AFG_Female_Cannabis_Plant(FabricBlockSettings.copyOf(Blocks.WHEAT)));
+    public static final Block AFG_MALE_CANNABIS_PLANT = Registry.register(Registries.BLOCK, new Identifier(Lets_do_marijuana.MOD_ID, "afg_male_cannabis_plant")
+            , new AFG_Male_Cannabis_Plant(FabricBlockSettings.copyOf(Blocks.WHEAT)));
+
+    public static final Block AG_FEMALE_CANNABIS_PLANT = Registry.register(Registries.BLOCK, new Identifier(Lets_do_marijuana.MOD_ID, "ag_female_cannabis_plant")
+            , new AG_Female_Cannabis_Plant(FabricBlockSettings.copyOf(Blocks.WHEAT)));
+    public static final Block AG_MALE_CANNABIS_PLANT = Registry.register(Registries.BLOCK, new Identifier(Lets_do_marijuana.MOD_ID, "ag_male_cannabis_plant")
+            , new AG_Male_Cannabis_Plant(FabricBlockSettings.copyOf(Blocks.WHEAT)));
+
+    public static final Block CG_FEMALE_CANNABIS_PLANT = Registry.register(Registries.BLOCK, new Identifier(Lets_do_marijuana.MOD_ID, "cg_female_cannabis_plant")
+            , new CG_Female_Cannabis_Plant(FabricBlockSettings.copyOf(Blocks.WHEAT)));
+    public static final Block CG_MALE_CANNABIS_PLANT = Registry.register(Registries.BLOCK, new Identifier(Lets_do_marijuana.MOD_ID, "cg_male_cannabis_plant")
+            , new CG_Male_Cannabis_Plant(FabricBlockSettings.copyOf(Blocks.WHEAT)));
+
+
+    public static final Block S1_FEMALE_CANNABIS_PLANT = Registry.register(Registries.BLOCK, new Identifier(Lets_do_marijuana.MOD_ID, "s1_female_cannabis_plant")
+            , new S1_Female_Cannabis_Plant(FabricBlockSettings.copyOf(Blocks.WHEAT)));
+    public static final Block S1_MALE_CANNABIS_PLANT = Registry.register(Registries.BLOCK, new Identifier(Lets_do_marijuana.MOD_ID, "s1_male_cannabis_plant")
+            , new S1_Male_Cannabis_Plant(FabricBlockSettings.copyOf(Blocks.WHEAT)));
+
+    public static final Block HK_FEMALE_CANNABIS_PLANT = Registry.register(Registries.BLOCK, new Identifier(Lets_do_marijuana.MOD_ID, "hk_female_cannabis_plant")
+            , new HK_Female_Cannabis_Plant(FabricBlockSettings.copyOf(Blocks.WHEAT)));
+    public static final Block HK_MALE_CANNABIS_PLANT = Registry.register(Registries.BLOCK, new Identifier(Lets_do_marijuana.MOD_ID, "hk_male_cannabis_plant")
+            , new HK_Male_Cannabis_Plant(FabricBlockSettings.copyOf(Blocks.WHEAT)));
+
+    public static final Block AK_FEMALE_CANNABIS_PLANT = Registry.register(Registries.BLOCK, new Identifier(Lets_do_marijuana.MOD_ID, "ak_female_cannabis_plant")
+            , new AK_Female_Cannabis_Plant(FabricBlockSettings.copyOf(Blocks.WHEAT)));
+    public static final Block AK_MALE_CANNABIS_PLANT = Registry.register(Registries.BLOCK, new Identifier(Lets_do_marijuana.MOD_ID, "ak_male_cannabis_plant")
+            , new AK_Male_Cannabis_Plant(FabricBlockSettings.copyOf(Blocks.WHEAT)));
+
+    public static final Block CP_FEMALE_CANNABIS_PLANT = Registry.register(Registries.BLOCK, new Identifier(Lets_do_marijuana.MOD_ID, "cp_female_cannabis_plant")
+            , new CP_Female_Cannabis_Plant(FabricBlockSettings.copyOf(Blocks.WHEAT)));
+    public static final Block CP_MALE_CANNABIS_PLANT = Registry.register(Registries.BLOCK, new Identifier(Lets_do_marijuana.MOD_ID, "cp_male_cannabis_plant")
+            , new CP_Male_Cannabis_Plant(FabricBlockSettings.copyOf(Blocks.WHEAT)));
+
+    public static final Block GDK_FEMALE_CANNABIS_PLANT = Registry.register(Registries.BLOCK, new Identifier(Lets_do_marijuana.MOD_ID, "gdk_female_cannabis_plant")
+            , new GDK_Female_Cannabis_Plant(FabricBlockSettings.copyOf(Blocks.WHEAT)));
+    public static final Block GDK_MALE_CANNABIS_PLANT = Registry.register(Registries.BLOCK, new Identifier(Lets_do_marijuana.MOD_ID, "gdk_male_cannabis_plant")
+            , new GDK_Male_Cannabis_Plant(FabricBlockSettings.copyOf(Blocks.WHEAT)));
 
 
     private static Block registerBlock(String name, Block block){

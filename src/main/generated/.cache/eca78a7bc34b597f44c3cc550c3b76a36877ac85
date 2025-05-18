@@ -1,4 +1,4 @@
-// 1.20.1	2025-05-17T23:12:18.0169218	lets_do_marijuana/Recipes
+// 1.20.1	2025-05-18T15:02:59.772163	lets_do_marijuana/Recipes
 21c3813c6390629214195899ebc4ff4012a389af data\do_marijuana\advancements\recipes\misc\grinder.json
 7ddf679bca1e807b128faec840bbc3ee4fb11c31 data\do_marijuana\recipes\rp_joint.json
 933f9e5c9b71671e5e15e60146d1b2170d80e561 data\do_marijuana\advancements\recipes\misc\rp_cured_nug.json
@@ -13,8 +13,8 @@ b5a9c9f2a5b4efb4ed3384718e650c8f3f73a23c data\do_marijuana\recipes\untrimmed_og_
 050e7de7c349cfac5119953dec5de1e2da9c533e data\do_marijuana\advancements\recipes\misc\rp_untrimmed_nug.json
 ff1e2517f37a19991d09fa2396ea850ab6f3b5c1 data\do_marijuana\advancements\recipes\misc\og_bud.json
 cfda1ab9d762231f9a0f7b6473d9c68460cde5ae data\do_marijuana\advancements\recipes\misc\cured_og_pound.json
-adf19bf1fcf5a1a1029869529a4c5b59b5edecec data\do_marijuana\advancements\recipes\misc\jar.json
 4455a06c606792dfcf2f8985ed041a2768ae6179 data\do_marijuana\recipes\gdp_jar_of_trimmed.json
+adf19bf1fcf5a1a1029869529a4c5b59b5edecec data\do_marijuana\advancements\recipes\misc\jar.json
 b18eec4aabe5734e563e5db61ad0d948bfe0a897 data\do_marijuana\recipes\trimmed_og_pound.json
 6c0c36cfa565c9b8c50e744e8e65a79b69039ed2 data\do_marijuana\advancements\recipes\misc\rp_bud.json
 382981f9bc91614f93b3ea4f2861eee799d64390 data\do_marijuana\recipes\gdp_jar_of_cured.json

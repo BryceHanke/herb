@@ -1,6 +1,6 @@
 {
-  "parent": "minecraft:block/cross",
+  "parent": "minecraft:block/crop",
   "textures": {
-    "cross": "do_marijuana:block/rp_female_cannabis_plant_stage1"
+    "crop": "do_marijuana:block/rp_male_cannabis_plant_stage1"
   }
 }

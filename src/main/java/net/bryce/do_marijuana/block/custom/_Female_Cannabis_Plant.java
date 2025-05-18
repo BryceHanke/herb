@@ -1,6 +1,5 @@
 package net.bryce.do_marijuana.block.custom;
 
-import net.bryce.do_marijuana.Lets_do_marijuana;
 import net.bryce.do_marijuana.block.ModBlocks;
 import net.bryce.do_marijuana.item.ModItems;
 import net.minecraft.block.*;
@@ -15,12 +14,12 @@ import net.minecraft.world.BlockView;
 import net.minecraft.world.World;
 import net.minecraft.world.WorldView;
 
-public class Female_Cannabis_Plant extends CropBlock {
+public class _Female_Cannabis_Plant extends CropBlock {
     public static final int FIRST_MAX_AGE = 3;
     public static final int SECOND_MAX_AGE = 3;
     public static final IntProperty AGE = IntProperty.of("age", 0, 6);
 
-    public Female_Cannabis_Plant(Settings settings) {
+    public _Female_Cannabis_Plant(Settings settings) {
         super(settings);
     }
 
@@ -114,15 +113,15 @@ public class Female_Cannabis_Plant extends CropBlock {
         if (world.getBaseLightLevel(pos, 0) >= 9)
         {
             int currentAge;
+            float f = getAvailableMoisture(this, world, pos);
 
             currentAge = this.getAge(state);
 
             if (currentAge < this.getMaxAge())
             {
-                float f = getAvailableMoisture(this, world, pos);
-                if (random.nextInt((int)(25.0F / f)+1) == 0)
+                if (currentAge == FIRST_MAX_AGE)
                 {
-                    if (currentAge == FIRST_MAX_AGE)
+                    if (random.nextInt((int)(25.0F / f)+1) == 0)
                     {
                         if(world.getBlockState(pos.up(1)).isOf(Blocks.AIR))
                         {
@@ -132,17 +131,35 @@ public class Female_Cannabis_Plant extends CropBlock {
                             }
                         }
                     }
-                    else
-                    {
-                        world.setBlockState(pos, this.withAge(currentAge+1), 2);
+                }
+                else
+                {
+                    world.setBlockState(pos, this.withAge(currentAge+1), 2);
 
-                        if (random.nextInt((int)(100.0F / f)+1) == 0)
+                    if (random.nextInt((int)(250.0F / f)+1) == 0)
+                    {
+                        if (this.getDefaultState().isOf(ModBlocks.OG_FEMALE_CANNABIS_PLANT))
                         {
                             world.setBlockState(pos, ModBlocks.OG_MALE_CANNABIS_PLANT.getDefaultState(), 2);
                         }
+                        if (this.getDefaultState().isOf(ModBlocks.GDP_FEMALE_CANNABIS_PLANT))
+                        {
+                            world.setBlockState(pos, ModBlocks.GDP_MALE_CANNABIS_PLANT.getDefaultState(), 2);
+                        }
+                        if (this.getDefaultState().isOf(ModBlocks.RP_FEMALE_CANNABIS_PLANT))
+                        {
+                            world.setBlockState(pos, ModBlocks.RP_MALE_CANNABIS_PLANT.getDefaultState(), 2);
+                        }
                     }
                 }
+
             }
         }
     }
+
+    public void getPollinated(World world, BlockPos pos, BlockState male_cross)
+    {
+        world.setBlockState(pos, male_cross, 2);
+    }
+
 }

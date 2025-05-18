@@ -26,10 +26,10 @@ public class Lets_do_marijuana implements ModInitializer {
 
 		LOGGER.info("Let's Do Marijuana!");
 
-		ModBlocks.registerModBlocks();
 		ModItemGroups.registerItemGroups();
 		ModItems.registerModItems();
 		ModEffects.registerEffects();
+		ModBlocks.registerModBlocks();
 
 		BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.SPARSE_JUNGLE, BiomeKeys.BAMBOO_JUNGLE), GenerationStep.Feature.VEGETAL_DECORATION, RegistryKey.of(RegistryKeys.PLACED_FEATURE, TILLED_PATCH_ID));
 	}

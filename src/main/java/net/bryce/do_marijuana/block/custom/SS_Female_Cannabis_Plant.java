@@ -1,6 +1,6 @@
 package net.bryce.do_marijuana.block.custom;
 
-public class SS_Female_Cannabis_Plant extends Female_Cannabis_Plant {
+public class SS_Female_Cannabis_Plant extends _Female_Cannabis_Plant {
     public SS_Female_Cannabis_Plant(Settings settings) {super(settings);
     }
 }

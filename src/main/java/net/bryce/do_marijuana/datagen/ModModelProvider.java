@@ -28,13 +28,23 @@ public class ModModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.TRIMMED_RP_POUND);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.CURED_RP_POUND);
 
-        blockStateModelGenerator.registerCrop(ModBlocks.OG_FEMALE_CANNABIS_PLANT, OG_Female_Cannabis_Plant.AGE, 0, 1, 2, 3, 4, 5, 6);
-        blockStateModelGenerator.registerCrop(ModBlocks.GDP_FEMALE_CANNABIS_PLANT, GDP_Female_Cannabis_Plant.AGE, 0, 1, 2, 3, 4, 5, 6);
-        blockStateModelGenerator.registerCrop(ModBlocks.RP_FEMALE_CANNABIS_PLANT, RP_Female_Cannabis_Plant.AGE, 0, 1, 2, 3, 4, 5, 6);
+        blockStateModelGenerator.registerCrop(ModBlocks.OG_FEMALE_CANNABIS_PLANT, _Female_Cannabis_Plant.AGE, 0, 1, 2, 3, 4, 5, 6);
+        blockStateModelGenerator.registerCrop(ModBlocks.GDP_FEMALE_CANNABIS_PLANT, _Female_Cannabis_Plant.AGE, 0, 1, 2, 3, 4, 5, 6);
+        blockStateModelGenerator.registerCrop(ModBlocks.RP_FEMALE_CANNABIS_PLANT, _Female_Cannabis_Plant.AGE, 0, 1, 2, 3, 4, 5, 6);
+        blockStateModelGenerator.registerCrop(ModBlocks.CP_FEMALE_CANNABIS_PLANT, _Female_Cannabis_Plant.AGE, 0, 1, 2, 3, 4, 5, 6);
+        blockStateModelGenerator.registerCrop(ModBlocks.HK_FEMALE_CANNABIS_PLANT, _Female_Cannabis_Plant.AGE, 0, 1, 2, 3, 4, 5, 6);
+        blockStateModelGenerator.registerCrop(ModBlocks.AFG_FEMALE_CANNABIS_PLANT, _Female_Cannabis_Plant.AGE, 0, 1, 2, 3, 4, 5, 6);
+        blockStateModelGenerator.registerCrop(ModBlocks.AG_FEMALE_CANNABIS_PLANT, _Female_Cannabis_Plant.AGE, 0, 1, 2, 3, 4, 5, 6);
+        blockStateModelGenerator.registerCrop(ModBlocks.CG_FEMALE_CANNABIS_PLANT, _Female_Cannabis_Plant.AGE, 0, 1, 2, 3, 4, 5, 6);
 
-        blockStateModelGenerator.registerCrop(ModBlocks.OG_MALE_CANNABIS_PLANT, OG_Male_Cannabis_Plant.AGE, 0, 1, 2);
-        blockStateModelGenerator.registerCrop(ModBlocks.GDP_MALE_CANNABIS_PLANT, GDP_Male_Cannabis_Plant.AGE, 0, 1, 2);
-        blockStateModelGenerator.registerCrop(ModBlocks.RP_MALE_CANNABIS_PLANT, RP_Male_Cannabis_Plant.AGE, 0, 1, 2);
+        blockStateModelGenerator.registerCrop(ModBlocks.OG_MALE_CANNABIS_PLANT, _Male_Cannabis_Plant.AGE, 0, 1, 2);
+        blockStateModelGenerator.registerCrop(ModBlocks.GDP_MALE_CANNABIS_PLANT, _Male_Cannabis_Plant.AGE, 0, 1, 2);
+        blockStateModelGenerator.registerCrop(ModBlocks.RP_MALE_CANNABIS_PLANT, _Male_Cannabis_Plant.AGE, 0, 1, 2);
+        blockStateModelGenerator.registerCrop(ModBlocks.CP_MALE_CANNABIS_PLANT, _Male_Cannabis_Plant.AGE, 0, 1, 2);
+        blockStateModelGenerator.registerCrop(ModBlocks.HK_MALE_CANNABIS_PLANT, _Male_Cannabis_Plant.AGE, 0, 1, 2);
+        blockStateModelGenerator.registerCrop(ModBlocks.AFG_MALE_CANNABIS_PLANT, _Male_Cannabis_Plant.AGE, 0, 1, 2);
+        blockStateModelGenerator.registerCrop(ModBlocks.AG_MALE_CANNABIS_PLANT, _Male_Cannabis_Plant.AGE, 0, 1, 2);
+        blockStateModelGenerator.registerCrop(ModBlocks.CG_MALE_CANNABIS_PLANT, _Male_Cannabis_Plant.AGE, 0, 1, 2);
     }
 
     @Override

@@ -41,6 +41,9 @@ public class ModItems {
     public static final Item OG_CANNABIS_SEEDS = registerItem("og_cannabis_seeds",
             new AliasedBlockItem(ModBlocks.OG_FEMALE_CANNABIS_PLANT, new FabricItemSettings()));
 
+    public static final Item MALE_OG_CANNABIS_SEEDS = registerItem("male_og_cannabis_seeds",
+            new AliasedBlockItem(ModBlocks.OG_MALE_CANNABIS_PLANT, new FabricItemSettings()));
+
     public static final Item GDP_UNTRIMMED_NUG = registerItem("gdp_untrimmed_nug", new Item(new FabricItemSettings()));
     public static final Item GDP_TRIMMED_NUG = registerItem("gdp_trimmed_nug", new Item(new FabricItemSettings()));
     public static final Item GDP_CURED_NUG = registerItem("gdp_cured_nug", new Item(new FabricItemSettings()));
@@ -56,6 +59,9 @@ public class ModItems {
 
     public static final Item GDP_CANNABIS_SEEDS = registerItem("gdp_cannabis_seeds",
             new AliasedBlockItem(ModBlocks.GDP_FEMALE_CANNABIS_PLANT, new FabricItemSettings()));
+
+    public static final Item MALE_GDP_CANNABIS_SEEDS = registerItem("male_gdp_cannabis_seeds",
+            new AliasedBlockItem(ModBlocks.GDP_MALE_CANNABIS_PLANT, new FabricItemSettings()));
 
     public static final Item RP_UNTRIMMED_NUG = registerItem("rp_untrimmed_nug", new Item(new FabricItemSettings()));
     public static final Item RP_TRIMMED_NUG = registerItem("rp_trimmed_nug", new Item(new FabricItemSettings()));
@@ -73,19 +79,29 @@ public class ModItems {
     public static final Item RP_CANNABIS_SEEDS = registerItem("rp_cannabis_seeds",
             new AliasedBlockItem(ModBlocks.RP_FEMALE_CANNABIS_PLANT, new FabricItemSettings()));
 
+    public static final Item MALE_RP_CANNABIS_SEEDS = registerItem("male_rp_cannabis_seeds",
+            new AliasedBlockItem(ModBlocks.RP_MALE_CANNABIS_PLANT, new FabricItemSettings()));
 
+    public static final Item CP_UNTRIMMED_NUG = registerItem("cp_untrimmed_nug", new Item(new FabricItemSettings()));
+    public static final Item CP_TRIMMED_NUG = registerItem("cp_trimmed_nug", new Item(new FabricItemSettings()));
+    public static final Item CP_CURED_NUG = registerItem("cp_cured_nug", new Item(new FabricItemSettings()));
+    public static final Item CP_BUD = registerItem("cp_bud", new Item(new FabricItemSettings()));
+    public static final Item CP_GROUND_WEED = registerItem("cp_ground_weed", new Item(new FabricItemSettings()));
+
+    public static final Item CP_JAR_OF_TRIMMED = registerItem("cp_jar_of_trimmed", new Jar_Item(new FabricItemSettings().maxDamage(42000).recipeRemainder(ModItems.JAR)));
+    public static final Item CP_JAR_OF_CURED = registerItem("cp_jar_of_cured", new Item(new FabricItemSettings().recipeRemainder(ModItems.JAR)));
+
+    public static final Item CP_JOINT = registerItem("cp_joint", new Joint_Item(new FabricItemSettings().maxDamage(42)));
+    public static final Item CP_LIT_JOINT = registerItem("cp_lit_joint", new Lit_Joint_Item(new FabricItemSettings().maxDamage(4200)));
+    public static final Item CP_ROACH = registerItem("cp_roach", new Roach_Item(new FabricItemSettings().maxDamage(420)));
+
+    public static final Item CP_CANNABIS_SEEDS = registerItem("cp_cannabis_seeds",
+            new AliasedBlockItem(ModBlocks.CP_FEMALE_CANNABIS_PLANT, new FabricItemSettings()));
+
+    public static final Item MALE_CP_CANNABIS_SEEDS = registerItem("male_cp_cannabis_seeds",
+            new AliasedBlockItem(ModBlocks.CP_MALE_CANNABIS_PLANT, new FabricItemSettings()));
 
     private static void addItemsToIngredientGroup(FabricItemGroupEntries entries){
-        entries.add(OG_UNTRIMMED_NUG);
-        entries.add(OG_TRIMMED_NUG);
-        entries.add(OG_CURED_NUG);
-        entries.add(OG_BUD);
-        entries.add(OG_GROUND_WEED);
-        entries.add(GDP_UNTRIMMED_NUG);
-        entries.add(GDP_TRIMMED_NUG);
-        entries.add(GDP_CURED_NUG);
-        entries.add(GDP_BUD);
-        entries.add(GDP_GROUND_WEED);
         entries.add(JAR);
     }
 
