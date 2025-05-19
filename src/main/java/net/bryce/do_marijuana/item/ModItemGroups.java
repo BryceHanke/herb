@@ -91,6 +91,51 @@ public class ModItemGroups {
                         entries.add(ModBlocks.TRIMMED_GDK_POUND);
                         entries.add(ModBlocks.CURED_GDK_POUND);
 
+                        entries.add(ModItems.AFG_UNTRIMMED_NUG);
+                        entries.add(ModItems.AFG_TRIMMED_NUG);
+                        entries.add(ModItems.AFG_CURED_NUG);
+                        entries.add(ModItems.AFG_BUD);
+                        entries.add(ModItems.AFG_GROUND_WEED);
+                        entries.add(ModItems.AFG_JOINT);
+                        entries.add(ModItems.AFG_LIT_JOINT);
+                        entries.add(ModItems.AFG_ROACH);
+                        entries.add(ModItems.AFG_CANNABIS_SEEDS);
+                        entries.add(ModItems.AFG_JAR_OF_TRIMMED);
+                        entries.add(ModItems.AFG_JAR_OF_CURED);
+                        entries.add(ModBlocks.UNTRIMMED_AFG_POUND);
+                        entries.add(ModBlocks.TRIMMED_AFG_POUND);
+                        entries.add(ModBlocks.CURED_AFG_POUND);
+
+                        entries.add(ModItems.HK_UNTRIMMED_NUG);
+                        entries.add(ModItems.HK_TRIMMED_NUG);
+                        entries.add(ModItems.HK_CURED_NUG);
+                        entries.add(ModItems.HK_BUD);
+                        entries.add(ModItems.HK_GROUND_WEED);
+                        entries.add(ModItems.HK_JOINT);
+                        entries.add(ModItems.HK_LIT_JOINT);
+                        entries.add(ModItems.HK_ROACH);
+                        entries.add(ModItems.HK_CANNABIS_SEEDS);
+                        entries.add(ModItems.HK_JAR_OF_TRIMMED);
+                        entries.add(ModItems.HK_JAR_OF_CURED);
+                        entries.add(ModBlocks.UNTRIMMED_HK_POUND);
+                        entries.add(ModBlocks.TRIMMED_HK_POUND);
+                        entries.add(ModBlocks.CURED_HK_POUND);
+
+                        entries.add(ModItems.AK_UNTRIMMED_NUG);
+                        entries.add(ModItems.AK_TRIMMED_NUG);
+                        entries.add(ModItems.AK_CURED_NUG);
+                        entries.add(ModItems.AK_BUD);
+                        entries.add(ModItems.AK_GROUND_WEED);
+                        entries.add(ModItems.AK_JOINT);
+                        entries.add(ModItems.AK_LIT_JOINT);
+                        entries.add(ModItems.AK_ROACH);
+                        entries.add(ModItems.AK_CANNABIS_SEEDS);
+                        entries.add(ModItems.AK_JAR_OF_TRIMMED);
+                        entries.add(ModItems.AK_JAR_OF_CURED);
+                        entries.add(ModBlocks.UNTRIMMED_AK_POUND);
+                        entries.add(ModBlocks.TRIMMED_AK_POUND);
+                        entries.add(ModBlocks.CURED_AK_POUND);
+
                         entries.add(ModItems.JAR);
                         entries.add(ModItems.ASHTRAY);
                         entries.add(ModItems.GRINDER);

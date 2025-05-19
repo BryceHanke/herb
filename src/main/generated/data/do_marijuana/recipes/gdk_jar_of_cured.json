@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "J": {
+      "item": "do_marijuana:jar"
+    },
+    "N": {
+      "item": "do_marijuana:gdk_cured_nug"
+    }
+  },
+  "pattern": [
+    "NJN",
+    "NNN"
+  ],
+  "result": {
+    "item": "do_marijuana:gdk_jar_of_cured"
+  },
+  "show_notification": true
+}

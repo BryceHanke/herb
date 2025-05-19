@@ -22,7 +22,6 @@ public class ModModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.TRIMMED_OG_POUND);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.CURED_OG_POUND);
 
-
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.UNTRIMMED_GDP_POUND);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.TRIMMED_GDP_POUND);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.CURED_GDP_POUND);
@@ -39,17 +38,36 @@ public class ModModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.TRIMMED_GDK_POUND);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.CURED_GDK_POUND);
 
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.UNTRIMMED_AFG_POUND);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.TRIMMED_AFG_POUND);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.CURED_AFG_POUND);
+
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.UNTRIMMED_HK_POUND);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.TRIMMED_HK_POUND);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.CURED_HK_POUND);
+
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.UNTRIMMED_AK_POUND);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.TRIMMED_AK_POUND);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.CURED_AK_POUND);
+
         blockStateModelGenerator.registerCrop(ModBlocks.OG_FEMALE_CANNABIS_PLANT, _Female_Cannabis_Plant.AGE, 0, 1, 2, 3, 4, 5, 6);
         blockStateModelGenerator.registerCrop(ModBlocks.GDP_FEMALE_CANNABIS_PLANT, _Female_Cannabis_Plant.AGE, 0, 1, 2, 3, 4, 5, 6);
         blockStateModelGenerator.registerCrop(ModBlocks.RP_FEMALE_CANNABIS_PLANT, _Female_Cannabis_Plant.AGE, 0, 1, 2, 3, 4, 5, 6);
         blockStateModelGenerator.registerCrop(ModBlocks.CP_FEMALE_CANNABIS_PLANT, _Female_Cannabis_Plant.AGE, 0, 1, 2, 3, 4, 5, 6);
         blockStateModelGenerator.registerCrop(ModBlocks.GDK_FEMALE_CANNABIS_PLANT, _Female_Cannabis_Plant.AGE, 0, 1, 2, 3, 4, 5, 6);
+        blockStateModelGenerator.registerCrop(ModBlocks.AFG_FEMALE_CANNABIS_PLANT, _Female_Cannabis_Plant.AGE, 0, 1, 2, 3, 4, 5, 6);
+        blockStateModelGenerator.registerCrop(ModBlocks.HK_FEMALE_CANNABIS_PLANT, _Female_Cannabis_Plant.AGE, 0, 1, 2, 3, 4, 5, 6);
+        blockStateModelGenerator.registerCrop(ModBlocks.AK_FEMALE_CANNABIS_PLANT, _Female_Cannabis_Plant.AGE, 0, 1, 2, 3, 4, 5, 6);
 
         blockStateModelGenerator.registerCrop(ModBlocks.OG_MALE_CANNABIS_PLANT, _Male_Cannabis_Plant.AGE, 0, 1, 2, 3);
         blockStateModelGenerator.registerCrop(ModBlocks.GDP_MALE_CANNABIS_PLANT, _Male_Cannabis_Plant.AGE, 0, 1, 2, 3);
         blockStateModelGenerator.registerCrop(ModBlocks.RP_MALE_CANNABIS_PLANT, _Male_Cannabis_Plant.AGE, 0, 1, 2, 3);
         blockStateModelGenerator.registerCrop(ModBlocks.CP_MALE_CANNABIS_PLANT, _Male_Cannabis_Plant.AGE, 0, 1, 2, 3);
         blockStateModelGenerator.registerCrop(ModBlocks.GDK_MALE_CANNABIS_PLANT, _Male_Cannabis_Plant.AGE, 0, 1, 2, 3);
+        blockStateModelGenerator.registerCrop(ModBlocks.AFG_MALE_CANNABIS_PLANT, _Male_Cannabis_Plant.AGE, 0, 1, 2, 3);
+        blockStateModelGenerator.registerCrop(ModBlocks.HK_MALE_CANNABIS_PLANT, _Male_Cannabis_Plant.AGE, 0, 1, 2, 3);
+        blockStateModelGenerator.registerCrop(ModBlocks.AK_MALE_CANNABIS_PLANT, _Male_Cannabis_Plant.AGE, 0, 1, 2, 3);
+
     }
 
     @Override
@@ -120,6 +138,44 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.register(ModItems.GDK_JAR_OF_TRIMMED, Models.GENERATED);
         itemModelGenerator.register(ModItems.GDK_JAR_OF_CURED, Models.GENERATED);
 
+        itemModelGenerator.register(ModItems.AFG_UNTRIMMED_NUG, Models.GENERATED);
+        itemModelGenerator.register(ModItems.AFG_TRIMMED_NUG, Models.GENERATED);
+        itemModelGenerator.register(ModItems.AFG_CURED_NUG, Models.GENERATED);
+        itemModelGenerator.register(ModItems.AFG_BUD, Models.GENERATED);
+        itemModelGenerator.register(ModItems.AFG_GROUND_WEED, Models.GENERATED);
+
+        itemModelGenerator.register(ModItems.AFG_JOINT, Models.GENERATED);
+        itemModelGenerator.register(ModItems.AFG_LIT_JOINT, Models.GENERATED);
+        itemModelGenerator.register(ModItems.AFG_ROACH, Models.GENERATED);
+
+        itemModelGenerator.register(ModItems.AFG_JAR_OF_TRIMMED, Models.GENERATED);
+        itemModelGenerator.register(ModItems.AFG_JAR_OF_CURED, Models.GENERATED);
+
+        itemModelGenerator.register(ModItems.HK_UNTRIMMED_NUG, Models.GENERATED);
+        itemModelGenerator.register(ModItems.HK_TRIMMED_NUG, Models.GENERATED);
+        itemModelGenerator.register(ModItems.HK_CURED_NUG, Models.GENERATED);
+        itemModelGenerator.register(ModItems.HK_BUD, Models.GENERATED);
+        itemModelGenerator.register(ModItems.HK_GROUND_WEED, Models.GENERATED);
+
+        itemModelGenerator.register(ModItems.HK_JOINT, Models.GENERATED);
+        itemModelGenerator.register(ModItems.HK_LIT_JOINT, Models.GENERATED);
+        itemModelGenerator.register(ModItems.HK_ROACH, Models.GENERATED);
+
+        itemModelGenerator.register(ModItems.HK_JAR_OF_TRIMMED, Models.GENERATED);
+        itemModelGenerator.register(ModItems.HK_JAR_OF_CURED, Models.GENERATED);
+
+        itemModelGenerator.register(ModItems.AK_UNTRIMMED_NUG, Models.GENERATED);
+        itemModelGenerator.register(ModItems.AK_TRIMMED_NUG, Models.GENERATED);
+        itemModelGenerator.register(ModItems.AK_CURED_NUG, Models.GENERATED);
+        itemModelGenerator.register(ModItems.AK_BUD, Models.GENERATED);
+        itemModelGenerator.register(ModItems.AK_GROUND_WEED, Models.GENERATED);
+
+        itemModelGenerator.register(ModItems.AK_JOINT, Models.GENERATED);
+        itemModelGenerator.register(ModItems.AK_LIT_JOINT, Models.GENERATED);
+        itemModelGenerator.register(ModItems.AK_ROACH, Models.GENERATED);
+
+        itemModelGenerator.register(ModItems.AK_JAR_OF_TRIMMED, Models.GENERATED);
+        itemModelGenerator.register(ModItems.AK_JAR_OF_CURED, Models.GENERATED);
 
         itemModelGenerator.register(ModItems.JAR, Models.GENERATED);
         itemModelGenerator.register(ModItems.ASHTRAY, Models.GENERATED);

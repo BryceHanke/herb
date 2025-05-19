@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "do_marijuana:rolling_paper"
+    },
+    {
+      "item": "do_marijuana:cp_ground_weed"
+    },
+    {
+      "item": "do_marijuana:cp_ground_weed"
+    },
+    {
+      "item": "do_marijuana:cp_ground_weed"
+    }
+  ],
+  "result": {
+    "item": "do_marijuana:cp_joint"
+  }
+}

@@ -51,7 +51,24 @@ public class Joint_Item extends Item {
             player.giveItemStack(lit_joint);
             stack.decrement(1);
         }
-
+        if (stack.isOf(ModItems.AFG_JOINT))
+        {
+            ItemStack lit_joint = new ItemStack(ModItems.AFG_LIT_JOINT);
+            player.giveItemStack(lit_joint);
+            stack.decrement(1);
+        }
+        if (stack.isOf(ModItems.HK_JOINT))
+        {
+            ItemStack lit_joint = new ItemStack(ModItems.HK_LIT_JOINT);
+            player.giveItemStack(lit_joint);
+            stack.decrement(1);
+        }
+        if (stack.isOf(ModItems.AK_JOINT))
+        {
+            ItemStack lit_joint = new ItemStack(ModItems.AK_LIT_JOINT);
+            player.giveItemStack(lit_joint);
+            stack.decrement(1);
+        }
         super.usageTick(world, user, stack, remainingUseTicks);
     }
 
@@ -71,7 +88,6 @@ public class Joint_Item extends Item {
         if (user.getOffHandStack().isOf(Items.FLINT_AND_STEEL))
         {
             return ItemUsage.consumeHeldItem(world, user, hand);
-
         }
 
         if(user.getOffHandStack().isOf(Items.FIRE_CHARGE))

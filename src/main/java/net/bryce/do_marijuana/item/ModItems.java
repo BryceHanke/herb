@@ -115,10 +115,68 @@ public class ModItems {
     public static final Item GDK_ROACH = registerItem("gdk_roach", new Roach_Item(new FabricItemSettings().maxDamage(420)));
 
     public static final Item GDK_CANNABIS_SEEDS = registerItem("gdk_cannabis_seeds",
-            new AliasedBlockItem(ModBlocks.CP_FEMALE_CANNABIS_PLANT, new FabricItemSettings()));
+            new AliasedBlockItem(ModBlocks.GDK_FEMALE_CANNABIS_PLANT, new FabricItemSettings()));
 
     public static final Item MALE_GDK_CANNABIS_SEEDS = registerItem("male_gdk_cannabis_seeds",
             new AliasedBlockItem(ModBlocks.GDK_MALE_CANNABIS_PLANT, new FabricItemSettings()));
+
+    public static final Item AFG_UNTRIMMED_NUG = registerItem("afg_untrimmed_nug", new Item(new FabricItemSettings()));
+    public static final Item AFG_TRIMMED_NUG = registerItem("afg_trimmed_nug", new Item(new FabricItemSettings()));
+    public static final Item AFG_CURED_NUG = registerItem("afg_cured_nug", new Item(new FabricItemSettings()));
+    public static final Item AFG_BUD = registerItem("afg_bud", new Item(new FabricItemSettings()));
+    public static final Item AFG_GROUND_WEED = registerItem("afg_ground_weed", new Item(new FabricItemSettings()));
+
+    public static final Item AFG_JAR_OF_TRIMMED = registerItem("afg_jar_of_trimmed", new Jar_Item(new FabricItemSettings().maxDamage(42000).recipeRemainder(ModItems.JAR)));
+    public static final Item AFG_JAR_OF_CURED = registerItem("afg_jar_of_cured", new Item(new FabricItemSettings().recipeRemainder(ModItems.JAR)));
+
+    public static final Item AFG_JOINT = registerItem("afg_joint", new Joint_Item(new FabricItemSettings().maxDamage(42)));
+    public static final Item AFG_LIT_JOINT = registerItem("afg_lit_joint", new Lit_Joint_Item(new FabricItemSettings().maxDamage(4200)));
+    public static final Item AFG_ROACH = registerItem("afg_roach", new Roach_Item(new FabricItemSettings().maxDamage(420)));
+
+    public static final Item AFG_CANNABIS_SEEDS = registerItem("afg_cannabis_seeds",
+            new AliasedBlockItem(ModBlocks.AFG_FEMALE_CANNABIS_PLANT, new FabricItemSettings()));
+
+    public static final Item MALE_AFG_CANNABIS_SEEDS = registerItem("male_afg_cannabis_seeds",
+            new AliasedBlockItem(ModBlocks.AFG_MALE_CANNABIS_PLANT, new FabricItemSettings()));
+
+    public static final Item HK_UNTRIMMED_NUG = registerItem("hk_untrimmed_nug", new Item(new FabricItemSettings()));
+    public static final Item HK_TRIMMED_NUG = registerItem("hk_trimmed_nug", new Item(new FabricItemSettings()));
+    public static final Item HK_CURED_NUG = registerItem("hk_cured_nug", new Item(new FabricItemSettings()));
+    public static final Item HK_BUD = registerItem("hk_bud", new Item(new FabricItemSettings()));
+    public static final Item HK_GROUND_WEED = registerItem("hk_ground_weed", new Item(new FabricItemSettings()));
+
+    public static final Item HK_JAR_OF_TRIMMED = registerItem("hk_jar_of_trimmed", new Jar_Item(new FabricItemSettings().maxDamage(42000).recipeRemainder(ModItems.JAR)));
+    public static final Item HK_JAR_OF_CURED = registerItem("hk_jar_of_cured", new Item(new FabricItemSettings().recipeRemainder(ModItems.JAR)));
+
+    public static final Item HK_JOINT = registerItem("hk_joint", new Joint_Item(new FabricItemSettings().maxDamage(42)));
+    public static final Item HK_LIT_JOINT = registerItem("hk_lit_joint", new Lit_Joint_Item(new FabricItemSettings().maxDamage(4200)));
+    public static final Item HK_ROACH = registerItem("hk_roach", new Roach_Item(new FabricItemSettings().maxDamage(420)));
+
+    public static final Item HK_CANNABIS_SEEDS = registerItem("hk_cannabis_seeds",
+            new AliasedBlockItem(ModBlocks.HK_FEMALE_CANNABIS_PLANT, new FabricItemSettings()));
+
+    public static final Item MALE_HK_CANNABIS_SEEDS = registerItem("male_hk_cannabis_seeds",
+            new AliasedBlockItem(ModBlocks.HK_MALE_CANNABIS_PLANT, new FabricItemSettings()));
+
+    public static final Item AK_UNTRIMMED_NUG = registerItem("ak_untrimmed_nug", new Item(new FabricItemSettings()));
+    public static final Item AK_TRIMMED_NUG = registerItem("ak_trimmed_nug", new Item(new FabricItemSettings()));
+    public static final Item AK_CURED_NUG = registerItem("ak_cured_nug", new Item(new FabricItemSettings()));
+    public static final Item AK_BUD = registerItem("ak_bud", new Item(new FabricItemSettings()));
+    public static final Item AK_GROUND_WEED = registerItem("ak_ground_weed", new Item(new FabricItemSettings()));
+
+    public static final Item AK_JAR_OF_TRIMMED = registerItem("ak_jar_of_trimmed", new Jar_Item(new FabricItemSettings().maxDamage(42000).recipeRemainder(ModItems.JAR)));
+    public static final Item AK_JAR_OF_CURED = registerItem("ak_jar_of_cured", new Item(new FabricItemSettings().recipeRemainder(ModItems.JAR)));
+
+    public static final Item AK_JOINT = registerItem("ak_joint", new Joint_Item(new FabricItemSettings().maxDamage(42)));
+    public static final Item AK_LIT_JOINT = registerItem("ak_lit_joint", new Lit_Joint_Item(new FabricItemSettings().maxDamage(4200)));
+    public static final Item AK_ROACH = registerItem("ak_roach", new Roach_Item(new FabricItemSettings().maxDamage(420)));
+
+    public static final Item AK_CANNABIS_SEEDS = registerItem("ak_cannabis_seeds",
+            new AliasedBlockItem(ModBlocks.AK_FEMALE_CANNABIS_PLANT, new FabricItemSettings()));
+
+    public static final Item MALE_AK_CANNABIS_SEEDS = registerItem("male_ak_cannabis_seeds",
+            new AliasedBlockItem(ModBlocks.AK_MALE_CANNABIS_PLANT, new FabricItemSettings()));
+
 
     private static void addItemsToIngredientGroup(FabricItemGroupEntries entries){
         entries.add(JAR);

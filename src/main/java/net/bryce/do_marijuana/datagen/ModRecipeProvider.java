@@ -79,16 +79,16 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .criterion(hasItem(ModItems.JAR), conditionsFromItem(ModItems.JAR))
                 .offerTo(consumer, new Identifier(getRecipeName(ModItems.OG_JAR_OF_CURED)));
 
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.OG_BUD, 5)
+                .input(ModItems.OG_CURED_NUG, 1)
+                .criterion(hasItem(ModItems.OG_CURED_NUG), conditionsFromItem(ModItems.OG_CURED_NUG))
+                .offerTo(consumer, new Identifier(getRecipeName(ModItems.OG_BUD)));
+
         ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.OG_JOINT, 1)
                 .input(ModItems.ROLLING_PAPER, 1)
                 .input(ModItems.OG_GROUND_WEED, 3)
                 .criterion(hasItem(ModItems.ROLLING_PAPER), conditionsFromItem(ModItems.ROLLING_PAPER))
                 .offerTo(consumer, new Identifier(getRecipeName(ModItems.OG_JOINT)));
-
-        ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.OG_BUD, 5)
-                .input(ModItems.OG_CURED_NUG, 1)
-                .criterion(hasItem(ModItems.OG_CURED_NUG), conditionsFromItem(ModItems.OG_CURED_NUG))
-                .offerTo(consumer, new Identifier(getRecipeName(ModItems.OG_BUD)));
 
         ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.GDP_JAR_OF_TRIMMED, 1)
                 .pattern("NJN")
@@ -133,9 +133,9 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .criterion(hasItem(ModItems.JAR), conditionsFromItem(ModItems.JAR))
                 .offerTo(consumer, new Identifier(getRecipeName(ModItems.RP_JAR_OF_CURED)));
 
-        ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.GDP_BUD, 5)
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.RP_BUD, 5)
                 .input(ModItems.RP_CURED_NUG, 1)
-                .criterion(hasItem(ModItems.GDP_CURED_NUG), conditionsFromItem(ModItems.RP_CURED_NUG))
+                .criterion(hasItem(ModItems.RP_CURED_NUG), conditionsFromItem(ModItems.RP_CURED_NUG))
                 .offerTo(consumer, new Identifier(getRecipeName(ModItems.RP_BUD)));
 
         ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.RP_JOINT, 1)
@@ -143,5 +143,59 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .input(ModItems.RP_GROUND_WEED, 3)
                 .criterion(hasItem(ModItems.ROLLING_PAPER), conditionsFromItem(ModItems.ROLLING_PAPER))
                 .offerTo(consumer, new Identifier(getRecipeName(ModItems.RP_JOINT)));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.CP_JAR_OF_TRIMMED, 1)
+                .pattern("NJN")
+                .pattern("NNN")
+                .input('J', ModItems.JAR)
+                .input('N', ModItems.CP_TRIMMED_NUG)
+                .criterion(hasItem(ModItems.JAR), conditionsFromItem(ModItems.JAR))
+                .offerTo(consumer, new Identifier(getRecipeName(ModItems.CP_JAR_OF_TRIMMED)));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.CP_JAR_OF_CURED, 1)
+                .pattern("NJN")
+                .pattern("NNN")
+                .input('J', ModItems.JAR)
+                .input('N', ModItems.CP_CURED_NUG)
+                .criterion(hasItem(ModItems.JAR), conditionsFromItem(ModItems.JAR))
+                .offerTo(consumer, new Identifier(getRecipeName(ModItems.CP_JAR_OF_CURED)));
+
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.CP_BUD, 5)
+                .input(ModItems.CP_CURED_NUG, 1)
+                .criterion(hasItem(ModItems.CP_CURED_NUG), conditionsFromItem(ModItems.CP_CURED_NUG))
+                .offerTo(consumer, new Identifier(getRecipeName(ModItems.CP_BUD)));
+
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.CP_JOINT, 1)
+                .input(ModItems.ROLLING_PAPER, 1)
+                .input(ModItems.CP_GROUND_WEED, 3)
+                .criterion(hasItem(ModItems.ROLLING_PAPER), conditionsFromItem(ModItems.ROLLING_PAPER))
+                .offerTo(consumer, new Identifier(getRecipeName(ModItems.CP_JOINT)));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.GDK_JAR_OF_TRIMMED, 1)
+                .pattern("NJN")
+                .pattern("NNN")
+                .input('J', ModItems.JAR)
+                .input('N', ModItems.GDK_TRIMMED_NUG)
+                .criterion(hasItem(ModItems.JAR), conditionsFromItem(ModItems.JAR))
+                .offerTo(consumer, new Identifier(getRecipeName(ModItems.GDK_JAR_OF_TRIMMED)));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.GDK_JAR_OF_CURED, 1)
+                .pattern("NJN")
+                .pattern("NNN")
+                .input('J', ModItems.JAR)
+                .input('N', ModItems.GDK_CURED_NUG)
+                .criterion(hasItem(ModItems.JAR), conditionsFromItem(ModItems.JAR))
+                .offerTo(consumer, new Identifier(getRecipeName(ModItems.GDK_JAR_OF_CURED)));
+
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.GDK_BUD, 5)
+                .input(ModItems.GDK_CURED_NUG, 1)
+                .criterion(hasItem(ModItems.GDK_CURED_NUG), conditionsFromItem(ModItems.GDK_CURED_NUG))
+                .offerTo(consumer, new Identifier(getRecipeName(ModItems.GDK_BUD)));
+
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.GDK_JOINT, 1)
+                .input(ModItems.ROLLING_PAPER, 1)
+                .input(ModItems.GDK_GROUND_WEED, 3)
+                .criterion(hasItem(ModItems.ROLLING_PAPER), conditionsFromItem(ModItems.ROLLING_PAPER))
+                .offerTo(consumer, new Identifier(getRecipeName(ModItems.GDK_JOINT)));
     }
 }

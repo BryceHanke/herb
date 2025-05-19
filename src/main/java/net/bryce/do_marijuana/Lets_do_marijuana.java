@@ -16,7 +16,8 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 public class Lets_do_marijuana implements ModInitializer {
-	public static final Identifier TILLED_PATCH_ID = Identifier.of(Lets_do_marijuana.MOD_ID, "tilled_patch_feature_placed");
+	public static final Identifier AFG_TILLED_PATCH_ID = Identifier.of(Lets_do_marijuana.MOD_ID, "afg_tilled_patch_feature_placed");
+	public static final Identifier HK_TILLED_PATCH_ID = Identifier.of(Lets_do_marijuana.MOD_ID, "hk_tilled_patch_feature_placed");
 
 	public static final String MOD_ID = "do_marijuana";
 	public static final Logger LOGGER = LoggerFactory.getLogger(MOD_ID);
@@ -31,7 +32,8 @@ public class Lets_do_marijuana implements ModInitializer {
 		ModEffects.registerEffects();
 		ModBlocks.registerModBlocks();
 
-		BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.SPARSE_JUNGLE, BiomeKeys.BAMBOO_JUNGLE), GenerationStep.Feature.VEGETAL_DECORATION, RegistryKey.of(RegistryKeys.PLACED_FEATURE, TILLED_PATCH_ID));
+		BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.SPARSE_JUNGLE, BiomeKeys.JUNGLE), GenerationStep.Feature.VEGETAL_DECORATION, RegistryKey.of(RegistryKeys.PLACED_FEATURE, AFG_TILLED_PATCH_ID));
+		BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.BAMBOO_JUNGLE, BiomeKeys.JUNGLE), GenerationStep.Feature.VEGETAL_DECORATION, RegistryKey.of(RegistryKeys.PLACED_FEATURE, HK_TILLED_PATCH_ID));
 	}
 
 

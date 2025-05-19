@@ -154,6 +154,22 @@ public class _Female_Cannabis_Plant extends CropBlock {
                         {
                             world.setBlockState(pos, ModBlocks.CP_MALE_CANNABIS_PLANT.getDefaultState(), 2);
                         }
+                        if (this.getDefaultState().isOf(ModBlocks.GDK_FEMALE_CANNABIS_PLANT))
+                        {
+                            world.setBlockState(pos, ModBlocks.GDK_MALE_CANNABIS_PLANT.getDefaultState(), 2);
+                        }
+                        if (this.getDefaultState().isOf(ModBlocks.AFG_FEMALE_CANNABIS_PLANT))
+                        {
+                            world.setBlockState(pos, ModBlocks.AFG_MALE_CANNABIS_PLANT.getDefaultState(), 2);
+                        }
+                        if (this.getDefaultState().isOf(ModBlocks.HK_FEMALE_CANNABIS_PLANT))
+                        {
+                            world.setBlockState(pos, ModBlocks.HK_MALE_CANNABIS_PLANT.getDefaultState(), 2);
+                        }
+                        if (this.getDefaultState().isOf(ModBlocks.AK_FEMALE_CANNABIS_PLANT))
+                        {
+                            world.setBlockState(pos, ModBlocks.CP_MALE_CANNABIS_PLANT.getDefaultState(), 2);
+                        }
                     }
                 }
 

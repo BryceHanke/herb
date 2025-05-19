@@ -34,7 +34,54 @@ public class Lit_Joint_Item extends Item{
     {
         if (user.getOffHandStack().getItem() == ModItems.ASHTRAY)
         {
-            Lets_do_marijuana.LOGGER.info("yomama");
+            if (user.getStackInHand(hand).isOf(ModItems.GDP_LIT_JOINT))
+            {
+                user.getStackInHand(hand).decrement(1);
+                ItemStack roach = new ItemStack(ModItems.GDP_ROACH);
+                user.giveItemStack(roach);
+            }
+            if (user.getStackInHand(hand).isOf(ModItems.OG_LIT_JOINT))
+            {
+                user.getStackInHand(hand).decrement(1);
+                ItemStack roach = new ItemStack(ModItems.OG_ROACH);
+                user.giveItemStack(roach);
+            }
+            if (user.getStackInHand(hand).isOf(ModItems.RP_LIT_JOINT))
+            {
+                user.getStackInHand(hand).decrement(1);
+                ItemStack roach = new ItemStack(ModItems.RP_ROACH);
+                user.giveItemStack(roach);
+            }
+            if (user.getStackInHand(hand).isOf(ModItems.CP_LIT_JOINT))
+            {
+                user.getStackInHand(hand).decrement(1);
+                ItemStack roach = new ItemStack(ModItems.CP_ROACH);
+                user.giveItemStack(roach);
+            }
+            if (user.getStackInHand(hand).isOf(ModItems.GDK_LIT_JOINT))
+            {
+                user.getStackInHand(hand).decrement(1);
+                ItemStack roach = new ItemStack(ModItems.GDK_ROACH);
+                user.giveItemStack(roach);
+            }
+            if (user.getStackInHand(hand).isOf(ModItems.AFG_LIT_JOINT))
+            {
+                user.getStackInHand(hand).decrement(1);
+                ItemStack roach = new ItemStack(ModItems.AFG_ROACH);
+                user.giveItemStack(roach);
+            }
+            if (user.getStackInHand(hand).isOf(ModItems.HK_LIT_JOINT))
+            {
+                user.getStackInHand(hand).decrement(1);
+                ItemStack roach = new ItemStack(ModItems.HK_ROACH);
+                user.giveItemStack(roach);
+            }
+            if (user.getStackInHand(hand).isOf(ModItems.AK_LIT_JOINT))
+            {
+                user.getStackInHand(hand).decrement(1);
+                ItemStack roach = new ItemStack(ModItems.AK_ROACH);
+                user.giveItemStack(roach);
+            }
         }
 
         return ItemUsage.consumeHeldItem(world, user, hand);
@@ -92,6 +139,24 @@ public class Lit_Joint_Item extends Item{
             {
                 stack.decrement(1);
                 ItemStack roach = new ItemStack(ModItems.GDK_ROACH);
+                player.giveItemStack(roach);
+            }
+            if (stack.isOf(ModItems.AFG_LIT_JOINT))
+            {
+                stack.decrement(1);
+                ItemStack roach = new ItemStack(ModItems.AFG_ROACH);
+                player.giveItemStack(roach);
+            }
+            if (stack.isOf(ModItems.HK_LIT_JOINT))
+            {
+                stack.decrement(1);
+                ItemStack roach = new ItemStack(ModItems.HK_ROACH);
+                player.giveItemStack(roach);
+            }
+            if (stack.isOf(ModItems.AK_LIT_JOINT))
+            {
+                stack.decrement(1);
+                ItemStack roach = new ItemStack(ModItems.AK_ROACH);
                 player.giveItemStack(roach);
             }
         }

@@ -55,6 +55,26 @@ public class _Male_Cannabis_Plant extends CropBlock {
             return ModItems.CP_CANNABIS_SEEDS;
         }
 
+        if (this == ModBlocks.GDK_MALE_CANNABIS_PLANT)
+        {
+            return ModItems.GDK_CANNABIS_SEEDS;
+        }
+
+        if (this == ModBlocks.AFG_MALE_CANNABIS_PLANT)
+        {
+            return ModItems.AFG_CANNABIS_SEEDS;
+        }
+
+        if (this == ModBlocks.HK_MALE_CANNABIS_PLANT)
+        {
+            return ModItems.HK_CANNABIS_SEEDS;
+        }
+
+        if (this == ModBlocks.AK_MALE_CANNABIS_PLANT)
+        {
+            return ModItems.AK_CANNABIS_SEEDS;
+        }
+
         return ModItems.OG_CANNABIS_SEEDS;
     }
 
@@ -115,7 +135,7 @@ public class _Male_Cannabis_Plant extends CropBlock {
         }
 
         // Pollination
-        if (random.nextInt((int)(5.0F / f)+1) == 0)
+        if (random.nextInt((int)(10.0F / f)+1) == 0)
         {
             _Male_Cannabis_Plant male_plant = this;
 
@@ -152,6 +172,14 @@ public class _Male_Cannabis_Plant extends CropBlock {
                     }
                 }
 
+                if (male_plant == ModBlocks.AK_MALE_CANNABIS_PLANT)
+                {
+                    if (block_to_change == ModBlocks.AFG_FEMALE_CANNABIS_PLANT || block_to_change == ModBlocks.HK_FEMALE_CANNABIS_PLANT)
+                    {
+                        block_to_change.getPollinated(world, pos.east(), ModBlocks.AK_MALE_CANNABIS_PLANT.getDefaultState());
+                    }
+                }
+
                 if (block_to_change == ModBlocks.CP_FEMALE_CANNABIS_PLANT || male_plant == ModBlocks.CP_MALE_CANNABIS_PLANT)
                 {
                     if (male_plant == ModBlocks.GDP_MALE_CANNABIS_PLANT || block_to_change == ModBlocks.GDP_FEMALE_CANNABIS_PLANT)
@@ -160,17 +188,25 @@ public class _Male_Cannabis_Plant extends CropBlock {
                     }
                 }
 
-                if (block_to_change == ModBlocks.RP_FEMALE_CANNABIS_PLANT || male_plant == ModBlocks.RP_MALE_CANNABIS_PLANT)
+                if (male_plant == ModBlocks.RP_MALE_CANNABIS_PLANT)
                 {
-                    if (male_plant == ModBlocks.CP_MALE_CANNABIS_PLANT || block_to_change == ModBlocks.CP_FEMALE_CANNABIS_PLANT)
+                    if (block_to_change == ModBlocks.CP_FEMALE_CANNABIS_PLANT || block_to_change == ModBlocks.GDP_FEMALE_CANNABIS_PLANT)
                     {
-                        block_to_change.getPollinated(world, pos.east(), ModBlocks.RP_MALE_CANNABIS_PLANT.getDefaultState());
+                        block_to_change.getPollinated(world, pos.east(), ModBlocks.GDK_MALE_CANNABIS_PLANT.getDefaultState());
                     }
                 }
 
                 if (block_to_change == ModBlocks.GDP_FEMALE_CANNABIS_PLANT || male_plant == ModBlocks.GDP_MALE_CANNABIS_PLANT)
                 {
                     if (male_plant == ModBlocks.OG_MALE_CANNABIS_PLANT || block_to_change == ModBlocks.OG_FEMALE_CANNABIS_PLANT)
+                    {
+                        block_to_change.getPollinated(world, pos.east(), ModBlocks.GDK_MALE_CANNABIS_PLANT.getDefaultState());
+                    }
+                }
+
+                if (male_plant == ModBlocks.GDK_MALE_CANNABIS_PLANT)
+                {
+                    if (block_to_change == ModBlocks.GDP_FEMALE_CANNABIS_PLANT || block_to_change == ModBlocks.OG_FEMALE_CANNABIS_PLANT)
                     {
                         block_to_change.getPollinated(world, pos.east(), ModBlocks.GDK_MALE_CANNABIS_PLANT.getDefaultState());
                     }
@@ -198,13 +234,21 @@ public class _Male_Cannabis_Plant extends CropBlock {
 
                 if (block_to_change == ModBlocks.CP_FEMALE_CANNABIS_PLANT && male_plant == ModBlocks.CP_MALE_CANNABIS_PLANT)
                 {
-                    block_to_change.getPollinated(world, pos.east(), ModBlocks.CP_MALE_CANNABIS_PLANT.getDefaultState());
+                    block_to_change.getPollinated(world, pos.west(), ModBlocks.CP_MALE_CANNABIS_PLANT.getDefaultState());
                 }
 
                 // Cross Pollination
                 if (block_to_change == ModBlocks.AFG_FEMALE_CANNABIS_PLANT || male_plant == ModBlocks.AFG_MALE_CANNABIS_PLANT)
                 {
                     if (male_plant == ModBlocks.HK_MALE_CANNABIS_PLANT || block_to_change == ModBlocks.HK_FEMALE_CANNABIS_PLANT)
+                    {
+                        block_to_change.getPollinated(world, pos.west(), ModBlocks.AK_MALE_CANNABIS_PLANT.getDefaultState());
+                    }
+                }
+
+                if (male_plant == ModBlocks.AK_MALE_CANNABIS_PLANT)
+                {
+                    if (block_to_change == ModBlocks.AFG_FEMALE_CANNABIS_PLANT || block_to_change == ModBlocks.HK_FEMALE_CANNABIS_PLANT)
                     {
                         block_to_change.getPollinated(world, pos.west(), ModBlocks.AK_MALE_CANNABIS_PLANT.getDefaultState());
                     }
@@ -218,19 +262,27 @@ public class _Male_Cannabis_Plant extends CropBlock {
                     }
                 }
 
+                if (male_plant == ModBlocks.RP_MALE_CANNABIS_PLANT)
+                {
+                    if (block_to_change == ModBlocks.CP_FEMALE_CANNABIS_PLANT || block_to_change == ModBlocks.GDP_FEMALE_CANNABIS_PLANT)
+                    {
+                        block_to_change.getPollinated(world, pos.west(), ModBlocks.GDK_MALE_CANNABIS_PLANT.getDefaultState());
+                    }
+                }
+
                 if (block_to_change == ModBlocks.GDP_FEMALE_CANNABIS_PLANT || male_plant == ModBlocks.GDP_MALE_CANNABIS_PLANT)
                 {
                     if (male_plant == ModBlocks.OG_MALE_CANNABIS_PLANT || block_to_change == ModBlocks.OG_FEMALE_CANNABIS_PLANT)
                     {
-                        block_to_change.getPollinated(world, pos.east(), ModBlocks.GDK_MALE_CANNABIS_PLANT.getDefaultState());
+                        block_to_change.getPollinated(world, pos.west(), ModBlocks.GDK_MALE_CANNABIS_PLANT.getDefaultState());
                     }
                 }
 
-                if (block_to_change == ModBlocks.RP_FEMALE_CANNABIS_PLANT || male_plant == ModBlocks.RP_MALE_CANNABIS_PLANT)
+                if (male_plant == ModBlocks.GDK_MALE_CANNABIS_PLANT)
                 {
-                    if (male_plant == ModBlocks.CP_MALE_CANNABIS_PLANT || block_to_change == ModBlocks.CP_FEMALE_CANNABIS_PLANT)
+                    if (block_to_change == ModBlocks.GDP_FEMALE_CANNABIS_PLANT || block_to_change == ModBlocks.OG_FEMALE_CANNABIS_PLANT)
                     {
-                        block_to_change.getPollinated(world, pos.west(), ModBlocks.RP_MALE_CANNABIS_PLANT.getDefaultState());
+                        block_to_change.getPollinated(world, pos.west(), ModBlocks.GDK_MALE_CANNABIS_PLANT.getDefaultState());
                     }
                 }
             }
@@ -256,13 +308,21 @@ public class _Male_Cannabis_Plant extends CropBlock {
 
                 if (block_to_change == ModBlocks.CP_FEMALE_CANNABIS_PLANT && male_plant == ModBlocks.CP_MALE_CANNABIS_PLANT)
                 {
-                    block_to_change.getPollinated(world, pos.east(), ModBlocks.CP_MALE_CANNABIS_PLANT.getDefaultState());
+                    block_to_change.getPollinated(world, pos.north(), ModBlocks.CP_MALE_CANNABIS_PLANT.getDefaultState());
                 }
 
                 // Cross Pollination
                 if (block_to_change == ModBlocks.AFG_FEMALE_CANNABIS_PLANT || male_plant == ModBlocks.AFG_MALE_CANNABIS_PLANT)
                 {
                     if (male_plant == ModBlocks.HK_MALE_CANNABIS_PLANT || block_to_change == ModBlocks.HK_FEMALE_CANNABIS_PLANT)
+                    {
+                        block_to_change.getPollinated(world, pos.north(), ModBlocks.AK_MALE_CANNABIS_PLANT.getDefaultState());
+                    }
+                }
+
+                if (male_plant == ModBlocks.AK_MALE_CANNABIS_PLANT)
+                {
+                    if (block_to_change == ModBlocks.AFG_FEMALE_CANNABIS_PLANT || block_to_change == ModBlocks.HK_FEMALE_CANNABIS_PLANT)
                     {
                         block_to_change.getPollinated(world, pos.north(), ModBlocks.AK_MALE_CANNABIS_PLANT.getDefaultState());
                     }
@@ -276,19 +336,27 @@ public class _Male_Cannabis_Plant extends CropBlock {
                     }
                 }
 
+                if (male_plant == ModBlocks.RP_MALE_CANNABIS_PLANT)
+                {
+                    if (block_to_change == ModBlocks.CP_FEMALE_CANNABIS_PLANT || block_to_change == ModBlocks.GDP_FEMALE_CANNABIS_PLANT)
+                    {
+                        block_to_change.getPollinated(world, pos.north(), ModBlocks.GDK_MALE_CANNABIS_PLANT.getDefaultState());
+                    }
+                }
+
                 if (block_to_change == ModBlocks.GDP_FEMALE_CANNABIS_PLANT || male_plant == ModBlocks.GDP_MALE_CANNABIS_PLANT)
                 {
                     if (male_plant == ModBlocks.OG_MALE_CANNABIS_PLANT || block_to_change == ModBlocks.OG_FEMALE_CANNABIS_PLANT)
                     {
-                        block_to_change.getPollinated(world, pos.east(), ModBlocks.GDK_MALE_CANNABIS_PLANT.getDefaultState());
+                        block_to_change.getPollinated(world, pos.north(), ModBlocks.GDK_MALE_CANNABIS_PLANT.getDefaultState());
                     }
                 }
 
-                if (block_to_change == ModBlocks.CP_FEMALE_CANNABIS_PLANT || male_plant == ModBlocks.CP_MALE_CANNABIS_PLANT)
+                if (male_plant == ModBlocks.GDK_MALE_CANNABIS_PLANT)
                 {
-                    if (male_plant == ModBlocks.RP_MALE_CANNABIS_PLANT || block_to_change == ModBlocks.RP_FEMALE_CANNABIS_PLANT)
+                    if (block_to_change == ModBlocks.GDP_FEMALE_CANNABIS_PLANT || block_to_change == ModBlocks.OG_FEMALE_CANNABIS_PLANT)
                     {
-                        block_to_change.getPollinated(world, pos.north(), ModBlocks.RP_MALE_CANNABIS_PLANT.getDefaultState());
+                        block_to_change.getPollinated(world, pos.north(), ModBlocks.GDK_MALE_CANNABIS_PLANT.getDefaultState());
                     }
                 }
             }
@@ -314,13 +382,21 @@ public class _Male_Cannabis_Plant extends CropBlock {
 
                 if (block_to_change == ModBlocks.CP_FEMALE_CANNABIS_PLANT && male_plant == ModBlocks.CP_MALE_CANNABIS_PLANT)
                 {
-                    block_to_change.getPollinated(world, pos.east(), ModBlocks.CP_MALE_CANNABIS_PLANT.getDefaultState());
+                    block_to_change.getPollinated(world, pos.south(), ModBlocks.CP_MALE_CANNABIS_PLANT.getDefaultState());
                 }
 
                 // Cross Pollination
                 if (block_to_change == ModBlocks.AFG_FEMALE_CANNABIS_PLANT || male_plant == ModBlocks.AFG_MALE_CANNABIS_PLANT)
                 {
                     if (male_plant == ModBlocks.HK_MALE_CANNABIS_PLANT || block_to_change == ModBlocks.HK_FEMALE_CANNABIS_PLANT)
+                    {
+                        block_to_change.getPollinated(world, pos.south(), ModBlocks.AK_MALE_CANNABIS_PLANT.getDefaultState());
+                    }
+                }
+
+                if (male_plant == ModBlocks.AK_MALE_CANNABIS_PLANT)
+                {
+                    if (block_to_change == ModBlocks.AFG_FEMALE_CANNABIS_PLANT || block_to_change == ModBlocks.HK_FEMALE_CANNABIS_PLANT)
                     {
                         block_to_change.getPollinated(world, pos.south(), ModBlocks.AK_MALE_CANNABIS_PLANT.getDefaultState());
                     }
@@ -334,19 +410,28 @@ public class _Male_Cannabis_Plant extends CropBlock {
                     }
                 }
 
+                if (male_plant == ModBlocks.RP_MALE_CANNABIS_PLANT)
+                {
+                    if (block_to_change == ModBlocks.CP_FEMALE_CANNABIS_PLANT || block_to_change == ModBlocks.GDP_FEMALE_CANNABIS_PLANT)
+                    {
+                        block_to_change.getPollinated(world, pos.south(), ModBlocks.GDK_MALE_CANNABIS_PLANT.getDefaultState());
+                    }
+                }
+
+
                 if (block_to_change == ModBlocks.GDP_FEMALE_CANNABIS_PLANT || male_plant == ModBlocks.GDP_MALE_CANNABIS_PLANT)
                 {
                     if (male_plant == ModBlocks.OG_MALE_CANNABIS_PLANT || block_to_change == ModBlocks.OG_FEMALE_CANNABIS_PLANT)
                     {
-                        block_to_change.getPollinated(world, pos.east(), ModBlocks.GDK_MALE_CANNABIS_PLANT.getDefaultState());
+                        block_to_change.getPollinated(world, pos.south(), ModBlocks.GDK_MALE_CANNABIS_PLANT.getDefaultState());
                     }
                 }
 
-                if (block_to_change == ModBlocks.RP_FEMALE_CANNABIS_PLANT || male_plant == ModBlocks.RP_MALE_CANNABIS_PLANT)
+                if (male_plant == ModBlocks.GDK_MALE_CANNABIS_PLANT)
                 {
-                    if (male_plant == ModBlocks.CP_MALE_CANNABIS_PLANT || block_to_change == ModBlocks.CP_FEMALE_CANNABIS_PLANT)
+                    if (block_to_change == ModBlocks.GDP_FEMALE_CANNABIS_PLANT || block_to_change == ModBlocks.OG_FEMALE_CANNABIS_PLANT)
                     {
-                        block_to_change.getPollinated(world, pos.south(), ModBlocks.RP_MALE_CANNABIS_PLANT.getDefaultState());
+                        block_to_change.getPollinated(world, pos.south(), ModBlocks.GDK_MALE_CANNABIS_PLANT.getDefaultState());
                     }
                 }
             }

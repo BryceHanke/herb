@@ -6,8 +6,6 @@ import net.bryce.do_marijuana.item.ModItems;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricBlockLootTableProvider;
 import net.minecraft.loot.condition.BlockStatePropertyLootCondition;
-import net.minecraft.loot.provider.number.LootNumberProvider;
-import net.minecraft.loot.provider.number.LootNumberProviderType;
 import net.minecraft.predicate.StatePredicate;
 
 public class ModLootTableProvider extends FabricBlockLootTableProvider {
@@ -29,6 +27,26 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
         addDrop(ModBlocks.TRIMMED_RP_POUND);
         addDrop(ModBlocks.CURED_RP_POUND);
 
+        addDrop(ModBlocks.UNTRIMMED_CP_POUND);
+        addDrop(ModBlocks.TRIMMED_CP_POUND);
+        addDrop(ModBlocks.CURED_CP_POUND);
+
+        addDrop(ModBlocks.UNTRIMMED_GDK_POUND);
+        addDrop(ModBlocks.TRIMMED_GDK_POUND);
+        addDrop(ModBlocks.CURED_GDK_POUND);
+
+        addDrop(ModBlocks.UNTRIMMED_AFG_POUND);
+        addDrop(ModBlocks.TRIMMED_AFG_POUND);
+        addDrop(ModBlocks.CURED_AFG_POUND);
+
+        addDrop(ModBlocks.UNTRIMMED_HK_POUND);
+        addDrop(ModBlocks.TRIMMED_HK_POUND);
+        addDrop(ModBlocks.CURED_HK_POUND);
+
+        addDrop(ModBlocks.UNTRIMMED_AK_POUND);
+        addDrop(ModBlocks.TRIMMED_AK_POUND);
+        addDrop(ModBlocks.CURED_AK_POUND);
+
         BlockStatePropertyLootCondition.Builder og_fem_builder = BlockStatePropertyLootCondition.builder(ModBlocks.OG_FEMALE_CANNABIS_PLANT).properties(StatePredicate.Builder.create()
                 .exactMatch(GDP_Female_Cannabis_Plant.AGE, 3));
         addDrop(ModBlocks.OG_FEMALE_CANNABIS_PLANT, cropDrops(ModBlocks.OG_FEMALE_CANNABIS_PLANT, ModItems.OG_UNTRIMMED_NUG, ModItems.OG_CANNABIS_SEEDS, og_fem_builder));
@@ -49,10 +67,26 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
                 .exactMatch(GDP_Female_Cannabis_Plant.AGE, 3));
         addDrop(ModBlocks.GDK_FEMALE_CANNABIS_PLANT, cropDrops(ModBlocks.GDK_FEMALE_CANNABIS_PLANT, ModItems.GDK_UNTRIMMED_NUG, ModItems.GDK_CANNABIS_SEEDS, gdk_fem_builder));
 
+        BlockStatePropertyLootCondition.Builder afg_fem_builder = BlockStatePropertyLootCondition.builder(ModBlocks.AFG_FEMALE_CANNABIS_PLANT).properties(StatePredicate.Builder.create()
+                .exactMatch(GDP_Female_Cannabis_Plant.AGE, 3));
+        addDrop(ModBlocks.AFG_FEMALE_CANNABIS_PLANT, cropDrops(ModBlocks.AFG_FEMALE_CANNABIS_PLANT, ModItems.AFG_UNTRIMMED_NUG, ModItems.AFG_CANNABIS_SEEDS, afg_fem_builder));
+
+        BlockStatePropertyLootCondition.Builder hk_fem_builder = BlockStatePropertyLootCondition.builder(ModBlocks.HK_FEMALE_CANNABIS_PLANT).properties(StatePredicate.Builder.create()
+                .exactMatch(GDP_Female_Cannabis_Plant.AGE, 3));
+        addDrop(ModBlocks.HK_FEMALE_CANNABIS_PLANT, cropDrops(ModBlocks.HK_FEMALE_CANNABIS_PLANT, ModItems.HK_UNTRIMMED_NUG, ModItems.HK_CANNABIS_SEEDS, hk_fem_builder));
+
+        BlockStatePropertyLootCondition.Builder ak_fem_builder = BlockStatePropertyLootCondition.builder(ModBlocks.AK_FEMALE_CANNABIS_PLANT).properties(StatePredicate.Builder.create()
+                .exactMatch(GDP_Female_Cannabis_Plant.AGE, 3));
+        addDrop(ModBlocks.AK_FEMALE_CANNABIS_PLANT, cropDrops(ModBlocks.AK_FEMALE_CANNABIS_PLANT, ModItems.AK_UNTRIMMED_NUG, ModItems.AK_CANNABIS_SEEDS, ak_fem_builder));
+
+
         addDrop(ModBlocks.OG_MALE_CANNABIS_PLANT, drops(ModItems.OG_CANNABIS_SEEDS));
         addDrop(ModBlocks.GDP_MALE_CANNABIS_PLANT, drops(ModItems.GDP_CANNABIS_SEEDS));
         addDrop(ModBlocks.RP_MALE_CANNABIS_PLANT, drops(ModItems.RP_CANNABIS_SEEDS));
         addDrop(ModBlocks.CP_MALE_CANNABIS_PLANT, drops(ModItems.CP_CANNABIS_SEEDS));
-        addDrop(ModBlocks.CP_MALE_CANNABIS_PLANT, drops(ModItems.CP_CANNABIS_SEEDS));
+        addDrop(ModBlocks.GDK_MALE_CANNABIS_PLANT, drops(ModItems.GDK_CANNABIS_SEEDS));
+        addDrop(ModBlocks.AFG_MALE_CANNABIS_PLANT, drops(ModItems.AFG_CANNABIS_SEEDS));
+        addDrop(ModBlocks.HK_MALE_CANNABIS_PLANT, drops(ModItems.HK_CANNABIS_SEEDS));
+        addDrop(ModBlocks.AK_MALE_CANNABIS_PLANT, drops(ModItems.AK_CANNABIS_SEEDS));
     }
 }

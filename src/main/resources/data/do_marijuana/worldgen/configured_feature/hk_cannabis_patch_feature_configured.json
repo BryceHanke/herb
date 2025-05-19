@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:simple_block",
+  "config": {
+    "to_place": {
+      "type": "minecraft:weighted_state_provider",
+      "entries": [
+        {
+          "weight": 1,
+          "data": {
+            "Name": "do_marijuana:hk_male_cannabis_plant",
+            "Properties": {
+              "distance": "3",
+              "persistent": "true",
+              "age": "1"
+            }
+          }
+        }
+      ]
+    }
+  }
+}

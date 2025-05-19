@@ -1,7 +1,7 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_gdp_cured_nug": {
+    "has_rp_cured_nug": {
       "conditions": {
         "items": [
           {
@@ -22,7 +22,7 @@
   },
   "requirements": [
     [
-      "has_gdp_cured_nug",
+      "has_rp_cured_nug",
       "has_the_recipe"
     ]
   ],
