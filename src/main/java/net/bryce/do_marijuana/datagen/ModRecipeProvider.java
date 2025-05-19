@@ -32,6 +32,14 @@ public class ModRecipeProvider extends FabricRecipeProvider {
         offerReversibleCompactingRecipes(consumer, RecipeCategory.MISC, ModItems.RP_TRIMMED_NUG, RecipeCategory.MISC, ModBlocks.TRIMMED_RP_POUND);
         offerReversibleCompactingRecipes(consumer, RecipeCategory.MISC, ModItems.RP_CURED_NUG, RecipeCategory.MISC, ModBlocks.CURED_RP_POUND);
 
+        offerReversibleCompactingRecipes(consumer, RecipeCategory.MISC, ModItems.CP_UNTRIMMED_NUG, RecipeCategory.MISC, ModBlocks.UNTRIMMED_CP_POUND);
+        offerReversibleCompactingRecipes(consumer, RecipeCategory.MISC, ModItems.CP_TRIMMED_NUG, RecipeCategory.MISC, ModBlocks.TRIMMED_CP_POUND);
+        offerReversibleCompactingRecipes(consumer, RecipeCategory.MISC, ModItems.CP_CURED_NUG, RecipeCategory.MISC, ModBlocks.CURED_CP_POUND);
+
+        offerReversibleCompactingRecipes(consumer, RecipeCategory.MISC, ModItems.GDK_UNTRIMMED_NUG, RecipeCategory.MISC, ModBlocks.UNTRIMMED_GDK_POUND);
+        offerReversibleCompactingRecipes(consumer, RecipeCategory.MISC, ModItems.GDK_TRIMMED_NUG, RecipeCategory.MISC, ModBlocks.TRIMMED_GDK_POUND);
+        offerReversibleCompactingRecipes(consumer, RecipeCategory.MISC, ModItems.GDK_CURED_NUG, RecipeCategory.MISC, ModBlocks.CURED_GDK_POUND);
+
         ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.GRINDER, 1)
                 .pattern("III")
                 .pattern("   ")

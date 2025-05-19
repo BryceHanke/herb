@@ -101,6 +101,25 @@ public class ModItems {
     public static final Item MALE_CP_CANNABIS_SEEDS = registerItem("male_cp_cannabis_seeds",
             new AliasedBlockItem(ModBlocks.CP_MALE_CANNABIS_PLANT, new FabricItemSettings()));
 
+    public static final Item GDK_UNTRIMMED_NUG = registerItem("gdk_untrimmed_nug", new Item(new FabricItemSettings()));
+    public static final Item GDK_TRIMMED_NUG = registerItem("gdk_trimmed_nug", new Item(new FabricItemSettings()));
+    public static final Item GDK_CURED_NUG = registerItem("gdk_cured_nug", new Item(new FabricItemSettings()));
+    public static final Item GDK_BUD = registerItem("gdk_bud", new Item(new FabricItemSettings()));
+    public static final Item GDK_GROUND_WEED = registerItem("gdk_ground_weed", new Item(new FabricItemSettings()));
+
+    public static final Item GDK_JAR_OF_TRIMMED = registerItem("gdk_jar_of_trimmed", new Jar_Item(new FabricItemSettings().maxDamage(42000).recipeRemainder(ModItems.JAR)));
+    public static final Item GDK_JAR_OF_CURED = registerItem("gdk_jar_of_cured", new Item(new FabricItemSettings().recipeRemainder(ModItems.JAR)));
+
+    public static final Item GDK_JOINT = registerItem("gdk_joint", new Joint_Item(new FabricItemSettings().maxDamage(42)));
+    public static final Item GDK_LIT_JOINT = registerItem("gdk_lit_joint", new Lit_Joint_Item(new FabricItemSettings().maxDamage(4200)));
+    public static final Item GDK_ROACH = registerItem("gdk_roach", new Roach_Item(new FabricItemSettings().maxDamage(420)));
+
+    public static final Item GDK_CANNABIS_SEEDS = registerItem("gdk_cannabis_seeds",
+            new AliasedBlockItem(ModBlocks.CP_FEMALE_CANNABIS_PLANT, new FabricItemSettings()));
+
+    public static final Item MALE_GDK_CANNABIS_SEEDS = registerItem("male_gdk_cannabis_seeds",
+            new AliasedBlockItem(ModBlocks.GDK_MALE_CANNABIS_PLANT, new FabricItemSettings()));
+
     private static void addItemsToIngredientGroup(FabricItemGroupEntries entries){
         entries.add(JAR);
     }

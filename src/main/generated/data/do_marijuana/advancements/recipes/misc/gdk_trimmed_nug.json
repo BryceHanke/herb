@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "minecraft:gdk_trimmed_nug"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "has_trimmed_gdk_pound": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "do_marijuana:trimmed_gdk_pound"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_trimmed_gdk_pound",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "minecraft:gdk_trimmed_nug"
+    ]
+  },
+  "sends_telemetry_event": false
+}

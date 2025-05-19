@@ -27,6 +27,9 @@ public class ModItemGroups {
                         entries.add(ModItems.OG_CANNABIS_SEEDS);
                         entries.add(ModItems.OG_JAR_OF_TRIMMED);
                         entries.add(ModItems.OG_JAR_OF_CURED);
+                        entries.add(ModBlocks.UNTRIMMED_OG_POUND);
+                        entries.add(ModBlocks.TRIMMED_OG_POUND);
+                        entries.add(ModBlocks.CURED_OG_POUND);
 
                         entries.add(ModItems.GDP_UNTRIMMED_NUG);
                         entries.add(ModItems.GDP_TRIMMED_NUG);
@@ -39,6 +42,9 @@ public class ModItemGroups {
                         entries.add(ModItems.GDP_CANNABIS_SEEDS);
                         entries.add(ModItems.GDP_JAR_OF_TRIMMED);
                         entries.add(ModItems.GDP_JAR_OF_CURED);
+                        entries.add(ModBlocks.UNTRIMMED_GDP_POUND);
+                        entries.add(ModBlocks.TRIMMED_GDP_POUND);
+                        entries.add(ModBlocks.CURED_GDP_POUND);
 
                         entries.add(ModItems.RP_UNTRIMMED_NUG);
                         entries.add(ModItems.RP_TRIMMED_NUG);
@@ -51,6 +57,9 @@ public class ModItemGroups {
                         entries.add(ModItems.RP_CANNABIS_SEEDS);
                         entries.add(ModItems.RP_JAR_OF_TRIMMED);
                         entries.add(ModItems.RP_JAR_OF_CURED);
+                        entries.add(ModBlocks.UNTRIMMED_RP_POUND);
+                        entries.add(ModBlocks.TRIMMED_RP_POUND);
+                        entries.add(ModBlocks.CURED_RP_POUND);
 
                         entries.add(ModItems.CP_UNTRIMMED_NUG);
                         entries.add(ModItems.CP_TRIMMED_NUG);
@@ -63,6 +72,24 @@ public class ModItemGroups {
                         entries.add(ModItems.CP_CANNABIS_SEEDS);
                         entries.add(ModItems.CP_JAR_OF_TRIMMED);
                         entries.add(ModItems.CP_JAR_OF_CURED);
+                        entries.add(ModBlocks.UNTRIMMED_CP_POUND);
+                        entries.add(ModBlocks.TRIMMED_CP_POUND);
+                        entries.add(ModBlocks.CURED_CP_POUND);
+
+                        entries.add(ModItems.GDK_UNTRIMMED_NUG);
+                        entries.add(ModItems.GDK_TRIMMED_NUG);
+                        entries.add(ModItems.GDK_CURED_NUG);
+                        entries.add(ModItems.GDK_BUD);
+                        entries.add(ModItems.GDK_GROUND_WEED);
+                        entries.add(ModItems.GDK_JOINT);
+                        entries.add(ModItems.GDK_LIT_JOINT);
+                        entries.add(ModItems.GDK_ROACH);
+                        entries.add(ModItems.GDK_CANNABIS_SEEDS);
+                        entries.add(ModItems.GDK_JAR_OF_TRIMMED);
+                        entries.add(ModItems.GDK_JAR_OF_CURED);
+                        entries.add(ModBlocks.UNTRIMMED_GDK_POUND);
+                        entries.add(ModBlocks.TRIMMED_GDK_POUND);
+                        entries.add(ModBlocks.CURED_GDK_POUND);
 
                         entries.add(ModItems.JAR);
                         entries.add(ModItems.ASHTRAY);

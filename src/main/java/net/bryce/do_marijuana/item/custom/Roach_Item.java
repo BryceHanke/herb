@@ -62,6 +62,18 @@ public class Roach_Item extends Item {
                 if (stack.isOf(ModItems.RP_ROACH))
                 {
                     user.addStatusEffect(new StatusEffectInstance(ModEffects.drowsy, 1000, 1));
+                    user.addStatusEffect(new StatusEffectInstance(ModEffects.focused, 1000, 1));
+
+                }
+                if (stack.isOf(ModItems.CP_ROACH))
+                {
+                    user.addStatusEffect(new StatusEffectInstance(ModEffects.focused, 1000, 1));
+                }
+                if (stack.isOf(ModItems.GDK_ROACH))
+                {
+                    user.addStatusEffect(new StatusEffectInstance(ModEffects.relaxed, 1000, 1));
+                    user.addStatusEffect(new StatusEffectInstance(ModEffects.focused, 1000, 1));
+
                 }
             }
         }

@@ -37,6 +37,18 @@ public class Jar_Item extends Item {
                 player.giveItemStack(cured_jar);
                 stack.decrement(1);
             }
+            if (stack.isOf(ModItems.CP_JAR_OF_TRIMMED))
+            {
+                ItemStack cured_jar = new ItemStack(ModItems.CP_JAR_OF_CURED);
+                player.giveItemStack(cured_jar);
+                stack.decrement(1);
+            }
+            if (stack.isOf(ModItems.GDK_JAR_OF_TRIMMED))
+            {
+                ItemStack cured_jar = new ItemStack(ModItems.GDK_JAR_OF_CURED);
+                player.giveItemStack(cured_jar);
+                stack.decrement(1);
+            }
         }
         super.inventoryTick(stack, world, entity, slot, selected);
     }

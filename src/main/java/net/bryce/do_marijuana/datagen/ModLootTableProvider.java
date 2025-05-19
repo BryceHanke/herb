@@ -41,8 +41,18 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
                 .exactMatch(GDP_Female_Cannabis_Plant.AGE, 3));
         addDrop(ModBlocks.RP_FEMALE_CANNABIS_PLANT, cropDrops(ModBlocks.RP_FEMALE_CANNABIS_PLANT, ModItems.RP_UNTRIMMED_NUG, ModItems.RP_CANNABIS_SEEDS, rp_fem_builder));
 
+        BlockStatePropertyLootCondition.Builder cp_fem_builder = BlockStatePropertyLootCondition.builder(ModBlocks.CP_FEMALE_CANNABIS_PLANT).properties(StatePredicate.Builder.create()
+                .exactMatch(GDP_Female_Cannabis_Plant.AGE, 3));
+        addDrop(ModBlocks.CP_FEMALE_CANNABIS_PLANT, cropDrops(ModBlocks.CP_FEMALE_CANNABIS_PLANT, ModItems.CP_UNTRIMMED_NUG, ModItems.CP_CANNABIS_SEEDS, cp_fem_builder));
+
+        BlockStatePropertyLootCondition.Builder gdk_fem_builder = BlockStatePropertyLootCondition.builder(ModBlocks.GDK_FEMALE_CANNABIS_PLANT).properties(StatePredicate.Builder.create()
+                .exactMatch(GDP_Female_Cannabis_Plant.AGE, 3));
+        addDrop(ModBlocks.GDK_FEMALE_CANNABIS_PLANT, cropDrops(ModBlocks.GDK_FEMALE_CANNABIS_PLANT, ModItems.GDK_UNTRIMMED_NUG, ModItems.GDK_CANNABIS_SEEDS, gdk_fem_builder));
+
         addDrop(ModBlocks.OG_MALE_CANNABIS_PLANT, drops(ModItems.OG_CANNABIS_SEEDS));
         addDrop(ModBlocks.GDP_MALE_CANNABIS_PLANT, drops(ModItems.GDP_CANNABIS_SEEDS));
         addDrop(ModBlocks.RP_MALE_CANNABIS_PLANT, drops(ModItems.RP_CANNABIS_SEEDS));
+        addDrop(ModBlocks.CP_MALE_CANNABIS_PLANT, drops(ModItems.CP_CANNABIS_SEEDS));
+        addDrop(ModBlocks.CP_MALE_CANNABIS_PLANT, drops(ModItems.CP_CANNABIS_SEEDS));
     }
 }

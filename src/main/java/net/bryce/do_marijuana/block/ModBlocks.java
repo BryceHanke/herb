@@ -26,6 +26,15 @@ public class ModBlocks {
     public static final Block TRIMMED_RP_POUND = registerBlock("trimmed_rp_pound", new Block(FabricBlockSettings.copyOf(Blocks.HAY_BLOCK)));
     public static final Block CURED_RP_POUND = registerBlock("cured_rp_pound", new Block(FabricBlockSettings.copyOf(Blocks.HAY_BLOCK)));
 
+    public static final Block UNTRIMMED_CP_POUND = registerBlock("untrimmed_cp_pound", new Block(FabricBlockSettings.copyOf(Blocks.HAY_BLOCK)));
+    public static final Block TRIMMED_CP_POUND = registerBlock("trimmed_cp_pound", new Block(FabricBlockSettings.copyOf(Blocks.HAY_BLOCK)));
+    public static final Block CURED_CP_POUND = registerBlock("cured_cp_pound", new Block(FabricBlockSettings.copyOf(Blocks.HAY_BLOCK)));
+
+    public static final Block UNTRIMMED_GDK_POUND = registerBlock("untrimmed_gdk_pound", new Block(FabricBlockSettings.copyOf(Blocks.HAY_BLOCK)));
+    public static final Block TRIMMED_GDK_POUND = registerBlock("trimmed_gdk_pound", new Block(FabricBlockSettings.copyOf(Blocks.HAY_BLOCK)));
+    public static final Block CURED_GDK_POUND = registerBlock("cured_gdk_pound", new Block(FabricBlockSettings.copyOf(Blocks.HAY_BLOCK)));
+
+
     public static final Block OG_FEMALE_CANNABIS_PLANT = Registry.register(Registries.BLOCK, new Identifier(Lets_do_marijuana.MOD_ID, "og_female_cannabis_plant")
             , new OG_Female_Cannabis_Plant(FabricBlockSettings.copyOf(Blocks.WHEAT)));
     public static final Block OG_MALE_CANNABIS_PLANT = Registry.register(Registries.BLOCK, new Identifier(Lets_do_marijuana.MOD_ID, "og_male_cannabis_plant")

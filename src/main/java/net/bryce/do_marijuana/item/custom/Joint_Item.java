@@ -39,6 +39,18 @@ public class Joint_Item extends Item {
             player.giveItemStack(lit_joint);
             stack.decrement(1);
         }
+        if (stack.isOf(ModItems.CP_JOINT))
+        {
+            ItemStack lit_joint = new ItemStack(ModItems.CP_LIT_JOINT);
+            player.giveItemStack(lit_joint);
+            stack.decrement(1);
+        }
+        if (stack.isOf(ModItems.GDK_JOINT))
+        {
+            ItemStack lit_joint = new ItemStack(ModItems.GDK_LIT_JOINT);
+            player.giveItemStack(lit_joint);
+            stack.decrement(1);
+        }
 
         super.usageTick(world, user, stack, remainingUseTicks);
     }

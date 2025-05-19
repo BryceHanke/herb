@@ -82,6 +82,18 @@ public class Lit_Joint_Item extends Item{
                 ItemStack roach = new ItemStack(ModItems.RP_ROACH);
                 player.giveItemStack(roach);
             }
+            if (stack.isOf(ModItems.CP_LIT_JOINT))
+            {
+                stack.decrement(1);
+                ItemStack roach = new ItemStack(ModItems.CP_ROACH);
+                player.giveItemStack(roach);
+            }
+            if (stack.isOf(ModItems.GDK_LIT_JOINT))
+            {
+                stack.decrement(1);
+                ItemStack roach = new ItemStack(ModItems.GDK_ROACH);
+                player.giveItemStack(roach);
+            }
         }
 
         super.inventoryTick(stack, world, entity, slot, selected);
@@ -113,7 +125,18 @@ public class Lit_Joint_Item extends Item{
                 }
                 if (stack.isOf(ModItems.RP_LIT_JOINT))
                 {
+                    user.addStatusEffect(new StatusEffectInstance(ModEffects.focused, 500, 0));
                     user.addStatusEffect(new StatusEffectInstance(ModEffects.drowsy, 500, 0));
+                }
+                if (stack.isOf(ModItems.CP_LIT_JOINT))
+                {
+                    user.addStatusEffect(new StatusEffectInstance(ModEffects.focused, 500, 0));
+                }
+                if (stack.isOf(ModItems.GDK_LIT_JOINT))
+                {
+                    user.addStatusEffect(new StatusEffectInstance(ModEffects.relaxed, 500, 0));
+                    user.addStatusEffect(new StatusEffectInstance(ModEffects.focused, 500, 0));
+
                 }
             }
         }
