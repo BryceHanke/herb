@@ -1,6 +1,5 @@
 package net.bryce.do_marijuana.item.custom;
 
-import net.bryce.do_marijuana.Lets_do_marijuana;
 import net.bryce.do_marijuana.effect.ModEffects;
 import net.bryce.do_marijuana.item.ModItems;
 import net.minecraft.entity.Entity;
@@ -10,7 +9,6 @@ import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.ItemUsage;
-import net.minecraft.item.Items;
 import net.minecraft.particle.ParticleTypes;
 import net.minecraft.server.world.ServerWorld;
 import net.minecraft.util.Hand;
@@ -27,7 +25,7 @@ public class Lit_Joint_Item extends Item{
 
     public UseAction getUseAction(ItemStack stack)
     {
-        return UseAction.BOW;
+        return UseAction.TOOT_HORN;
     }
 
     public TypedActionResult<ItemStack> use(World world, PlayerEntity user, Hand hand)
@@ -36,54 +34,53 @@ public class Lit_Joint_Item extends Item{
         {
             if (user.getStackInHand(hand).isOf(ModItems.GDP_LIT_JOINT))
             {
-                user.getStackInHand(hand).decrement(1);
                 ItemStack roach = new ItemStack(ModItems.GDP_ROACH);
                 user.giveItemStack(roach);
+                user.getStackInHand(hand).decrement(1);
             }
             if (user.getStackInHand(hand).isOf(ModItems.OG_LIT_JOINT))
             {
-                user.getStackInHand(hand).decrement(1);
                 ItemStack roach = new ItemStack(ModItems.OG_ROACH);
                 user.giveItemStack(roach);
+                user.getStackInHand(hand).decrement(1);
             }
             if (user.getStackInHand(hand).isOf(ModItems.RP_LIT_JOINT))
             {
-                user.getStackInHand(hand).decrement(1);
                 ItemStack roach = new ItemStack(ModItems.RP_ROACH);
                 user.giveItemStack(roach);
+                user.getStackInHand(hand).decrement(1);
             }
             if (user.getStackInHand(hand).isOf(ModItems.CP_LIT_JOINT))
             {
-                user.getStackInHand(hand).decrement(1);
                 ItemStack roach = new ItemStack(ModItems.CP_ROACH);
                 user.giveItemStack(roach);
+                user.getStackInHand(hand).decrement(1);
             }
             if (user.getStackInHand(hand).isOf(ModItems.GDK_LIT_JOINT))
             {
-                user.getStackInHand(hand).decrement(1);
                 ItemStack roach = new ItemStack(ModItems.GDK_ROACH);
                 user.giveItemStack(roach);
+                user.getStackInHand(hand).decrement(1);
             }
             if (user.getStackInHand(hand).isOf(ModItems.AFG_LIT_JOINT))
             {
-                user.getStackInHand(hand).decrement(1);
                 ItemStack roach = new ItemStack(ModItems.AFG_ROACH);
                 user.giveItemStack(roach);
+                user.getStackInHand(hand).decrement(1);
             }
             if (user.getStackInHand(hand).isOf(ModItems.HK_LIT_JOINT))
             {
-                user.getStackInHand(hand).decrement(1);
                 ItemStack roach = new ItemStack(ModItems.HK_ROACH);
                 user.giveItemStack(roach);
+                user.getStackInHand(hand).decrement(1);
             }
             if (user.getStackInHand(hand).isOf(ModItems.AK_LIT_JOINT))
             {
-                user.getStackInHand(hand).decrement(1);
                 ItemStack roach = new ItemStack(ModItems.AK_ROACH);
                 user.giveItemStack(roach);
+                user.getStackInHand(hand).decrement(1);
             }
         }
-
         return ItemUsage.consumeHeldItem(world, user, hand);
 
     }
@@ -113,54 +110,59 @@ public class Lit_Joint_Item extends Item{
         {
             if (stack.isOf(ModItems.GDP_LIT_JOINT))
             {
-                stack.decrement(1);
                 ItemStack roach = new ItemStack(ModItems.GDP_ROACH);
                 player.giveItemStack(roach);
+                stack.decrement(1);
             }
             if (stack.isOf(ModItems.OG_LIT_JOINT))
             {
-                stack.decrement(1);
                 ItemStack roach = new ItemStack(ModItems.OG_ROACH);
                 player.giveItemStack(roach);
+                stack.decrement(1);
             }
             if (stack.isOf(ModItems.RP_LIT_JOINT))
             {
-                stack.decrement(1);
                 ItemStack roach = new ItemStack(ModItems.RP_ROACH);
                 player.giveItemStack(roach);
+                stack.decrement(1);
             }
             if (stack.isOf(ModItems.CP_LIT_JOINT))
             {
-                stack.decrement(1);
                 ItemStack roach = new ItemStack(ModItems.CP_ROACH);
                 player.giveItemStack(roach);
+                stack.decrement(1);
             }
             if (stack.isOf(ModItems.GDK_LIT_JOINT))
             {
-                stack.decrement(1);
                 ItemStack roach = new ItemStack(ModItems.GDK_ROACH);
                 player.giveItemStack(roach);
+                stack.decrement(1);
             }
             if (stack.isOf(ModItems.AFG_LIT_JOINT))
             {
-                stack.decrement(1);
                 ItemStack roach = new ItemStack(ModItems.AFG_ROACH);
                 player.giveItemStack(roach);
+                stack.decrement(1);
             }
             if (stack.isOf(ModItems.HK_LIT_JOINT))
             {
-                stack.decrement(1);
                 ItemStack roach = new ItemStack(ModItems.HK_ROACH);
                 player.giveItemStack(roach);
+                stack.decrement(1);
             }
             if (stack.isOf(ModItems.AK_LIT_JOINT))
             {
-                stack.decrement(1);
                 ItemStack roach = new ItemStack(ModItems.AK_ROACH);
                 player.giveItemStack(roach);
+                stack.decrement(1);
+            }
+            if (stack.isOf(ModItems.CD_LIT_JOINT))
+            {
+                ItemStack roach = new ItemStack(ModItems.CD_ROACH);
+                player.giveItemStack(roach);
+                stack.decrement(1);
             }
         }
-
         super.inventoryTick(stack, world, entity, slot, selected);
     }
 
@@ -201,7 +203,31 @@ public class Lit_Joint_Item extends Item{
                 {
                     user.addStatusEffect(new StatusEffectInstance(ModEffects.relaxed, 500, 0));
                     user.addStatusEffect(new StatusEffectInstance(ModEffects.focused, 500, 0));
+                }
+                if (stack.isOf(ModItems.AFG_LIT_JOINT))
+                {
+                    user.addStatusEffect(new StatusEffectInstance(ModEffects.relaxed, 500, 0));
+                    user.addStatusEffect(new StatusEffectInstance(ModEffects.hungry, 500, 0));
 
+                }
+                if (stack.isOf(ModItems.HK_LIT_JOINT))
+                {
+                    user.addStatusEffect(new StatusEffectInstance(ModEffects.hungry, 500, 0));
+                    user.addStatusEffect(new StatusEffectInstance(ModEffects.focused, 500, 0));
+
+                }
+                if (stack.isOf(ModItems.AK_LIT_JOINT))
+                {
+                    user.addStatusEffect(new StatusEffectInstance(ModEffects.relaxed, 500, 0));
+                    user.addStatusEffect(new StatusEffectInstance(ModEffects.hungry, 500, 0));
+                    user.addStatusEffect(new StatusEffectInstance(ModEffects.focused, 500, 0));
+                }
+                if (stack.isOf(ModItems.CD_LIT_JOINT))
+                {
+                    user.addStatusEffect(new StatusEffectInstance(ModEffects.relaxed, 500, 0));
+                    user.addStatusEffect(new StatusEffectInstance(ModEffects.hungry, 500, 0));
+                    user.addStatusEffect(new StatusEffectInstance(ModEffects.focused, 500, 0));
+                    user.addStatusEffect(new StatusEffectInstance(ModEffects.drowsy, 500, 0));
                 }
             }
         }

@@ -27,7 +27,7 @@ public class Roach_Item extends Item {
 
     public UseAction getUseAction(ItemStack stack)
     {
-        return UseAction.BOW;
+        return UseAction.TOOT_HORN;
     }
 
     public TypedActionResult<ItemStack> use(World world, PlayerEntity user, Hand hand)
@@ -73,7 +73,29 @@ public class Roach_Item extends Item {
                 {
                     user.addStatusEffect(new StatusEffectInstance(ModEffects.relaxed, 1000, 1));
                     user.addStatusEffect(new StatusEffectInstance(ModEffects.focused, 1000, 1));
-
+                }
+                if (stack.isOf(ModItems.AFG_ROACH))
+                {
+                    user.addStatusEffect(new StatusEffectInstance(ModEffects.relaxed, 1000, 1));
+                    user.addStatusEffect(new StatusEffectInstance(ModEffects.hungry, 1000, 1));
+                }
+                if (stack.isOf(ModItems.HK_ROACH))
+                {
+                    user.addStatusEffect(new StatusEffectInstance(ModEffects.hungry, 1000, 1));
+                    user.addStatusEffect(new StatusEffectInstance(ModEffects.focused, 1000, 1));
+                }
+                if (stack.isOf(ModItems.AK_ROACH))
+                {
+                    user.addStatusEffect(new StatusEffectInstance(ModEffects.relaxed, 1000, 1));
+                    user.addStatusEffect(new StatusEffectInstance(ModEffects.hungry, 1000, 1));
+                    user.addStatusEffect(new StatusEffectInstance(ModEffects.focused, 1000, 1));
+                }
+                if (stack.isOf(ModItems.CD_ROACH))
+                {
+                    user.addStatusEffect(new StatusEffectInstance(ModEffects.relaxed, 1000, 1));
+                    user.addStatusEffect(new StatusEffectInstance(ModEffects.hungry, 1000, 1));
+                    user.addStatusEffect(new StatusEffectInstance(ModEffects.focused, 1000, 1));
+                    user.addStatusEffect(new StatusEffectInstance(ModEffects.drowsy, 1000, 1));
                 }
             }
         }

@@ -47,9 +47,39 @@ public class _Female_Cannabis_Plant extends CropBlock {
             return ModItems.GDP_CANNABIS_SEEDS;
         }
 
+        if (this == ModBlocks.CP_FEMALE_CANNABIS_PLANT)
+        {
+            return ModItems.RP_CANNABIS_SEEDS;
+        }
+
         if (this == ModBlocks.RP_FEMALE_CANNABIS_PLANT)
         {
             return ModItems.RP_CANNABIS_SEEDS;
+        }
+
+        if (this == ModBlocks.GDK_FEMALE_CANNABIS_PLANT)
+        {
+            return ModItems.GDK_CANNABIS_SEEDS;
+        }
+
+        if (this == ModBlocks.AFG_FEMALE_CANNABIS_PLANT)
+        {
+            return ModItems.AFG_CANNABIS_SEEDS;
+        }
+
+        if (this == ModBlocks.HK_FEMALE_CANNABIS_PLANT)
+        {
+            return ModItems.HK_CANNABIS_SEEDS;
+        }
+
+        if (this == ModBlocks.AK_FEMALE_CANNABIS_PLANT)
+        {
+            return ModItems.AK_CANNABIS_SEEDS;
+        }
+
+        if (this == ModBlocks.CD_FEMALE_CANNABIS_PLANT)
+        {
+            return ModItems.CD_CANNABIS_SEEDS;
         }
 
         return ModItems.OG_CANNABIS_SEEDS;
@@ -63,7 +93,7 @@ public class _Female_Cannabis_Plant extends CropBlock {
     @Override
     public int getMaxAge()
     {
-        return FIRST_MAX_AGE + SECOND_MAX_AGE;
+        return FIRST_MAX_AGE + SECOND_MAX_AGE-1;
     }
 
     @Override
@@ -168,7 +198,11 @@ public class _Female_Cannabis_Plant extends CropBlock {
                         }
                         if (this.getDefaultState().isOf(ModBlocks.AK_FEMALE_CANNABIS_PLANT))
                         {
-                            world.setBlockState(pos, ModBlocks.CP_MALE_CANNABIS_PLANT.getDefaultState(), 2);
+                            world.setBlockState(pos, ModBlocks.AK_MALE_CANNABIS_PLANT.getDefaultState(), 2);
+                        }
+                        if (this.getDefaultState().isOf(ModBlocks.CD_FEMALE_CANNABIS_PLANT))
+                        {
+                            world.setBlockState(pos, ModBlocks.CD_MALE_CANNABIS_PLANT.getDefaultState(), 2);
                         }
                     }
                 }

@@ -16,6 +16,7 @@ public class Lets_do_marijuanaClient implements ClientModInitializer {
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.AFG_FEMALE_CANNABIS_PLANT, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.HK_FEMALE_CANNABIS_PLANT, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.AK_FEMALE_CANNABIS_PLANT, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.CD_FEMALE_CANNABIS_PLANT, RenderLayer.getCutout());
 
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.OG_MALE_CANNABIS_PLANT, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.GDP_MALE_CANNABIS_PLANT, RenderLayer.getCutout());
@@ -25,6 +26,7 @@ public class Lets_do_marijuanaClient implements ClientModInitializer {
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.AFG_MALE_CANNABIS_PLANT, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.HK_MALE_CANNABIS_PLANT, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.AK_MALE_CANNABIS_PLANT, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.CD_MALE_CANNABIS_PLANT, RenderLayer.getCutout());
 
 
         Lets_do_marijuana.LOGGER.info("Done initializing client!");

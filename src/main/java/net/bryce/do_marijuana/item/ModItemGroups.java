@@ -136,6 +136,21 @@ public class ModItemGroups {
                         entries.add(ModBlocks.TRIMMED_AK_POUND);
                         entries.add(ModBlocks.CURED_AK_POUND);
 
+                        entries.add(ModItems.CD_UNTRIMMED_NUG);
+                        entries.add(ModItems.CD_TRIMMED_NUG);
+                        entries.add(ModItems.CD_CURED_NUG);
+                        entries.add(ModItems.CD_BUD);
+                        entries.add(ModItems.CD_GROUND_WEED);
+                        entries.add(ModItems.CD_JOINT);
+                        entries.add(ModItems.CD_LIT_JOINT);
+                        entries.add(ModItems.CD_ROACH);
+                        entries.add(ModItems.CD_CANNABIS_SEEDS);
+                        entries.add(ModItems.CD_JAR_OF_TRIMMED);
+                        entries.add(ModItems.CD_JAR_OF_CURED);
+                        entries.add(ModBlocks.UNTRIMMED_CD_POUND);
+                        entries.add(ModBlocks.TRIMMED_CD_POUND);
+                        entries.add(ModBlocks.CURED_CD_POUND);
+
                         entries.add(ModItems.JAR);
                         entries.add(ModItems.ASHTRAY);
                         entries.add(ModItems.GRINDER);

@@ -46,6 +46,10 @@ public class ModBlocks {
     public static final Block TRIMMED_AK_POUND = registerBlock("trimmed_ak_pound", new Block(FabricBlockSettings.copyOf(Blocks.HAY_BLOCK)));
     public static final Block CURED_AK_POUND = registerBlock("cured_ak_pound", new Block(FabricBlockSettings.copyOf(Blocks.HAY_BLOCK)));
 
+    public static final Block UNTRIMMED_CD_POUND = registerBlock("untrimmed_cd_pound", new Block(FabricBlockSettings.copyOf(Blocks.HAY_BLOCK)));
+    public static final Block TRIMMED_CD_POUND = registerBlock("trimmed_cd_pound", new Block(FabricBlockSettings.copyOf(Blocks.HAY_BLOCK)));
+    public static final Block CURED_CD_POUND = registerBlock("cured_cd_pound", new Block(FabricBlockSettings.copyOf(Blocks.HAY_BLOCK)));
+
 
     public static final Block OG_FEMALE_CANNABIS_PLANT = Registry.register(Registries.BLOCK, new Identifier(Lets_do_marijuana.MOD_ID, "og_female_cannabis_plant")
             , new OG_Female_Cannabis_Plant(FabricBlockSettings.copyOf(Blocks.WHEAT)));
@@ -85,6 +89,11 @@ public class ModBlocks {
     public static final Block GDK_FEMALE_CANNABIS_PLANT = Registry.register(Registries.BLOCK, new Identifier(Lets_do_marijuana.MOD_ID, "gdk_female_cannabis_plant")
             , new GDK_Female_Cannabis_Plant(FabricBlockSettings.copyOf(Blocks.WHEAT)));
     public static final Block GDK_MALE_CANNABIS_PLANT = Registry.register(Registries.BLOCK, new Identifier(Lets_do_marijuana.MOD_ID, "gdk_male_cannabis_plant")
+            , new GDK_Male_Cannabis_Plant(FabricBlockSettings.copyOf(Blocks.WHEAT)));
+
+    public static final Block CD_FEMALE_CANNABIS_PLANT = Registry.register(Registries.BLOCK, new Identifier(Lets_do_marijuana.MOD_ID, "cd_female_cannabis_plant")
+            , new GDK_Female_Cannabis_Plant(FabricBlockSettings.copyOf(Blocks.WHEAT)));
+    public static final Block CD_MALE_CANNABIS_PLANT = Registry.register(Registries.BLOCK, new Identifier(Lets_do_marijuana.MOD_ID, "cd_male_cannabis_plant")
             , new GDK_Male_Cannabis_Plant(FabricBlockSettings.copyOf(Blocks.WHEAT)));
 
 

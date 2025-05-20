@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients":
+  [
+    {
+      "item": "do_marijuana:ak_bud"
+    },
+    {
+      "item": "do_marijuana:grinder"
+    }
+  ],
+  "result":
+  {
+    "count": 3,
+    "item": "do_marijuana:ak_ground_weed"
+  }
+}
+

@@ -2,6 +2,7 @@ package net.bryce.do_marijuana.datagen;
 
 import net.bryce.do_marijuana.block.ModBlocks;
 import net.bryce.do_marijuana.block.custom.GDP_Female_Cannabis_Plant;
+import net.bryce.do_marijuana.block.custom._Female_Cannabis_Plant;
 import net.bryce.do_marijuana.item.ModItems;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricBlockLootTableProvider;
@@ -47,6 +48,10 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
         addDrop(ModBlocks.TRIMMED_AK_POUND);
         addDrop(ModBlocks.CURED_AK_POUND);
 
+        addDrop(ModBlocks.UNTRIMMED_CD_POUND);
+        addDrop(ModBlocks.TRIMMED_CD_POUND);
+        addDrop(ModBlocks.CURED_CD_POUND);
+
         BlockStatePropertyLootCondition.Builder og_fem_builder = BlockStatePropertyLootCondition.builder(ModBlocks.OG_FEMALE_CANNABIS_PLANT).properties(StatePredicate.Builder.create()
                 .exactMatch(GDP_Female_Cannabis_Plant.AGE, 3));
         addDrop(ModBlocks.OG_FEMALE_CANNABIS_PLANT, cropDrops(ModBlocks.OG_FEMALE_CANNABIS_PLANT, ModItems.OG_UNTRIMMED_NUG, ModItems.OG_CANNABIS_SEEDS, og_fem_builder));
@@ -79,6 +84,10 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
                 .exactMatch(GDP_Female_Cannabis_Plant.AGE, 3));
         addDrop(ModBlocks.AK_FEMALE_CANNABIS_PLANT, cropDrops(ModBlocks.AK_FEMALE_CANNABIS_PLANT, ModItems.AK_UNTRIMMED_NUG, ModItems.AK_CANNABIS_SEEDS, ak_fem_builder));
 
+        BlockStatePropertyLootCondition.Builder cd_fem_builder = BlockStatePropertyLootCondition.builder(ModBlocks.CD_FEMALE_CANNABIS_PLANT).properties(StatePredicate.Builder.create()
+                .exactMatch(GDP_Female_Cannabis_Plant.AGE, 3));
+        addDrop(ModBlocks.CD_FEMALE_CANNABIS_PLANT, cropDrops(ModBlocks.CD_FEMALE_CANNABIS_PLANT, ModItems.CD_UNTRIMMED_NUG, ModItems.CD_CANNABIS_SEEDS, cd_fem_builder));
+
 
         addDrop(ModBlocks.OG_MALE_CANNABIS_PLANT, drops(ModItems.OG_CANNABIS_SEEDS));
         addDrop(ModBlocks.GDP_MALE_CANNABIS_PLANT, drops(ModItems.GDP_CANNABIS_SEEDS));
@@ -88,5 +97,6 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
         addDrop(ModBlocks.AFG_MALE_CANNABIS_PLANT, drops(ModItems.AFG_CANNABIS_SEEDS));
         addDrop(ModBlocks.HK_MALE_CANNABIS_PLANT, drops(ModItems.HK_CANNABIS_SEEDS));
         addDrop(ModBlocks.AK_MALE_CANNABIS_PLANT, drops(ModItems.AK_CANNABIS_SEEDS));
+        addDrop(ModBlocks.CD_MALE_CANNABIS_PLANT, drops(ModItems.CD_CANNABIS_SEEDS));
     }
 }

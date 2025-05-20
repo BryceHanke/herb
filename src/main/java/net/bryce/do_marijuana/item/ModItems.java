@@ -177,6 +177,25 @@ public class ModItems {
     public static final Item MALE_AK_CANNABIS_SEEDS = registerItem("male_ak_cannabis_seeds",
             new AliasedBlockItem(ModBlocks.AK_MALE_CANNABIS_PLANT, new FabricItemSettings()));
 
+    public static final Item CD_UNTRIMMED_NUG = registerItem("cd_untrimmed_nug", new Item(new FabricItemSettings()));
+    public static final Item CD_TRIMMED_NUG = registerItem("cd_trimmed_nug", new Item(new FabricItemSettings()));
+    public static final Item CD_CURED_NUG = registerItem("cd_cured_nug", new Item(new FabricItemSettings()));
+    public static final Item CD_BUD = registerItem("cd_bud", new Item(new FabricItemSettings()));
+    public static final Item CD_GROUND_WEED = registerItem("cd_ground_weed", new Item(new FabricItemSettings()));
+
+    public static final Item CD_JAR_OF_TRIMMED = registerItem("cd_jar_of_trimmed", new Jar_Item(new FabricItemSettings().maxDamage(42000).recipeRemainder(ModItems.JAR)));
+    public static final Item CD_JAR_OF_CURED = registerItem("cd_jar_of_cured", new Item(new FabricItemSettings().recipeRemainder(ModItems.JAR)));
+
+    public static final Item CD_JOINT = registerItem("cd_joint", new Joint_Item(new FabricItemSettings().maxDamage(42)));
+    public static final Item CD_LIT_JOINT = registerItem("cd_lit_joint", new Lit_Joint_Item(new FabricItemSettings().maxDamage(4200)));
+    public static final Item CD_ROACH = registerItem("cd_roach", new Roach_Item(new FabricItemSettings().maxDamage(420)));
+
+    public static final Item CD_CANNABIS_SEEDS = registerItem("cd_cannabis_seeds",
+            new AliasedBlockItem(ModBlocks.CD_FEMALE_CANNABIS_PLANT, new FabricItemSettings()));
+
+    public static final Item MALE_CD_CANNABIS_SEEDS = registerItem("male_cd_cannabis_seeds",
+            new AliasedBlockItem(ModBlocks.CD_MALE_CANNABIS_PLANT, new FabricItemSettings()));
+
 
     private static void addItemsToIngredientGroup(FabricItemGroupEntries entries){
         entries.add(JAR);

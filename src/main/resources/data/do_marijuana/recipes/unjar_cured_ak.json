@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "do_marijuana:ak_jar_of_cured"
+    }
+  ],
+  "result": {
+    "count": 5,
+    "item": "do_marijuana:ak_cured_nug"
+  }
+}

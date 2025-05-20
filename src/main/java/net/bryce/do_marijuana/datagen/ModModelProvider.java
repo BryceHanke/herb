@@ -50,6 +50,10 @@ public class ModModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.TRIMMED_AK_POUND);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.CURED_AK_POUND);
 
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.UNTRIMMED_CD_POUND);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.TRIMMED_CD_POUND);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.CURED_CD_POUND);
+
         blockStateModelGenerator.registerCrop(ModBlocks.OG_FEMALE_CANNABIS_PLANT, _Female_Cannabis_Plant.AGE, 0, 1, 2, 3, 4, 5, 6);
         blockStateModelGenerator.registerCrop(ModBlocks.GDP_FEMALE_CANNABIS_PLANT, _Female_Cannabis_Plant.AGE, 0, 1, 2, 3, 4, 5, 6);
         blockStateModelGenerator.registerCrop(ModBlocks.RP_FEMALE_CANNABIS_PLANT, _Female_Cannabis_Plant.AGE, 0, 1, 2, 3, 4, 5, 6);
@@ -58,6 +62,7 @@ public class ModModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerCrop(ModBlocks.AFG_FEMALE_CANNABIS_PLANT, _Female_Cannabis_Plant.AGE, 0, 1, 2, 3, 4, 5, 6);
         blockStateModelGenerator.registerCrop(ModBlocks.HK_FEMALE_CANNABIS_PLANT, _Female_Cannabis_Plant.AGE, 0, 1, 2, 3, 4, 5, 6);
         blockStateModelGenerator.registerCrop(ModBlocks.AK_FEMALE_CANNABIS_PLANT, _Female_Cannabis_Plant.AGE, 0, 1, 2, 3, 4, 5, 6);
+        blockStateModelGenerator.registerCrop(ModBlocks.CD_FEMALE_CANNABIS_PLANT, _Female_Cannabis_Plant.AGE, 0, 1, 2, 3, 4, 5, 6);
 
         blockStateModelGenerator.registerCrop(ModBlocks.OG_MALE_CANNABIS_PLANT, _Male_Cannabis_Plant.AGE, 0, 1, 2, 3);
         blockStateModelGenerator.registerCrop(ModBlocks.GDP_MALE_CANNABIS_PLANT, _Male_Cannabis_Plant.AGE, 0, 1, 2, 3);
@@ -67,6 +72,7 @@ public class ModModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerCrop(ModBlocks.AFG_MALE_CANNABIS_PLANT, _Male_Cannabis_Plant.AGE, 0, 1, 2, 3);
         blockStateModelGenerator.registerCrop(ModBlocks.HK_MALE_CANNABIS_PLANT, _Male_Cannabis_Plant.AGE, 0, 1, 2, 3);
         blockStateModelGenerator.registerCrop(ModBlocks.AK_MALE_CANNABIS_PLANT, _Male_Cannabis_Plant.AGE, 0, 1, 2, 3);
+        blockStateModelGenerator.registerCrop(ModBlocks.CD_MALE_CANNABIS_PLANT, _Male_Cannabis_Plant.AGE, 0, 1, 2, 3);
 
     }
 
@@ -176,6 +182,19 @@ public class ModModelProvider extends FabricModelProvider {
 
         itemModelGenerator.register(ModItems.AK_JAR_OF_TRIMMED, Models.GENERATED);
         itemModelGenerator.register(ModItems.AK_JAR_OF_CURED, Models.GENERATED);
+
+        itemModelGenerator.register(ModItems.CD_UNTRIMMED_NUG, Models.GENERATED);
+        itemModelGenerator.register(ModItems.CD_TRIMMED_NUG, Models.GENERATED);
+        itemModelGenerator.register(ModItems.CD_CURED_NUG, Models.GENERATED);
+        itemModelGenerator.register(ModItems.CD_BUD, Models.GENERATED);
+        itemModelGenerator.register(ModItems.CD_GROUND_WEED, Models.GENERATED);
+
+        itemModelGenerator.register(ModItems.CD_JOINT, Models.GENERATED);
+        itemModelGenerator.register(ModItems.CD_LIT_JOINT, Models.GENERATED);
+        itemModelGenerator.register(ModItems.CD_ROACH, Models.GENERATED);
+
+        itemModelGenerator.register(ModItems.CD_JAR_OF_TRIMMED, Models.GENERATED);
+        itemModelGenerator.register(ModItems.CD_JAR_OF_CURED, Models.GENERATED);
 
         itemModelGenerator.register(ModItems.JAR, Models.GENERATED);
         itemModelGenerator.register(ModItems.ASHTRAY, Models.GENERATED);

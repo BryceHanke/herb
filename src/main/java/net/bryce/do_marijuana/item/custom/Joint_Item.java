@@ -69,6 +69,12 @@ public class Joint_Item extends Item {
             player.giveItemStack(lit_joint);
             stack.decrement(1);
         }
+        if (stack.isOf(ModItems.CD_JOINT))
+        {
+            ItemStack lit_joint = new ItemStack(ModItems.CD_LIT_JOINT);
+            player.giveItemStack(lit_joint);
+            stack.decrement(1);
+        }
         super.usageTick(world, user, stack, remainingUseTicks);
     }
 
@@ -79,7 +85,7 @@ public class Joint_Item extends Item {
     public UseAction getUseAction(ItemStack stack)
     {
         stack.setDamage(stack.getDamage() + 1);
-        return UseAction.BOW;
+        return UseAction.TOOT_HORN;
     }
 
     public TypedActionResult<ItemStack> use(World world, PlayerEntity user, Hand hand)

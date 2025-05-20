@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "do_marijuana:untrimmed_afg_pound"
+    }
+  ],
+  "result": {
+    "count": 9,
+    "item": "do_marijuana:afg_untrimmed_nug"
+  }
+}

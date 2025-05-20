@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "do_marijuana:hk_jar_of_trimmed"
+    }
+  ],
+  "result": {
+    "count": 5,
+    "item": "do_marijuana:hk_trimmed_nug"
+  }
+}
