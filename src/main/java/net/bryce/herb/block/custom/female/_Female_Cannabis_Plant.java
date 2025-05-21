@@ -31,9 +31,10 @@ public class _Female_Cannabis_Plant extends CropBlock {
     {
         for (Identifier id : Strains.strains)
         {
-            if (String.valueOf(this).startsWith(String.valueOf(id)))
+            if (String.valueOf(this).contains(String.valueOf(id.getPath())))
             {
-                strain = new Identifier("herb",String.valueOf(id));
+                strain = new Identifier("herb",String.valueOf(id.getPath()));
+                Herb.LOGGER.info(this.toString());
             }
         }
     }
@@ -135,13 +136,15 @@ public class _Female_Cannabis_Plant extends CropBlock {
                 }
                 else
                 {
-                    world.setBlockState(pos, this.withAge(currentAge+1), 2);
-
-                    if (random.nextInt((int)(250.0F / f)+1) == 0)
+                    if (currentAge == 0)
                     {
-                        setStrain();
-                        world.setBlockState(pos, Registries.BLOCK.get(new Identifier(Herb.MOD_ID,String.valueOf(strain.getPath()) + "_male_cannabis_plant")).getDefaultState(), 2);
+                        if (random.nextInt((int) (250.0F / f) + 1) == 0) {
+                            setStrain();
+                            world.setBlockState(pos, Registries.BLOCK.get(new Identifier(Herb.MOD_ID, String.valueOf(strain.getPath()) + "_male_cannabis_plant")).getDefaultState(), 2);
+                        }
                     }
+
+                    world.setBlockState(pos, this.withAge(currentAge+1), 2);
                 }
 
             }

@@ -17,6 +17,8 @@ import net.minecraft.world.BlockView;
 import net.minecraft.world.World;
 import net.minecraft.world.WorldView;
 
+import java.util.Objects;
+
 public class _Male_Cannabis_Plant extends CropBlock {
     public _Male_Cannabis_Plant(Settings settings) {
         super(settings);
@@ -31,9 +33,9 @@ public class _Male_Cannabis_Plant extends CropBlock {
     {
         for (Identifier id : Strains.strains)
         {
-            if (String.valueOf(this).contains(String.valueOf(id)))
+            if (String.valueOf(this).contains(String.valueOf(id.getPath())))
             {
-                strain = new Identifier("herb",String.valueOf(id));
+                strain = new Identifier("herb",String.valueOf(id.getPath()));
             }
         }
     }
@@ -116,17 +118,33 @@ public class _Male_Cannabis_Plant extends CropBlock {
                             pos.west(1)
                     };
 
-            _Male_Cannabis_Plant male_plant = this;
+            setStrain();
 
             for (BlockPos positions : position)
             {
-                if (world.getBlockState(positions).getBlock() == Registries.BLOCK.get(new Identifier(strain + "_female_cannabis_plant")))
+                if (world.getBlockState(positions).getBlock() instanceof _Female_Cannabis_Plant fem_plant)
                 {
-                    _Female_Cannabis_Plant fem_plant = (_Female_Cannabis_Plant) world.getBlockState(positions).getBlock();
-                    fem_plant.getPollinated(world, pos, Registries.BLOCK.get(new Identifier(strain + "_male_cannabis_plant")).getDefaultState());
+                    fem_plant.setStrain();
+
+                    if(check_Cross(fem_plant, this, world, positions, "gdp", "og", "gdk")){}
+                    else if(check_Cross(fem_plant, this, world, positions, "gdp", "ww", "rp")){}
+                    else if(check_Cross(fem_plant, this, world, positions, "afg", "hk", "ak")){}
+                    else {fem_plant.getPollinated(world, positions, Registries.BLOCK.get(new Identifier(fem_plant.strain + "_male_cannabis_plant")).getDefaultState());}
                 }
             }
         }
+    }
+    public static boolean check_Cross(_Female_Cannabis_Plant femaleCannabisPlant, _Male_Cannabis_Plant maleCannabisPlant, World world, BlockPos position, String first_strain,  String second_strain, String new_strain)
+    {
+        if (Objects.equals(maleCannabisPlant.strain, new Identifier("herb", first_strain)) || (Objects.equals(maleCannabisPlant.strain, new Identifier("herb", second_strain))) || (Objects.equals(maleCannabisPlant.strain, new Identifier("herb", new_strain))))
+        {
+            if (Objects.equals(femaleCannabisPlant.strain, new Identifier("herb", first_strain)) || (Objects.equals(femaleCannabisPlant.strain, new Identifier("herb", second_strain))))
+            {
+                femaleCannabisPlant.getPollinated(world, position, Registries.BLOCK.get(new Identifier("herb",new_strain + "_male_cannabis_plant")).getDefaultState());
+                return true;
+            }
+        }
+        return false;
     }
 }
 

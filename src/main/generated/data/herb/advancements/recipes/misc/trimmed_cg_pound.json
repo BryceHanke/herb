@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_cg_trimmed_nug": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "herb:cg_trimmed_nug"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "minecraft:trimmed_cg_pound"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_cg_trimmed_nug",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "minecraft:trimmed_cg_pound"
+    ]
+  },
+  "sends_telemetry_event": false
+}

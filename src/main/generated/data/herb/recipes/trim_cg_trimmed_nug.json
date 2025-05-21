@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "herb:trimming_scissors"
+    },
+    {
+      "item": "herb:cg_untrimmed_nug"
+    },
+    {
+      "item": "herb:cg_untrimmed_nug"
+    },
+    {
+      "item": "herb:cg_untrimmed_nug"
+    }
+  ],
+  "result": {
+    "count": 3,
+    "item": "herb:cg_untrimmed_nug"
+  }
+}

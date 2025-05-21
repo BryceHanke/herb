@@ -22,15 +22,18 @@ public class Herb implements ModInitializer {
 	public static final String MOD_ID = "herb";
 	public static final Logger LOGGER = LoggerFactory.getLogger(MOD_ID);
 
+
 	@Override
 	public void onInitialize() {
 
-		LOGGER.info("Let's Do Marijuana!");
+		LOGGER.info("HERB");
 
-		ModItemGroups.registerItemGroups();
+		ModBlocks.registerStrainBlocks();
+		ModItems.registerStrainItems();
 		ModItems.registerModItems();
-		ModEffects.registerEffects();
 		ModBlocks.registerModBlocks();
+		ModItemGroups.registerItemGroups();
+		ModEffects.registerEffects();
 
 		BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.SPARSE_JUNGLE, BiomeKeys.JUNGLE), GenerationStep.Feature.VEGETAL_DECORATION, RegistryKey.of(RegistryKeys.PLACED_FEATURE, AFG_TILLED_PATCH_ID));
 		BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.BAMBOO_JUNGLE, BiomeKeys.JUNGLE), GenerationStep.Feature.VEGETAL_DECORATION, RegistryKey.of(RegistryKeys.PLACED_FEATURE, HK_TILLED_PATCH_ID));

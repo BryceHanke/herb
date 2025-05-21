@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "J": {
+      "item": "herb:jar"
+    },
+    "N": {
+      "item": "herb:ss_trimmed_nug"
+    }
+  },
+  "pattern": [
+    "NJN",
+    "NNN"
+  ],
+  "result": {
+    "item": "herb:ss_jar_of_trimmed"
+  },
+  "show_notification": true
+}

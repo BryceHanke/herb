@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "herb:item/male_cg_cannabis_seeds"
+  }
+}

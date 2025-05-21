@@ -17,38 +17,35 @@ public class ModModelProvider extends FabricModelProvider {
         super(output);
     }
 
-
-
     @Override
-    public void generateBlockStateModels(BlockStateModelGenerator blockStateModelGenerator) {
+    public void generateBlockStateModels(BlockStateModelGenerator blockStateModelGenerator)
+    {
         for (Identifier id : Strains.strains)
         {
             blockStateModelGenerator.registerSimpleCubeAll(Registries.BLOCK.get(new Identifier("herb","untrimmed_"+String.valueOf(id.getPath())+"_pound")));
             blockStateModelGenerator.registerSimpleCubeAll(Registries.BLOCK.get(new Identifier("herb","trimmed_"+String.valueOf(id.getPath()) + "_pound")));
             blockStateModelGenerator.registerSimpleCubeAll(Registries.BLOCK.get(new Identifier("herb","cured_"+String.valueOf(id.getPath()) + "_pound")));
-            blockStateModelGenerator.registerCrop(Registries.BLOCK.get(new Identifier(String.valueOf(id) + "_female_cannabis_plant")), _Female_Cannabis_Plant.AGE, 0, 1, 2, 3, 4, 5, 6);
-            blockStateModelGenerator.registerCrop(Registries.BLOCK.get(new Identifier(String.valueOf(id) + "_male_cannabis_plant")), _Male_Cannabis_Plant.AGE, 0, 1, 2, 3);
-        }
 
+            blockStateModelGenerator.registerCrop(Registries.BLOCK.get(new Identifier("herb",String.valueOf(id.getPath()) + "_female_cannabis_plant")), _Female_Cannabis_Plant.AGE, 0, 1, 2, 3, 4, 5, 6);
+            blockStateModelGenerator.registerCrop(Registries.BLOCK.get(new Identifier("herb",String.valueOf(id.getPath()) + "_male_cannabis_plant")), _Male_Cannabis_Plant.AGE, 0, 1, 2, 3);
+        }
     }
 
     @Override
     public void generateItemModels(ItemModelGenerator itemModelGenerator) {
         for (Identifier id : Strains.strains)
         {
-            itemModelGenerator.register(Registries.ITEM.get(new Identifier(String.valueOf(id) + "_untrimmed_nug")), Models.GENERATED);
-            itemModelGenerator.register(Registries.ITEM.get(new Identifier(String.valueOf(id) + "_trimmed_nug")), Models.GENERATED);
-            itemModelGenerator.register(Registries.ITEM.get(new Identifier(String.valueOf(id) + "_cured_nug")), Models.GENERATED);
-            itemModelGenerator.register(Registries.ITEM.get(new Identifier(String.valueOf(id) + "_bud")), Models.GENERATED);
-            itemModelGenerator.register(Registries.ITEM.get(new Identifier(String.valueOf(id) + "_ground_weed")), Models.GENERATED);
-            itemModelGenerator.register(Registries.ITEM.get(new Identifier(String.valueOf(id) + "_joint")), Models.GENERATED);
-            itemModelGenerator.register(Registries.ITEM.get(new Identifier(String.valueOf(id) + "_lit_joint")), Models.GENERATED);
-            itemModelGenerator.register(Registries.ITEM.get(new Identifier(String.valueOf(id) + "_roach")), Models.GENERATED);
-            itemModelGenerator.register(Registries.ITEM.get(new Identifier(String.valueOf(id) + "_jar_of_trimmed")), Models.GENERATED);
-            itemModelGenerator.register(Registries.ITEM.get(new Identifier(String.valueOf(id) + "_jar_of_cured")), Models.GENERATED);
+            itemModelGenerator.register(Registries.ITEM.get(new Identifier("herb",String.valueOf(id.getPath()) + "_untrimmed_nug")), Models.GENERATED);
+            itemModelGenerator.register(Registries.ITEM.get(new Identifier("herb",String.valueOf(id.getPath()) + "_trimmed_nug")), Models.GENERATED);
+            itemModelGenerator.register(Registries.ITEM.get(new Identifier("herb",String.valueOf(id.getPath()) + "_cured_nug")), Models.GENERATED);
+            itemModelGenerator.register(Registries.ITEM.get(new Identifier("herb",String.valueOf(id.getPath()) + "_bud")), Models.GENERATED);
+            itemModelGenerator.register(Registries.ITEM.get(new Identifier("herb",String.valueOf(id.getPath()) + "_ground_weed")), Models.GENERATED);
+            itemModelGenerator.register(Registries.ITEM.get(new Identifier("herb",String.valueOf(id.getPath()) + "_joint")), Models.GENERATED);
+            itemModelGenerator.register(Registries.ITEM.get(new Identifier("herb",String.valueOf(id.getPath()) + "_lit_joint")), Models.GENERATED);
+            itemModelGenerator.register(Registries.ITEM.get(new Identifier("herb",String.valueOf(id.getPath()) + "_roach")), Models.GENERATED);
+            itemModelGenerator.register(Registries.ITEM.get(new Identifier("herb",String.valueOf(id.getPath()) + "_jar_of_trimmed")), Models.GENERATED);
+            itemModelGenerator.register(Registries.ITEM.get(new Identifier("herb",String.valueOf(id.getPath()) + "_jar_of_cured")), Models.GENERATED);
         }
-
-
 
         itemModelGenerator.register(ModItems.JAR, Models.GENERATED);
         itemModelGenerator.register(ModItems.ASHTRAY, Models.GENERATED);

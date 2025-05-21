@@ -1,5 +1,0 @@
-package net.bryce.herb.block.custom.male;
-
-public class WZ_Male_Cannabis_Plant extends _Male_Cannabis_Plant {
-    public WZ_Male_Cannabis_Plant(Settings settings) {super(settings);}
-}

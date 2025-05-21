@@ -22,18 +22,18 @@ public class ModTranslationProvider extends FabricLanguageProvider {
     {
         for (Identifier id : Strains.strains)
         {
-            translationBuilder.add(Registries.ITEM.get(new Identifier(String.valueOf(id) + "_untrimmed_nug")),"Untrimmed "+String.valueOf(id.getPath().toUpperCase()) + " Nug");
-            translationBuilder.add(Registries.ITEM.get(new Identifier(String.valueOf(id) + "_trimmed_nug")),"Trimmed "+String.valueOf(id.getPath().toUpperCase()) + " Nug");
-            translationBuilder.add(Registries.ITEM.get(new Identifier(String.valueOf(id) + "_cured_nug")),"Cured "+String.valueOf(id.getPath().toUpperCase()) + " Nug");
-            translationBuilder.add(Registries.ITEM.get(new Identifier(String.valueOf(id) + "_bud")),String.valueOf(id.getPath().toUpperCase()) + " Bud");
-            translationBuilder.add(Registries.ITEM.get(new Identifier(String.valueOf(id)+"_ground_weed")),"Ground "+String.valueOf(id.getPath().toUpperCase()));
-            translationBuilder.add(Registries.ITEM.get(new Identifier(String.valueOf(id) + "_jar_of_trimmed")),"Jar of Trimmed "+String.valueOf(id.getPath().toUpperCase()));
-            translationBuilder.add(Registries.ITEM.get(new Identifier(String.valueOf(id) + "_jar_of_cured")),"Jar of Cured "+String.valueOf(id.getPath().toUpperCase()));
-            translationBuilder.add(Registries.ITEM.get(new Identifier(String.valueOf(id) + "_cannabis_seeds")),String.valueOf(id.getPath().toUpperCase())+" Seeds");
+            translationBuilder.add(Registries.ITEM.get(new Identifier("herb",String.valueOf(id.getPath()) + "_untrimmed_nug")),"Untrimmed "+String.valueOf(id.getPath().toUpperCase()) + " Nug");
+            translationBuilder.add(Registries.ITEM.get(new Identifier("herb",String.valueOf(id.getPath()) + "_trimmed_nug")),"Trimmed "+String.valueOf(id.getPath().toUpperCase()) + " Nug");
+            translationBuilder.add(Registries.ITEM.get(new Identifier("herb",String.valueOf(id.getPath()) + "_cured_nug")),"Cured "+String.valueOf(id.getPath().toUpperCase()) + " Nug");
+            translationBuilder.add(Registries.ITEM.get(new Identifier("herb",String.valueOf(id.getPath()) + "_bud")),String.valueOf(id.getPath().toUpperCase()) + " Bud");
+            translationBuilder.add(Registries.ITEM.get(new Identifier("herb",String.valueOf(id.getPath())+"_ground_weed")),"Ground "+String.valueOf(id.getPath().toUpperCase()));
+            translationBuilder.add(Registries.ITEM.get(new Identifier("herb",String.valueOf(id.getPath()) + "_jar_of_trimmed")),"Jar of Trimmed "+String.valueOf(id.getPath().toUpperCase()));
+            translationBuilder.add(Registries.ITEM.get(new Identifier("herb",String.valueOf(id.getPath()) + "_jar_of_cured")),"Jar of Cured "+String.valueOf(id.getPath().toUpperCase()));
+            translationBuilder.add(Registries.ITEM.get(new Identifier("herb",String.valueOf(id.getPath()) + "_cannabis_seeds")),String.valueOf(id.getPath().toUpperCase())+" Seeds");
             translationBuilder.add(Registries.ITEM.get(new Identifier("herb","male_"+String.valueOf(id.getPath()) + "_cannabis_seeds")),String.valueOf(id.getPath().toUpperCase())+" Male Seeds");
-            translationBuilder.add(Registries.ITEM.get(new Identifier(String.valueOf(id) + "_joint")),String.valueOf(id.getPath().toUpperCase())+" Joint");
-            translationBuilder.add(Registries.ITEM.get(new Identifier(String.valueOf(id) + "_lit_joint")),"Lit "+String.valueOf(id.getPath().toUpperCase())+" Joint");
-            translationBuilder.add(Registries.ITEM.get(new Identifier(String.valueOf(id) + "_roach")),String.valueOf(id.getPath().toUpperCase())+" Roach");
+            translationBuilder.add(Registries.ITEM.get(new Identifier("herb",String.valueOf(id.getPath()) + "_joint")),String.valueOf(id.getPath().toUpperCase())+" Joint");
+            translationBuilder.add(Registries.ITEM.get(new Identifier("herb",String.valueOf(id.getPath()) + "_lit_joint")),"Lit "+String.valueOf(id.getPath().toUpperCase())+" Joint");
+            translationBuilder.add(Registries.ITEM.get(new Identifier("herb",String.valueOf(id.getPath()) + "_roach")),String.valueOf(id.getPath().toUpperCase())+" Roach");
             translationBuilder.add(Registries.BLOCK.get(new Identifier("herb","untrimmed_"+String.valueOf(id.getPath()) + "_pound")),"Sack of Untrimmed "+String.valueOf(id.getPath().toUpperCase()));
             translationBuilder.add(Registries.BLOCK.get(new Identifier("herb","trimmed_"+String.valueOf(id.getPath()) + "_pound")),"Sack of Trimmed "+String.valueOf(id.getPath().toUpperCase()));
             translationBuilder.add(Registries.BLOCK.get(new Identifier("herb","cured_"+String.valueOf(id.getPath()) + "_pound")),"Sack of Cured "+String.valueOf(id.getPath().toUpperCase()));
@@ -41,6 +41,7 @@ public class ModTranslationProvider extends FabricLanguageProvider {
 
         translationBuilder.add(ModItems.JAR, "Jar");
         translationBuilder.add(ModItems.GRINDER, "Grinder");
+        translationBuilder.add(ModItems.ASHTRAY, "Ashtray");
         translationBuilder.add(ModItems.DIRTY_GRINDER, "Dirty Grinder");
         translationBuilder.add(ModItems.ROLLING_PAPER, "Rolling Paper");
         translationBuilder.add(ModItems.TRIMMING_SCISSORS, "Trimming Scissors");
@@ -51,7 +52,9 @@ public class ModTranslationProvider extends FabricLanguageProvider {
         translationBuilder.add(ModEffects.focused, "Focused");
         translationBuilder.add(ModEffects.relaxed, "Relaxed");
         translationBuilder.add(ModEffects.energized, "Energized");
+        translationBuilder.add(ModEffects.giggly, "Giggly");
+        translationBuilder.add(ModEffects.euphoric, "Euphoric");
 
-        translationBuilder.add("itemgroup.herb", "herb");
+        translationBuilder.add("itemgroup.herb", "Herb");
     }
 }

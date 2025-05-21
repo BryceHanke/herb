@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "herb:block/untrimmed_s1_pound"
+  }
+}

@@ -23,6 +23,9 @@
 		],
 		"fabric-datagen": [
 			"net.bryce.herb.HerbDataGenerator"
+		],
+		"preLaunch": [
+			"net.bryce.herb.HerbPreLaunch"
 		]
 	},
 	"mixins": [

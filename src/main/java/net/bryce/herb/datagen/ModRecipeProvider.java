@@ -21,13 +21,13 @@ public class ModRecipeProvider extends FabricRecipeProvider {
     }
 
     @Override
-    public void generate(Consumer<RecipeJsonProvider> consumer) {
-        for (Identifier id : new Strains().strains) {
+    public void generate(Consumer<RecipeJsonProvider> consumer)
+    {
+        for (Identifier id : Strains.strains) {
             Herb.LOGGER.info("Loading recipes for " + id);
-
-            offerReversibleCompactingRecipes(consumer, RecipeCategory.MISC, Registries.ITEM.get(new Identifier(String.valueOf(id) + "_untrimmed_nug")), RecipeCategory.MISC,  Registries.ITEM.get(new Identifier("herb","untrimmed_" + String.valueOf(id.getPath()) + "_pound")));
-            offerReversibleCompactingRecipes(consumer, RecipeCategory.MISC, Registries.ITEM.get(new Identifier(String.valueOf(id) + "_trimmed_nug")), RecipeCategory.MISC,  Registries.ITEM.get(new Identifier("herb","trimmed_" + String.valueOf(id.getPath()) + "_pound")));
-            offerReversibleCompactingRecipes(consumer, RecipeCategory.MISC, Registries.ITEM.get(new Identifier(String.valueOf(id) + "_cured_nug")), RecipeCategory.MISC,  Registries.ITEM.get(new Identifier("herb","cured_" + String.valueOf(id.getPath()) + "_pound")));
+            offerReversibleCompactingRecipes(consumer, RecipeCategory.MISC, Registries.ITEM.get(new Identifier(String.valueOf(id) + "_untrimmed_nug")), RecipeCategory.MISC,  Registries.BLOCK.get(new Identifier("herb","untrimmed_" + String.valueOf(id.getPath()) + "_pound")));
+            offerReversibleCompactingRecipes(consumer, RecipeCategory.MISC, Registries.ITEM.get(new Identifier(String.valueOf(id) + "_trimmed_nug")), RecipeCategory.MISC,  Registries.BLOCK.get(new Identifier("herb","trimmed_" + String.valueOf(id.getPath()) + "_pound")));
+            offerReversibleCompactingRecipes(consumer, RecipeCategory.MISC, Registries.ITEM.get(new Identifier(String.valueOf(id) + "_cured_nug")), RecipeCategory.MISC,  Registries.BLOCK.get(new Identifier("herb","cured_" + String.valueOf(id.getPath()) + "_pound")));
 
             ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, Registries.ITEM.get(new Identifier(String.valueOf(id) + "_jar_of_trimmed")), 1)
                     .pattern("NJN")
