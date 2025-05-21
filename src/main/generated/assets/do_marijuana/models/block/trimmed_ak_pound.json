@@ -1,7 +1,0 @@
-{
-  "parent": "minecraft:block/cube_column",
-  "textures": {
-    "end": "do_marijuana:block/trimmed_ak_pound_top",
-    "side": "do_marijuana:block/trimmed_ak_pound"
-  }
-}

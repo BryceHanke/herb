@@ -1,0 +1,59 @@
+{
+  "type": "minecraft:vegetation_patch",
+  "config": {
+    "surface": "floor",
+    "depth": 1,
+    "vertical_range": 1,
+    "extra_bottom_block_chance": 1,
+    "extra_edge_column_chance": 1,
+    "vegetation_chance": 1,
+    "xz_radius": 1,
+    "replaceable": "#minecraft:dirt",
+    "ground_state": {
+      "type": "minecraft:weighted_state_provider",
+      "entries": [
+        {
+          "weight": 1,
+          "data": {
+            "Name": "minecraft:water",
+            "Properties": {
+              "level": "0"
+            }
+          }
+        },
+        {
+          "weight": 3,
+          "data": {
+            "Name": "minecraft:farmland",
+            "Properties": {
+              "moisture": "7"
+            }
+          }
+        }
+      ]
+    },
+    "vegetation_feature": {
+      "feature": "herb:hk_cannabis_patch_feature_configured",
+      "placement": [
+        {
+          "type": "minecraft:count",
+          "count": 1
+        },
+        {
+          "type": "minecraft:environment_scan",
+          "direction_of_search": "down",
+          "max_steps": 2,
+          "target_condition": {
+            "type": "minecraft:would_survive",
+            "state": {
+              "Name": "minecraft:farmland",
+              "Properties": {
+                "moisture": "7"
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

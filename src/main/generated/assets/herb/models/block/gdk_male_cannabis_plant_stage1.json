@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/crop",
+  "textures": {
+    "crop": "herb:block/gdk_male_cannabis_plant_stage1"
+  }
+}

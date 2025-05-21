@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/crop",
+  "textures": {
+    "crop": "herb:block/ak_female_cannabis_plant_stage0"
+  }
+}

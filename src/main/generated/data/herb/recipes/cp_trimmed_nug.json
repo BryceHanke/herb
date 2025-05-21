@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "herb:trimmed_cp_pound"
+    }
+  ],
+  "result": {
+    "count": 9,
+    "item": "herb:cp_trimmed_nug"
+  }
+}

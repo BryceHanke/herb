@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_gdk_cured_nug": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "herb:gdk_cured_nug"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "minecraft:cured_gdk_pound"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_gdk_cured_nug",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "minecraft:cured_gdk_pound"
+    ]
+  },
+  "sends_telemetry_event": false
+}

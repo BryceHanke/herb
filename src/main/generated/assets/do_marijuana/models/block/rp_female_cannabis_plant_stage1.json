@@ -1,6 +1,0 @@
-{
-  "parent": "minecraft:block/cross",
-  "textures": {
-    "cross": "do_marijuana:block/rp_female_cannabis_plant_stage1"
-  }
-}

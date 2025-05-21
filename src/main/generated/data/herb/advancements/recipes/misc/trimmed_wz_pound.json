@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "minecraft:trimmed_wz_pound"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "has_wz_trimmed_nug": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "herb:wz_trimmed_nug"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_wz_trimmed_nug",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "minecraft:trimmed_wz_pound"
+    ]
+  },
+  "sends_telemetry_event": false
+}

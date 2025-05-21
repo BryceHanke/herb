@@ -1,9 +1,9 @@
 {
 	"schemaVersion": 1,
-	"id": "do_marijuana",
+	"id": "herb",
 	"version": "${version}",
-	"name": "lets_do_marijuana",
-	"description": "A let's do style mod that adds marijuana!",
+	"name": "herb",
+	"description": "a simple smokable herb",
 	"authors": [
 		"ecyrb"
 	],
@@ -12,21 +12,21 @@
 		"sources": "https://github.com/FabricMC/fabric-example-mod"
 	},
 	"license": "MIT",
-	"icon": "assets/do_marijuana/icon.png",
+	"icon": "assets/herb/icon.png",
 	"environment": "*",
 	"entrypoints": {
 		"main": [
-			"net.bryce.do_marijuana.Lets_do_marijuana"
+			"net.bryce.herb.Herb"
 		],
 		"client": [
-			"net.bryce.do_marijuana.Lets_do_marijuanaClient"
+			"net.bryce.herb.HerbClient"
 		],
 		"fabric-datagen": [
-			"net.bryce.do_marijuana.Lets_do_marijuanaDataGenerator"
+			"net.bryce.herb.HerbDataGenerator"
 		]
 	},
 	"mixins": [
-		"do_marijuana.mixins.json"
+		"herb.mixins.json"
 	],
 	"depends": {
 		"fabricloader": ">=0.16.14",
