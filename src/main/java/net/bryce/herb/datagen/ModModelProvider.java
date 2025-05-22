@@ -26,8 +26,8 @@ public class ModModelProvider extends FabricModelProvider {
             blockStateModelGenerator.registerSimpleCubeAll(Registries.BLOCK.get(new Identifier("herb","trimmed_"+String.valueOf(id.getPath()) + "_pound")));
             blockStateModelGenerator.registerSimpleCubeAll(Registries.BLOCK.get(new Identifier("herb","cured_"+String.valueOf(id.getPath()) + "_pound")));
 
-            blockStateModelGenerator.registerCrop(Registries.BLOCK.get(new Identifier("herb",String.valueOf(id.getPath()) + "_female_cannabis_plant")), _Female_Cannabis_Plant.AGE, 0, 1, 2, 3, 4, 5, 6);
-            blockStateModelGenerator.registerCrop(Registries.BLOCK.get(new Identifier("herb",String.valueOf(id.getPath()) + "_male_cannabis_plant")), _Male_Cannabis_Plant.AGE, 0, 1, 2, 3);
+            blockStateModelGenerator.registerTintableCrossBlockStateWithStages(Registries.BLOCK.get(new Identifier("herb",String.valueOf(id.getPath()) + "_female_cannabis_plant")), BlockStateModelGenerator.TintType.NOT_TINTED, _Female_Cannabis_Plant.AGE, 0, 1, 2, 3, 4, 5, 6);
+            blockStateModelGenerator.registerTintableCrossBlockStateWithStages(Registries.BLOCK.get(new Identifier("herb",String.valueOf(id.getPath()) + "_male_cannabis_plant")), BlockStateModelGenerator.TintType.NOT_TINTED, _Male_Cannabis_Plant.AGE, 0, 1, 2, 3);
         }
     }
 

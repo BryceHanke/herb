@@ -1,6 +1,7 @@
 package net.bryce.herb.item.custom.base;
 
 import net.bryce.herb.strains.Strains;
+import net.minecraft.entity.Entity;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Item;
@@ -33,13 +34,7 @@ public class Joint_Item extends Item {
     @Override
     public void usageTick(World world, LivingEntity user, ItemStack stack, int remainingUseTicks)
     {
-        PlayerEntity player = (PlayerEntity)user;
-
-        setStrain();
-        ItemStack lit_joint = Registries.ITEM.get(new Identifier("herb", String.valueOf(strain.getPath()) + "_lit_joint")).getDefaultStack();
-        player.giveItemStack(lit_joint);
-        stack.decrement(1);
-
+        light_Joint(user, stack);
         super.usageTick(world, user, stack, remainingUseTicks);
     }
 
@@ -56,21 +51,22 @@ public class Joint_Item extends Item {
     public TypedActionResult<ItemStack> use(World world, PlayerEntity user, Hand hand)
     {
 
-        if (user.getOffHandStack().isOf(Items.FLINT_AND_STEEL))
-        {
-            return ItemUsage.consumeHeldItem(world, user, hand);
-        }
-
-        if(user.getOffHandStack().isOf(Items.FIRE_CHARGE))
-        {
-            return ItemUsage.consumeHeldItem(world, user, hand);
-        }
-
-        if(user.getOffHandStack().isOf(Items.LAVA_BUCKET))
+        if (user.getOffHandStack().isOf(Items.FLINT_AND_STEEL) || user.getOffHandStack().isOf(Items.LAVA_BUCKET) || user.getOffHandStack().isOf(Items.FIRE_CHARGE))
         {
             return ItemUsage.consumeHeldItem(world, user, hand);
         }
 
         return TypedActionResult.fail(user.getStackInHand(hand));
+    }
+
+
+    public void light_Joint(Entity user, ItemStack stack)
+    {
+        PlayerEntity player = (PlayerEntity)user;
+
+        setStrain();
+        ItemStack lit_joint = Registries.ITEM.get(new Identifier("herb", String.valueOf(strain.getPath()) + "_lit_joint")).getDefaultStack();
+        player.giveItemStack(lit_joint);
+        stack.decrement(1);
     }
 }

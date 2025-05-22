@@ -1,6 +1,6 @@
 {
-  "parent": "minecraft:block/crop",
+  "parent": "minecraft:block/cross",
   "textures": {
-    "crop": "herb:block/hk_female_cannabis_plant_stage3"
+    "cross": "herb:block/hk_female_cannabis_plant_stage3"
   }
 }

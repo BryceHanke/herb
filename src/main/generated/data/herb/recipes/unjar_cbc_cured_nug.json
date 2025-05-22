@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "herb:cbc_jar_of_cured"
+    }
+  ],
+  "result": {
+    "count": 5,
+    "item": "herb:cbc_cured_nug"
+  }
+}

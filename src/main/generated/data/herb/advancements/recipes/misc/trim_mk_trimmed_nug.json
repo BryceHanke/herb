@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "minecraft:trim_mk_trimmed_nug"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "has_trimming_scissors": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "herb:trimming_scissors"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_trimming_scissors",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "minecraft:trim_mk_trimmed_nug"
+    ]
+  },
+  "sends_telemetry_event": false
+}

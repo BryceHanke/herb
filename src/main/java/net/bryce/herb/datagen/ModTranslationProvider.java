@@ -52,8 +52,18 @@ public class ModTranslationProvider extends FabricLanguageProvider {
         translationBuilder.add(ModEffects.focused, "Focused");
         translationBuilder.add(ModEffects.relaxed, "Relaxed");
         translationBuilder.add(ModEffects.energized, "Energized");
+        translationBuilder.add(ModEffects.aroused, "Aroused");
         translationBuilder.add(ModEffects.giggly, "Giggly");
         translationBuilder.add(ModEffects.euphoric, "Euphoric");
+        translationBuilder.add(ModEffects.tingly, "Tingly");
+        translationBuilder.add(ModEffects.creative, "Creative");
+        translationBuilder.add(ModEffects.uplifted, "Uplifted");
+        translationBuilder.add(ModEffects.headache, "Headache");
+        translationBuilder.add(ModEffects.dizzy, "Dizzy");
+        translationBuilder.add(ModEffects.dryeyes, "Dry Eyes");
+        translationBuilder.add(ModEffects.cottonmouth, "Cotton Mouth");
+        translationBuilder.add(ModEffects.anxiety, "Anxiety");
+
 
         translationBuilder.add("itemgroup.herb", "Herb");
     }

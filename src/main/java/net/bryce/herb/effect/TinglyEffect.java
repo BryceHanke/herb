@@ -25,7 +25,7 @@ public class TinglyEffect extends StatusEffect {
         {
             PlayerEntity player = (PlayerEntity) entity;
             RegistryKey<DamageType> RegistryEntry = null;
-            player.damage(new DamageSources(entity.getEntityWorld().getRegistryManager()).starve(), 1);
+            player.damage(new DamageSources(entity.getEntityWorld().getRegistryManager()).freeze(), 1);
         }
         super.applyUpdateEffect(entity, amplifier);
     }

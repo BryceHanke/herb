@@ -1,0 +1,28 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "herb:grinder"
+    },
+    {
+      "item": "herb:fog_bud"
+    },
+    {
+      "item": "herb:fog_bud"
+    },
+    {
+      "item": "herb:fog_bud"
+    },
+    {
+      "item": "herb:fog_bud"
+    },
+    {
+      "item": "herb:fog_bud"
+    }
+  ],
+  "result": {
+    "count": 5,
+    "item": "herb:fog_ground_weed"
+  }
+}

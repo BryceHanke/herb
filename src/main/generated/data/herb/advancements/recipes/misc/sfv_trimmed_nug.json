@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "minecraft:sfv_trimmed_nug"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "has_trimmed_sfv_pound": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "herb:trimmed_sfv_pound"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_trimmed_sfv_pound",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "minecraft:sfv_trimmed_nug"
+    ]
+  },
+  "sends_telemetry_event": false
+}

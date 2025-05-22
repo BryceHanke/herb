@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "herb:cured_ac_pound"
+    }
+  ],
+  "result": {
+    "count": 9,
+    "item": "herb:ac_cured_nug"
+  }
+}

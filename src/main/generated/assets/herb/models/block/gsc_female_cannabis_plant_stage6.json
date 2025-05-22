@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cross",
+  "textures": {
+    "cross": "herb:block/gsc_female_cannabis_plant_stage6"
+  }
+}

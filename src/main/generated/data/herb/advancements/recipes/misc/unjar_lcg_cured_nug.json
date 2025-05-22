@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_lcg_jar_of_cured": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "herb:lcg_jar_of_cured"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "minecraft:unjar_lcg_cured_nug"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_lcg_jar_of_cured",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "minecraft:unjar_lcg_cured_nug"
+    ]
+  },
+  "sends_telemetry_event": false
+}

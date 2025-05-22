@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "minecraft:tk_bud"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "has_tk_cured_nug": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "herb:tk_cured_nug"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_tk_cured_nug",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "minecraft:tk_bud"
+    ]
+  },
+  "sends_telemetry_event": false
+}

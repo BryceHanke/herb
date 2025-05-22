@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "herb:tk_jar_of_trimmed"
+    }
+  ],
+  "result": {
+    "count": 5,
+    "item": "herb:tk_trimmed_nug"
+  }
+}

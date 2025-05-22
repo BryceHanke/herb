@@ -77,6 +77,8 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                     .input(Registries.ITEM.get(new Identifier(String.valueOf(id) + "_ground_weed")), 3)
                     .criterion(hasItem(ModItems.ROLLING_PAPER), conditionsFromItem(ModItems.ROLLING_PAPER))
                     .offerTo(consumer, new Identifier(getRecipeName(Registries.ITEM.get(new Identifier(String.valueOf(id) + "_joint")))));
+
+
         }
 
         ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.TRIMMING_SCISSORS, 1)

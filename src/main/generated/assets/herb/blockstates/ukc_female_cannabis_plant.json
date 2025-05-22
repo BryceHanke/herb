@@ -1,0 +1,25 @@
+{
+  "variants": {
+    "age=0": {
+      "model": "herb:block/ukc_female_cannabis_plant_stage0"
+    },
+    "age=1": {
+      "model": "herb:block/ukc_female_cannabis_plant_stage1"
+    },
+    "age=2": {
+      "model": "herb:block/ukc_female_cannabis_plant_stage2"
+    },
+    "age=3": {
+      "model": "herb:block/ukc_female_cannabis_plant_stage3"
+    },
+    "age=4": {
+      "model": "herb:block/ukc_female_cannabis_plant_stage4"
+    },
+    "age=5": {
+      "model": "herb:block/ukc_female_cannabis_plant_stage5"
+    },
+    "age=6": {
+      "model": "herb:block/ukc_female_cannabis_plant_stage6"
+    }
+  }
+}

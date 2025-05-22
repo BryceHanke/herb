@@ -1,0 +1,28 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "herb:grinder"
+    },
+    {
+      "item": "herb:cbc_bud"
+    },
+    {
+      "item": "herb:cbc_bud"
+    },
+    {
+      "item": "herb:cbc_bud"
+    },
+    {
+      "item": "herb:cbc_bud"
+    },
+    {
+      "item": "herb:cbc_bud"
+    }
+  ],
+  "result": {
+    "count": 5,
+    "item": "herb:cbc_ground_weed"
+  }
+}
