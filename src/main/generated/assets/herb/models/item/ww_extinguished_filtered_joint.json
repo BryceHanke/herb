@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "herb:item/ww_extinguished_filtered_joint"
+  }
+}

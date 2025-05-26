@@ -1,10 +1,9 @@
 package net.bryce.herb.item.custom.base;
 
-import net.bryce.herb.strains.Strains;
+import net.bryce.herb.item.ModItems;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.ItemUsage;
 import net.minecraft.item.Items;
@@ -12,46 +11,33 @@ import net.minecraft.registry.Registries;
 import net.minecraft.util.Hand;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.TypedActionResult;
-import net.minecraft.util.UseAction;
 import net.minecraft.world.World;
 
-public class Joint_Item extends Item {
+public class Joint_Item extends Smokable_Item {
     public Joint_Item(Settings settings) {super(settings);}
 
-    public Identifier strain = Strains.strains[0];
-
-    public void setStrain()
+    @Override
+    public void onCraft(ItemStack stack, World world, PlayerEntity player)
     {
-        for (Identifier id : Strains.strains)
-        {
-            if (String.valueOf(this).contains(String.valueOf(id.getPath())))
-            {
-                strain = new Identifier("herb", String.valueOf(id.getPath()));
-            }
-        }
+        setStrain();
+        stack.getOrCreateNbt().putString("strain", String.valueOf(this.strain));
+        set_Filtered();
+        stack.getOrCreateNbt().putString("filter", String.valueOf(this.filtered));
     }
 
     @Override
     public void usageTick(World world, LivingEntity user, ItemStack stack, int remainingUseTicks)
     {
-        light_Joint(user, stack);
+        if (remainingUseTicks <= 1) {
+            stack.setDamage(stack.getDamage() + 1);
+            light_Joint(user, stack);
+        }
         super.usageTick(world, user, stack, remainingUseTicks);
-    }
-
-    public int getMaxUseTime(ItemStack stack) {
-        return 64;
-    }
-
-    public UseAction getUseAction(ItemStack stack)
-    {
-        stack.setDamage(stack.getDamage() + 1);
-        return UseAction.TOOT_HORN;
     }
 
     public TypedActionResult<ItemStack> use(World world, PlayerEntity user, Hand hand)
     {
-
-        if (user.getOffHandStack().isOf(Items.FLINT_AND_STEEL) || user.getOffHandStack().isOf(Items.LAVA_BUCKET) || user.getOffHandStack().isOf(Items.FIRE_CHARGE))
+        if (user.getOffHandStack().isOf(Items.FLINT_AND_STEEL) || user.getOffHandStack().isOf(ModItems.LIGHTER))
         {
             return ItemUsage.consumeHeldItem(world, user, hand);
         }
@@ -65,8 +51,23 @@ public class Joint_Item extends Item {
         PlayerEntity player = (PlayerEntity)user;
 
         setStrain();
+        set_Filtered();
         ItemStack lit_joint = Registries.ITEM.get(new Identifier("herb", String.valueOf(strain.getPath()) + "_lit_joint")).getDefaultStack();
-        player.giveItemStack(lit_joint);
-        stack.decrement(1);
+        ItemStack filtered_lit_joint = Registries.ITEM.get(new Identifier("herb", String.valueOf(strain.getPath()) + "_filtered_lit_joint")).getDefaultStack();
+        lit_joint.getOrCreateNbt().putString("strain", String.valueOf(strain.getPath()));
+        filtered_lit_joint.getOrCreateNbt().putString("strain", String.valueOf(strain.getPath()));
+        if (this.filtered)
+        {
+            filtered_lit_joint.setDamage(stack.getDamage());
+            stack.decrement(1);
+            player.giveItemStack(filtered_lit_joint);
+        }else {
+            lit_joint.setDamage(stack.getDamage());
+            stack.decrement(1);
+            player.giveItemStack(lit_joint);
+        }
+
+        ((PlayerEntity) user).getOffHandStack().setDamage(((PlayerEntity) user).getOffHandStack().getDamage() + 1);
+
     }
 }

@@ -5,7 +5,6 @@ import net.bryce.herb.strains.Strains;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.ItemUsage;
 import net.minecraft.particle.ParticleTypes;
@@ -17,23 +16,8 @@ import net.minecraft.util.TypedActionResult;
 import net.minecraft.util.UseAction;
 import net.minecraft.world.World;
 
-import java.util.Objects;
-
-public class Lit_Joint_Item extends Item{
+public class Lit_Joint_Item extends Smokable_Item{
     public Lit_Joint_Item(Settings settings) {super(settings);}
-
-    public Identifier strain = Strains.strains[0];
-
-    public void setStrain()
-    {
-        for (Identifier id : Strains.strains)
-        {
-            if (String.valueOf(this).contains(String.valueOf(id.getPath())))
-            {
-                strain = new Identifier("herb", String.valueOf(id.getPath()));
-            }
-        }
-    }
 
     public int getMaxUseTime(ItemStack stack) {
         return 16;
@@ -46,17 +30,7 @@ public class Lit_Joint_Item extends Item{
 
     public TypedActionResult<ItemStack> use(World world, PlayerEntity user, Hand hand)
     {
-        setStrain();
-
-        if (user.getOffHandStack().getItem() == ModItems.ASHTRAY)
-        {
-            ItemStack roach = Registries.ITEM.get(new Identifier("herb",String.valueOf(strain.getPath()) + "_roach")).getDefaultStack();
-            ((PlayerEntity) user).giveItemStack(roach);
-            user.getStackInHand(hand).decrement(1);
-        }
-
         return ItemUsage.consumeHeldItem(world, user, hand);
-
     }
 
     @Override
@@ -64,35 +38,68 @@ public class Lit_Joint_Item extends Item{
     {
         PlayerEntity player = (PlayerEntity)entity;
 
-        stack.setDamage(stack.getDamage() + 1);
+        stack.setDamage(stack.getDamage() + 4);
         if (!world.isClient) {
             if (selected)
             {
                 ((ServerWorld) world).spawnParticles(ParticleTypes.ASH,
-                        player.getX() + player.getRotationVector().x,
-                        player.getY() + player.getRotationVector().y,
-                        player.getZ() + player.getRotationVector().z,
+                        player.getX() + (player.getRotationVector().x / 8),
+                        player.getY() + player.getEyeHeight(player.getPose()),
+                        player.getZ() + (player.getRotationVector().z / 8),
                         1,
-                        player.getRotationVector().x * 0.1,
-                        player.getRotationVector().y * 0.1,
-                        player.getRotationVector().z * 0.1,
+                        player.getRotationVector().x * 0.01,
+                        player.getRotationVector().y * 0.01,
+                        player.getRotationVector().z * 0.01,
                         0.001);
             }
         }
 
+        if(player.getOffHandStack().getDamage() >= player.getOffHandStack().getMaxDamage())
+        {
+            player.getOffHandStack().decrement(1);
+        }
+
         if (stack.getDamage() >= stack.getMaxDamage())
         {
-            ItemStack roach = Registries.ITEM.get(new Identifier("herb",String.valueOf(strain.getPath()) + "_roach")).getDefaultStack();
-            ((PlayerEntity) entity).giveItemStack(roach);
-            stack.decrement(1);
+            set_Filtered();
+            if (!this.filtered)
+            {
+                ItemStack roach = Registries.ITEM.get(new Identifier("herb",String.valueOf(strain.getPath()) + "_roach")).getDefaultStack();
+                roach.getOrCreateNbt().putString("strain", String.valueOf(strain.getPath()));
+                stack.decrement(1);
+                ((PlayerEntity) entity).giveItemStack(roach);
+            }else
+            {
+                stack.decrement(1);
+            }
         }
+
+        if (player.isSubmergedInWater())
+        {
+            extinguish_Joint(stack, player);
+        }
+
         super.inventoryTick(stack, world, entity, slot, selected);
     }
 
     @Override
     public void usageTick(World world, LivingEntity user, ItemStack stack, int remainingUseTicks) {
-        stack.setDamage(stack.getDamage() + 1);
-        if (remainingUseTicks <= 5)
+        stack.setDamage(stack.getDamage() + 16);
+        if (remainingUseTicks <= 1)
+        {
+            setStrain();
+            Strains.effects((PlayerEntity) user, strain.getPath(), 0);
+
+            setStrain();
+
+            if (user.getOffHandStack().getItem() == ModItems.ASHTRAY)
+            {
+                set_Filtered();
+                extinguish_Joint(stack, user);
+            }
+        }
+
+            if (remainingUseTicks <= 5)
         {
             if (!world.isClient)
             {
@@ -105,11 +112,27 @@ public class Lit_Joint_Item extends Item{
                         user.getRotationVector().y * 0.5,
                         user.getRotationVector().z * 0.5,
                         0.001);
-                setStrain();
-                Strains.effects((PlayerEntity) user, strain.getPath(), 0);
+
             }
         }
         super.usageTick(world, user, stack, remainingUseTicks);
+    }
+
+    public void extinguish_Joint(ItemStack stack, Entity user)
+    {
+        if (this.filtered)
+        {
+            ItemStack roach = Registries.ITEM.get(new Identifier("herb",String.valueOf(strain.getPath()) + "_extinguished_filtered_joint")).getDefaultStack();
+            roach.setDamage(stack.getDamage());
+            stack.decrement(1);
+            ((PlayerEntity) user).giveItemStack(roach);
+        }else {
+            ItemStack roach = Registries.ITEM.get(new Identifier("herb",String.valueOf(strain.getPath()) + "_extinguished_joint")).getDefaultStack();
+            roach.setDamage(stack.getDamage());
+            stack.decrement(1);
+            ((PlayerEntity) user).giveItemStack(roach);
+        }
+
     }
 
 }

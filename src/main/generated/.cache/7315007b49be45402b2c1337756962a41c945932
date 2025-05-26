@@ -1,4 +1,4 @@
-// 1.20.1	2025-05-21T22:35:30.597353	herb/Block Loot Tables
+// 1.20.1	2025-05-25T18:29:25.9751217	herb/Block Loot Tables
 06d0391e61df863830b7d48a8c464cded775a578 data\herb\loot_tables\blocks\cured_wz_pound.json
 a4820fe3cef7b5495237569e7829a8ec400b2ae6 data\herb\loot_tables\blocks\trimmed_cd_pound.json
 dfac82e96b99e447a6730b5474cb05832d70f4c5 data\herb\loot_tables\blocks\cured_bk_pound.json
@@ -33,8 +33,8 @@ ef88b3a9230ad832fac58338a2e81622bdd62ac4 data\herb\loot_tables\blocks\untrimmed_
 5021237a1a06fa7332b079b1b79608854ec2b452 data\herb\loot_tables\blocks\untrimmed_am_pound.json
 0a590a767a69b0c6157f76c89d22790e4fd2fbf0 data\herb\loot_tables\blocks\ac_female_cannabis_plant.json
 74618d0ba2638863a6e163276fe7618841436261 data\herb\loot_tables\blocks\trimmed_ak_pound.json
-8c5c81830a286b74e8d01088ae32a34070b90276 data\herb\loot_tables\blocks\ag_female_cannabis_plant.json
 eef73bede1406e7545ebb40980e3d03b6955b4b5 data\herb\loot_tables\blocks\cured_afr_pound.json
+8c5c81830a286b74e8d01088ae32a34070b90276 data\herb\loot_tables\blocks\ag_female_cannabis_plant.json
 1686d0365230a91b82ee1fd1b53bbfa2f089896a data\herb\loot_tables\blocks\sfv_female_cannabis_plant.json
 b2c48df7bb8a950b957aefca6c34962f3d5773d5 data\herb\loot_tables\blocks\untrimmed_ukc_pound.json
 3d191ae69dfedb12a1152b1d215749173387bc4d data\herb\loot_tables\blocks\bm_female_cannabis_plant.json

@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "herb:rolling_paper"
+    },
+    {
+      "item": "herb:filter"
+    },
+    {
+      "item": "herb:db_ground_weed"
+    },
+    {
+      "item": "herb:db_ground_weed"
+    }
+  ],
+  "result": {
+    "item": "herb:db_filtered_joint"
+  }
+}

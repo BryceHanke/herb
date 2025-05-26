@@ -66,7 +66,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                     .criterion(hasItem(ModItems.GRINDER), conditionsFromItem(ModItems.GRINDER))
                     .offerTo(consumer, new Identifier(getRecipeName(Registries.ITEM.get(new Identifier(String.valueOf(id) + "_ground_weed")))));
 
-            ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, Registries.ITEM.get(new Identifier(String.valueOf(id) + "_untrimmed_nug")), 3)
+            ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, Registries.ITEM.get(new Identifier(String.valueOf(id) + "_trimmed_nug")), 3)
                     .input(ModItems.TRIMMING_SCISSORS, 1)
                     .input(Registries.ITEM.get(new Identifier(String.valueOf(id) + "_untrimmed_nug")), 3)
                     .criterion(hasItem(ModItems.TRIMMING_SCISSORS), conditionsFromItem(ModItems.TRIMMING_SCISSORS))
@@ -78,8 +78,37 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                     .criterion(hasItem(ModItems.ROLLING_PAPER), conditionsFromItem(ModItems.ROLLING_PAPER))
                     .offerTo(consumer, new Identifier(getRecipeName(Registries.ITEM.get(new Identifier(String.valueOf(id) + "_joint")))));
 
+            ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, Registries.ITEM.get(new Identifier(String.valueOf(id) + "_filtered_joint")), 1)
+                    .input(ModItems.ROLLING_PAPER, 1)
+                    .input(ModItems.FILTER, 1)
+                    .input(Registries.ITEM.get(new Identifier(String.valueOf(id) + "_ground_weed")), 2)
+                    .criterion(hasItem(ModItems.ROLLING_PAPER), conditionsFromItem(ModItems.ROLLING_PAPER))
+                    .offerTo(consumer, new Identifier(getRecipeName(Registries.ITEM.get(new Identifier(String.valueOf(id) + "_filtered_joint")))));
 
+            ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, Registries.ITEM.get(new Identifier(String.valueOf(id) + "_packed_pipe")), 1)
+                    .input(ModItems.GLASS_PIPE, 1)
+                    .input(Registries.ITEM.get(new Identifier(String.valueOf(id) + "_ground_weed")), 1)
+                    .criterion(hasItem(ModItems.GLASS_PIPE), conditionsFromItem(ModItems.GLASS_PIPE))
+                    .offerTo(consumer, new Identifier(getRecipeName(Registries.ITEM.get(new Identifier(String.valueOf(id) + "_packed_pipe")))));
         }
+
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.GLASS_PIPE, 1)
+                .input(ModItems.DIRTY_GLASS_PIPE, 1)
+                .input(Items.WATER_BUCKET, 1)
+                .criterion(hasItem(ModItems.DIRTY_GLASS_PIPE), conditionsFromItem(ModItems.DIRTY_GLASS_PIPE))
+                .offerTo(consumer, new Identifier("herb","clean_"+getRecipeName(ModItems.DIRTY_GLASS_PIPE)));
+
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.TRIMMING_SCISSORS, 1)
+                .input(ModItems.DIRTY_TRIMMING_SCISSORS, 1)
+                .input(Items.WATER_BUCKET, 1)
+                .criterion(hasItem(ModItems.DIRTY_TRIMMING_SCISSORS), conditionsFromItem(ModItems.DIRTY_TRIMMING_SCISSORS))
+                .offerTo(consumer, new Identifier("herb","clean_"+getRecipeName(ModItems.DIRTY_TRIMMING_SCISSORS)));
+
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.GRINDER, 1)
+                .input(ModItems.DIRTY_GRINDER, 1)
+                .input(Items.WATER_BUCKET, 1)
+                .criterion(hasItem(ModItems.DIRTY_GRINDER), conditionsFromItem(ModItems.DIRTY_GRINDER))
+                .offerTo(consumer, new Identifier("herb","clean_"+getRecipeName(ModItems.DIRTY_GRINDER)));
 
         ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.TRIMMING_SCISSORS, 1)
                 .pattern("I I")
@@ -106,11 +135,32 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .criterion(hasItem(Items.GLASS), conditionsFromItem(Items.GLASS))
                 .offerTo(consumer, new Identifier(getRecipeName(ModItems.JAR)));
 
-        ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.ROLLING_PAPER, 1)
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.LIGHTER, 1)
+                .pattern("III")
+                .pattern("IFI")
+                .pattern("III")
+                .input('I', Items.IRON_INGOT)
+                .input('F', Items.FLINT_AND_STEEL)
+                .criterion(hasItem(Items.FLINT_AND_STEEL), conditionsFromItem(Items.FLINT_AND_STEEL))
+                .offerTo(consumer, new Identifier(getRecipeName(ModItems.LIGHTER)));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.GLASS_PIPE, 1)
+                .pattern("  G")
+                .pattern("G G")
+                .pattern("GGG")
+                .input('G', Items.GLASS)
+                .criterion(hasItem(Items.GLASS), conditionsFromItem(Items.GLASS))
+                .offerTo(consumer, new Identifier(getRecipeName(ModItems.GLASS_PIPE)));
+
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.ROLLING_PAPER, 3)
                 .input(Items.PAPER, 1)
                 .input(Items.SUGAR_CANE, 1)
                 .criterion(hasItem(Items.PAPER), conditionsFromItem(Items.PAPER))
                 .offerTo(consumer, new Identifier(getRecipeName(ModItems.ROLLING_PAPER)));
 
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.FILTER, 3)
+                .input(Items.PAPER, 1)
+                .criterion(hasItem(Items.PAPER), conditionsFromItem(Items.PAPER))
+                .offerTo(consumer, new Identifier(getRecipeName(ModItems.FILTER)));
     }
 }

@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "herb:item/ag_filtered_lit_joint"
+  }
+}
