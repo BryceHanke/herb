@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "minecraft:unload_vg_packed_bowl"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "has_vg_packed_straight_bong": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "herb:vg_packed_straight_bong"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_vg_packed_straight_bong",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "minecraft:unload_vg_packed_bowl"
+    ]
+  },
+  "sends_telemetry_event": false
+}

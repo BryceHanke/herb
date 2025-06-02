@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "herb:glass_pipe"
+    },
+    {
+      "item": "herb:vg_ground_weed"
+    }
+  ],
+  "result": {
+    "item": "herb:vg_packed_pipe"
+  }
+}

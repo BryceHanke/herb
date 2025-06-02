@@ -36,6 +36,21 @@ public class Lit_Joint_Item extends Smokable_Item{
     @Override
     public void inventoryTick(ItemStack stack, World world, Entity entity, int slot, boolean selected)
     {
+
+        if (stack.getDamage() >= stack.getMaxDamage())
+        {
+            set_Filtered();
+            if (!this.filtered)
+            {
+                ItemStack roach = Registries.ITEM.get(new Identifier("herb",String.valueOf(strain.getPath()) + "_roach")).getDefaultStack();
+                roach.getOrCreateNbt().putString("strain", String.valueOf(strain.getPath()));
+                stack.decrement(1);
+                ((PlayerEntity) entity).giveItemStack(roach);
+            }else
+            {
+                stack.decrement(1);
+            }
+        }
         PlayerEntity player = (PlayerEntity)entity;
 
         stack.setDamage(stack.getDamage() + 4);
@@ -57,21 +72,6 @@ public class Lit_Joint_Item extends Smokable_Item{
         if(player.getOffHandStack().getDamage() >= player.getOffHandStack().getMaxDamage())
         {
             player.getOffHandStack().decrement(1);
-        }
-
-        if (stack.getDamage() >= stack.getMaxDamage())
-        {
-            set_Filtered();
-            if (!this.filtered)
-            {
-                ItemStack roach = Registries.ITEM.get(new Identifier("herb",String.valueOf(strain.getPath()) + "_roach")).getDefaultStack();
-                roach.getOrCreateNbt().putString("strain", String.valueOf(strain.getPath()));
-                stack.decrement(1);
-                ((PlayerEntity) entity).giveItemStack(roach);
-            }else
-            {
-                stack.decrement(1);
-            }
         }
 
         if (player.isSubmergedInWater())

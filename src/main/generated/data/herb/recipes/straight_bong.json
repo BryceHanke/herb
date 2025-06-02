@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "G": {
+      "item": "minecraft:glass"
+    }
+  },
+  "pattern": [
+    " G ",
+    " G ",
+    "GGG"
+  ],
+  "result": {
+    "item": "herb:straight_bong"
+  },
+  "show_notification": true
+}

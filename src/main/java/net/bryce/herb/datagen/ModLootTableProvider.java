@@ -1,6 +1,7 @@
 package net.bryce.herb.datagen;
 
-import net.bryce.herb.block.custom.female._Female_Cannabis_Plant;
+import net.bryce.herb.block.ModBlocks;
+import net.bryce.herb.block.custom.cannabis_crops.female._Female_Cannabis_Plant;
 import net.bryce.herb.strains.Strains;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricBlockLootTableProvider;
@@ -29,5 +30,7 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
                             Registries.ITEM.get(new Identifier("herb", String.valueOf(strain.getPath())+"_untrimmed_nug")),
                             Registries.ITEM.get(new Identifier("herb", String.valueOf(strain.getPath())+"_cannabis_seeds")), fem_builder));
         }
+
+        addDrop(ModBlocks.STRAIGHT_BONG_BLOCK);
     }
 }

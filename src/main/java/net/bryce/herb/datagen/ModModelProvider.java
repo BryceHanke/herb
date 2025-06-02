@@ -1,23 +1,15 @@
 package net.bryce.herb.datagen;
 
-import com.google.gson.JsonElement;
 import net.bryce.herb.block.ModBlocks;
 import net.bryce.herb.strains.Strains;
-import net.bryce.herb.block.custom.female._Female_Cannabis_Plant;
-import net.bryce.herb.block.custom.male._Male_Cannabis_Plant;
+import net.bryce.herb.block.custom.cannabis_crops.female._Female_Cannabis_Plant;
+import net.bryce.herb.block.custom.cannabis_crops.male._Male_Cannabis_Plant;
 import net.bryce.herb.item.ModItems;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricModelProvider;
-import net.minecraft.block.Block;
 import net.minecraft.data.client.*;
 import net.minecraft.registry.Registries;
 import net.minecraft.util.Identifier;
-
-import java.util.Map;
-import java.util.Optional;
-import java.util.function.BiConsumer;
-import java.util.function.BiFunction;
-import java.util.function.Supplier;
 
 public class ModModelProvider extends FabricModelProvider {
     public ModModelProvider(FabricDataOutput output) {
@@ -36,6 +28,8 @@ public class ModModelProvider extends FabricModelProvider {
             blockStateModelGenerator.registerTintableCrossBlockStateWithStages(Registries.BLOCK.get(new Identifier("herb",String.valueOf(id.getPath()) + "_female_cannabis_plant")), BlockStateModelGenerator.TintType.NOT_TINTED, _Female_Cannabis_Plant.AGE, 0, 1, 2, 3, 4, 5, 6);
             blockStateModelGenerator.registerTintableCrossBlockStateWithStages(Registries.BLOCK.get(new Identifier("herb",String.valueOf(id.getPath()) + "_male_cannabis_plant")), BlockStateModelGenerator.TintType.NOT_TINTED, _Male_Cannabis_Plant.AGE, 0, 1, 2, 3);
         }
+
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.STRAIGHT_BONG_BLOCK);
     }
 
     @Override
@@ -57,6 +51,8 @@ public class ModModelProvider extends FabricModelProvider {
             itemModelGenerator.register(Registries.ITEM.get(new Identifier("herb",String.valueOf(id.getPath()) + "_jar_of_trimmed")), Models.GENERATED);
             itemModelGenerator.register(Registries.ITEM.get(new Identifier("herb",String.valueOf(id.getPath()) + "_jar_of_cured")), Models.GENERATED);
             itemModelGenerator.register(Registries.ITEM.get(new Identifier("herb",String.valueOf(id.getPath()) + "_packed_pipe")), Models.GENERATED);
+            itemModelGenerator.register(Registries.ITEM.get(new Identifier("herb",String.valueOf(id.getPath()) + "_packed_bowl")), Models.GENERATED);
+            itemModelGenerator.register(Registries.ITEM.get(new Identifier("herb",String.valueOf(id.getPath()) + "_packed_straight_bong")), Models.GENERATED);
         }
 
         itemModelGenerator.register(ModItems.JAR, Models.GENERATED);
@@ -75,5 +71,12 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.register(ModItems.FILTER, Models.GENERATED);
 
         itemModelGenerator.register(ModItems.LIGHTER, Models.GENERATED);
+        itemModelGenerator.register(ModItems.LIT_LIGHTER, Models.GENERATED);
+
+        itemModelGenerator.register(ModItems.STRAIGHT_BONG, Models.GENERATED);
+        itemModelGenerator.register(ModItems.DIRTY_PACKED_STRAIGHT_BONG, Models.GENERATED);
+        itemModelGenerator.register(ModItems.DIRTY_STRAIGHT_BONG, Models.GENERATED);
+        itemModelGenerator.register(ModItems.EMPTY_BOWL, Models.GENERATED);
+        itemModelGenerator.register(ModItems.DIRTY_BOWL, Models.GENERATED);
     }
 }

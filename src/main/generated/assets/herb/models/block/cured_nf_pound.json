@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "herb:block/cured_nf_pound_top",
+    "side": "herb:block/cured_pound"
+  }
+}

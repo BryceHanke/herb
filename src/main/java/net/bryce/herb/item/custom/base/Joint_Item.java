@@ -35,17 +35,6 @@ public class Joint_Item extends Smokable_Item {
         super.usageTick(world, user, stack, remainingUseTicks);
     }
 
-    public TypedActionResult<ItemStack> use(World world, PlayerEntity user, Hand hand)
-    {
-        if (user.getOffHandStack().isOf(Items.FLINT_AND_STEEL) || user.getOffHandStack().isOf(ModItems.LIGHTER))
-        {
-            return ItemUsage.consumeHeldItem(world, user, hand);
-        }
-
-        return TypedActionResult.fail(user.getStackInHand(hand));
-    }
-
-
     public void light_Joint(Entity user, ItemStack stack)
     {
         PlayerEntity player = (PlayerEntity)user;

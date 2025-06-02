@@ -15,9 +15,6 @@ public class Pipe_Item extends Smokable_Item {
     public Pipe_Item(Settings settings) {super(settings);
     }
 
-
-
-
     public void inventoryTick(ItemStack stack, World world, Entity entity, int slot, boolean selected)
     {
         if (stack.getDamage() >= stack.getMaxDamage())

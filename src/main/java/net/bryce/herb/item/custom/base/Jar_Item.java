@@ -42,4 +42,6 @@ public class Jar_Item extends Item {
         }
         super.inventoryTick(stack, world, entity, slot, selected);
     }
+
+
 }

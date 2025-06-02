@@ -1,6 +1,7 @@
 package net.bryce.herb.item;
 
 import net.bryce.herb.Herb;
+import net.bryce.herb.block.ModBlocks;
 import net.bryce.herb.item.custom.base.*;
 import net.bryce.herb.strains.Strains;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
@@ -31,7 +32,16 @@ public class ModItems {
 
     public static final Item FILTER =  registerItem("filter", new Item(new FabricItemSettings().maxCount(300)));
 
-    public static final Item LIGHTER = registerItem("lighter", new Item(new FabricItemSettings().maxDamage(16)));
+    public static final Item LIGHTER = registerItem("lighter", new Lighter_Item(new FabricItemSettings().maxDamage(4200)));
+    public static final Item LIT_LIGHTER = registerItem("lit_lighter", new Lit_Lighter_Item(new FabricItemSettings().maxDamage(4200)));
+
+    public static final Item STRAIGHT_BONG = registerItem("straight_bong", new AliasedBlockItem(ModBlocks.STRAIGHT_BONG_BLOCK, new FabricItemSettings()));
+
+    public static final Item DIRTY_STRAIGHT_BONG = registerItem("dirty_straight_bong", new Item(new FabricItemSettings()));
+    public static final Item DIRTY_PACKED_STRAIGHT_BONG = registerItem("dirty_packed_straight_bong", new Item(new FabricItemSettings().recipeRemainder(ModItems.DIRTY_STRAIGHT_BONG)));
+
+    public static final Item EMPTY_BOWL = registerItem("empty_bowl", new Item(new FabricItemSettings()));
+    public static final Item DIRTY_BOWL = registerItem("dirty_bowl", new Item(new FabricItemSettings()));
 
     private static void addItemsToIngredientGroup(FabricItemGroupEntries entries){
         entries.add(JAR);
@@ -60,6 +70,8 @@ public class ModItems {
             registerItem(String.valueOf(strain.getPath())+"_cannabis_seeds", new AliasedBlockItem(Registries.BLOCK.get(new Identifier(Herb.MOD_ID, String.valueOf(strain.getPath())+"_female_cannabis_plant")), new FabricItemSettings()));
             registerItem("male_"+String.valueOf(strain.getPath())+"_cannabis_seeds", new AliasedBlockItem(Registries.BLOCK.get(new Identifier(Herb.MOD_ID, String.valueOf(strain.getPath())+"_male_cannabis_plant")), new FabricItemSettings()));
             registerItem(String.valueOf(strain.getPath())+"_packed_pipe", new Pipe_Item(new FabricItemSettings().maxDamage(16)));
+            registerItem(String.valueOf(strain.getPath())+"_packed_bowl", new Item(new FabricItemSettings()));
+            registerItem(String.valueOf(strain.getPath())+"_packed_straight_bong", new Bong_Item(new FabricItemSettings().recipeRemainder(ModItems.STRAIGHT_BONG).maxDamage(3)));
         }
     }
 

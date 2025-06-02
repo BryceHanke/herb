@@ -1,6 +1,7 @@
 {
-  "parent": "minecraft:block/cube_all",
+  "parent": "minecraft:block/cube_column",
   "textures": {
-    "all": "herb:block/cured_bk_pound"
+    "end": "herb:block/cured_bk_pound_top",
+    "side": "herb:block/cured_bk_pound"
   }
 }

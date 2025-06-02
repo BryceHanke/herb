@@ -90,7 +90,29 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                     .input(Registries.ITEM.get(new Identifier(String.valueOf(id) + "_ground_weed")), 1)
                     .criterion(hasItem(ModItems.GLASS_PIPE), conditionsFromItem(ModItems.GLASS_PIPE))
                     .offerTo(consumer, new Identifier(getRecipeName(Registries.ITEM.get(new Identifier(String.valueOf(id) + "_packed_pipe")))));
+
+            ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, Registries.ITEM.get(new Identifier(String.valueOf(id) + "_packed_bowl")), 1)
+                    .input(ModItems.EMPTY_BOWL, 1)
+                    .input(Registries.ITEM.get(new Identifier(String.valueOf(id) + "_ground_weed")), 1)
+                    .criterion(hasItem(ModItems.EMPTY_BOWL), conditionsFromItem(ModItems.EMPTY_BOWL))
+                    .offerTo(consumer, new Identifier(getRecipeName(Registries.ITEM.get(new Identifier(String.valueOf(id) + "_packed_bowl")))));
+
+            ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, Registries.ITEM.get(new Identifier(String.valueOf(id) + "_packed_straight_bong")), 1)
+                    .input(ModItems.STRAIGHT_BONG, 1)
+                    .input(Registries.ITEM.get(new Identifier(String.valueOf(id) + "_packed_bowl")), 1)
+                    .criterion(hasItem(ModItems.EMPTY_BOWL), conditionsFromItem(ModItems.EMPTY_BOWL))
+                    .offerTo(consumer, new Identifier(getRecipeName(Registries.ITEM.get(new Identifier(String.valueOf(id) + "_packed_straight_bong")))));
+
+            ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, Registries.ITEM.get(new Identifier(String.valueOf(id) + "_packed_bowl")), 1)
+                    .input(Registries.ITEM.get(new Identifier(String.valueOf(id) + "_packed_straight_bong")), 1)
+                    .criterion(hasItem(Registries.ITEM.get(new Identifier(String.valueOf(id) + "_packed_straight_bong"))), conditionsFromItem(Registries.ITEM.get(new Identifier(String.valueOf(id) + "_packed_straight_bong"))))
+                    .offerTo(consumer, new Identifier("unload_" + getRecipeName(Registries.ITEM.get(new Identifier(String.valueOf(id) + "_packed_bowl")))));
         }
+
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.DIRTY_BOWL, 1)
+                .input(ModItems.DIRTY_PACKED_STRAIGHT_BONG, 1)
+                .criterion(hasItem(ModItems.DIRTY_PACKED_STRAIGHT_BONG), conditionsFromItem((ModItems.DIRTY_PACKED_STRAIGHT_BONG)))
+                .offerTo(consumer, new Identifier("unload_" + getRecipeName(ModItems.DIRTY_BOWL)));
 
         ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.GLASS_PIPE, 1)
                 .input(ModItems.DIRTY_GLASS_PIPE, 1)
@@ -103,6 +125,18 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .input(Items.WATER_BUCKET, 1)
                 .criterion(hasItem(ModItems.DIRTY_TRIMMING_SCISSORS), conditionsFromItem(ModItems.DIRTY_TRIMMING_SCISSORS))
                 .offerTo(consumer, new Identifier("herb","clean_"+getRecipeName(ModItems.DIRTY_TRIMMING_SCISSORS)));
+
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.STRAIGHT_BONG, 1)
+                .input(ModItems.DIRTY_STRAIGHT_BONG, 1)
+                .input(Items.WATER_BUCKET, 1)
+                .criterion(hasItem(ModItems.DIRTY_STRAIGHT_BONG), conditionsFromItem(ModItems.DIRTY_STRAIGHT_BONG))
+                .offerTo(consumer, new Identifier("herb","clean_"+getRecipeName(ModItems.DIRTY_STRAIGHT_BONG)));
+
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.EMPTY_BOWL, 1)
+                .input(ModItems.DIRTY_BOWL, 1)
+                .input(Items.WATER_BUCKET, 1)
+                .criterion(hasItem(ModItems.DIRTY_BOWL), conditionsFromItem(ModItems.DIRTY_BOWL))
+                .offerTo(consumer, new Identifier("herb","clean_"+getRecipeName(ModItems.DIRTY_BOWL)));
 
         ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.GRINDER, 1)
                 .input(ModItems.DIRTY_GRINDER, 1)
@@ -151,6 +185,22 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .input('G', Items.GLASS)
                 .criterion(hasItem(Items.GLASS), conditionsFromItem(Items.GLASS))
                 .offerTo(consumer, new Identifier(getRecipeName(ModItems.GLASS_PIPE)));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.STRAIGHT_BONG, 1)
+                .pattern(" G ")
+                .pattern(" G ")
+                .pattern("GGG")
+                .input('G', Items.GLASS)
+                .criterion(hasItem(Items.GLASS), conditionsFromItem(Items.GLASS))
+                .offerTo(consumer, new Identifier(getRecipeName(ModItems.STRAIGHT_BONG)));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.EMPTY_BOWL, 1)
+                .pattern("G G")
+                .pattern(" G ")
+                .pattern(" G ")
+                .input('G', Items.GLASS)
+                .criterion(hasItem(Items.GLASS), conditionsFromItem(Items.GLASS))
+                .offerTo(consumer, new Identifier(getRecipeName(ModItems.EMPTY_BOWL)));
 
         ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.ROLLING_PAPER, 3)
                 .input(Items.PAPER, 1)

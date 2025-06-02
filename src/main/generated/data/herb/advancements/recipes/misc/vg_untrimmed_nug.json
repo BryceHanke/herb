@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "minecraft:vg_untrimmed_nug"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "has_untrimmed_vg_pound": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "herb:untrimmed_vg_pound"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_untrimmed_vg_pound",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "minecraft:vg_untrimmed_nug"
+    ]
+  },
+  "sends_telemetry_event": false
+}

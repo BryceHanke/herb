@@ -25,6 +25,10 @@ public abstract class ItemRendererMixin {
             return ((net.bryce.herb.mixin.ItemRendererAccessor) this).mccourse$getModels().getModelManager().getModel(new ModelIdentifier(Herb.MOD_ID, "jar_model", "inventory"));
         }
 
+        if (stack.isOf(ModItems.STRAIGHT_BONG) && renderMode != ModelTransformationMode.GUI) {
+            return ((net.bryce.herb.mixin.ItemRendererAccessor) this).mccourse$getModels().getModelManager().getModel(new ModelIdentifier(Herb.MOD_ID, "straight_bong_model", "inventory"));
+        }
+
         for (Identifier strain : Strains.strains)
         {
             if (stack.isOf(Registries.ITEM.get(new Identifier("herb", String.valueOf(strain.getPath())+"_joint"))) && renderMode != ModelTransformationMode.GUI)
@@ -42,6 +46,10 @@ public abstract class ItemRendererMixin {
             if (stack.isOf(Registries.ITEM.get(new Identifier("herb", String.valueOf(strain.getPath())+"_jar_of_cured"))) && renderMode != ModelTransformationMode.GUI)
             {
                 return ((net.bryce.herb.mixin.ItemRendererAccessor) this).mccourse$getModels().getModelManager().getModel(new ModelIdentifier(Herb.MOD_ID, "cured_jar_model", "inventory"));
+            }
+            if (stack.isOf(Registries.ITEM.get(new Identifier("herb", String.valueOf(strain.getPath())+"_packed_straight_bong"))) && renderMode != ModelTransformationMode.GUI)
+            {
+                return ((net.bryce.herb.mixin.ItemRendererAccessor) this).mccourse$getModels().getModelManager().getModel(new ModelIdentifier(Herb.MOD_ID, "packed_straight_bong_model", "inventory"));
             }
         }
         return value;

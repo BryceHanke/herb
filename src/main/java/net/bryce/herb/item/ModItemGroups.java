@@ -16,6 +16,17 @@ public class ModItemGroups {
             new Identifier(Herb.MOD_ID, "herb"),
             FabricItemGroup.builder().displayName(Text.translatable("Herb"))
                     .icon(() -> new ItemStack(Registries.ITEM.get(new Identifier("herb", "og_untrimmed_nug")))).entries((displayContext, entries) -> {
+                        entries.add(ModItems.JAR);
+                        entries.add(ModItems.ASHTRAY);
+                        entries.add(ModItems.GRINDER);
+                        entries.add(ModItems.TRIMMING_SCISSORS);
+                        entries.add(ModItems.ROLLING_PAPER);
+                        entries.add(ModItems.GLASS_PIPE);
+                        entries.add(ModItems.FILTER);
+                        entries.add(ModItems.LIGHTER);
+                        entries.add(ModItems.STRAIGHT_BONG);
+                        entries.add(ModItems.EMPTY_BOWL);
+
                         for (Identifier strain : Strains.strains)
                         {
                             entries.add(Registries.ITEM.get(new Identifier("herb", String.valueOf(strain.getPath())+"_jar_of_trimmed")));
@@ -29,28 +40,18 @@ public class ModItemGroups {
                             entries.add(Registries.ITEM.get(new Identifier("herb", String.valueOf(strain.getPath())+"_filtered_joint")));
                             entries.add(Registries.ITEM.get(new Identifier("herb", String.valueOf(strain.getPath())+"_lit_joint")));
                             entries.add(Registries.ITEM.get(new Identifier("herb", String.valueOf(strain.getPath())+"_filtered_lit_joint")));
-                            entries.add(Registries.ITEM.get(new Identifier("herb", String.valueOf(strain.getPath())+"_extinguished_joint")));
                             entries.add(Registries.ITEM.get(new Identifier("herb", String.valueOf(strain.getPath())+"_extinguished_filtered_joint")));
+                            entries.add(Registries.ITEM.get(new Identifier("herb", String.valueOf(strain.getPath())+"_extinguished_joint")));
                             entries.add(Registries.ITEM.get(new Identifier("herb", String.valueOf(strain.getPath())+"_roach")));
                             entries.add(Registries.ITEM.get(new Identifier("herb", String.valueOf(strain.getPath())+"_cannabis_seeds")));
                             entries.add(Registries.ITEM.get(new Identifier("herb", "male_"+ String.valueOf(strain.getPath())+"_cannabis_seeds")));
                             entries.add(Registries.ITEM.get(new Identifier("herb", String.valueOf(strain.getPath())+"_packed_pipe")));
+                            entries.add(Registries.ITEM.get(new Identifier("herb", String.valueOf(strain.getPath())+"_packed_bowl")));
+                            entries.add(Registries.ITEM.get(new Identifier("herb", String.valueOf(strain.getPath())+"_packed_straight_bong")));
                             entries.add(Registries.BLOCK.get(new Identifier("herb", "untrimmed_"+String.valueOf(strain.getPath())+"_pound")));
                             entries.add(Registries.BLOCK.get(new Identifier("herb", "trimmed_"+String.valueOf(strain.getPath())+"_pound")));
                             entries.add(Registries.BLOCK.get(new Identifier("herb", "cured_"+String.valueOf(strain.getPath())+"_pound")));
                         }
-
-                        entries.add(ModItems.JAR);
-                        entries.add(ModItems.ASHTRAY);
-                        entries.add(ModItems.GRINDER);
-                        entries.add(ModItems.DIRTY_GRINDER);
-                        entries.add(ModItems.TRIMMING_SCISSORS);
-                        entries.add(ModItems.DIRTY_TRIMMING_SCISSORS);
-                        entries.add(ModItems.ROLLING_PAPER);
-                        entries.add(ModItems.GLASS_PIPE);
-                        entries.add(ModItems.DIRTY_GLASS_PIPE);
-                        entries.add(ModItems.FILTER);
-                        entries.add(ModItems.LIGHTER);
                     }).build());
 
     public static void registerItemGroups(){

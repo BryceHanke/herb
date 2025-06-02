@@ -39,6 +39,8 @@ public class ModTranslationProvider extends FabricLanguageProvider {
             translationBuilder.add(Registries.ITEM.get(new Identifier("herb",String.valueOf(id.getPath()) + "_lit_joint")),"Lit "+String.valueOf(id.getPath().toUpperCase())+" Joint");
             translationBuilder.add(Registries.ITEM.get(new Identifier("herb",String.valueOf(id.getPath()) + "_roach")),String.valueOf(id.getPath().toUpperCase())+" Roach");
             translationBuilder.add(Registries.ITEM.get(new Identifier("herb",String.valueOf(id.getPath()) + "_packed_pipe")),String.valueOf(id.getPath().toUpperCase())+" Packed Pipe");
+            translationBuilder.add(Registries.ITEM.get(new Identifier("herb",String.valueOf(id.getPath()) + "_packed_bowl")),"Bowl of " + String.valueOf(id.getPath().toUpperCase()));
+            translationBuilder.add(Registries.ITEM.get(new Identifier("herb",String.valueOf(id.getPath()) + "_packed_straight_bong")),"Straight Bong Packed With "+String.valueOf(id.getPath().toUpperCase()));
             translationBuilder.add(Registries.BLOCK.get(new Identifier("herb","untrimmed_"+String.valueOf(id.getPath()) + "_pound")),"Sack of Untrimmed "+String.valueOf(id.getPath().toUpperCase()));
             translationBuilder.add(Registries.BLOCK.get(new Identifier("herb","trimmed_"+String.valueOf(id.getPath()) + "_pound")),"Sack of Trimmed "+String.valueOf(id.getPath().toUpperCase()));
             translationBuilder.add(Registries.BLOCK.get(new Identifier("herb","cured_"+String.valueOf(id.getPath()) + "_pound")),"Sack of Cured "+String.valueOf(id.getPath().toUpperCase()));
@@ -60,6 +62,11 @@ public class ModTranslationProvider extends FabricLanguageProvider {
         translationBuilder.add(ModItems.FILTER, "Filter");
 
         translationBuilder.add(ModItems.LIGHTER, "Lighter");
+        translationBuilder.add(ModItems.STRAIGHT_BONG, "Straight Bong");
+        translationBuilder.add(ModItems.DIRTY_PACKED_STRAIGHT_BONG, "Dirty Packed Straight Bong");
+        translationBuilder.add(ModItems.DIRTY_STRAIGHT_BONG, "Dirty Straight Bong");
+        translationBuilder.add(ModItems.EMPTY_BOWL, "Empty Bowl");
+        translationBuilder.add(ModItems.DIRTY_BOWL, "Dirty Bowl");
 
         translationBuilder.add(ModEffects.sleepy, "Sleepy");
         translationBuilder.add(ModEffects.hungry, "Hungry");

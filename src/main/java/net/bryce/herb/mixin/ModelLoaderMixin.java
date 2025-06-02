@@ -28,5 +28,7 @@ public abstract class ModelLoaderMixin {
         this.addModel(new ModelIdentifier(Herb.MOD_ID, "jar_model", "inventory"));
         this.addModel(new ModelIdentifier(Herb.MOD_ID, "trimmed_jar_model", "inventory"));
         this.addModel(new ModelIdentifier(Herb.MOD_ID, "cured_jar_model", "inventory"));
+        this.addModel(new ModelIdentifier(Herb.MOD_ID, "straight_bong_model", "inventory"));
+        this.addModel(new ModelIdentifier(Herb.MOD_ID, "packed_straight_bong_model", "inventory"));
     }
 }

@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "herb:straight_bong"
+    },
+    {
+      "item": "herb:og_packed_bowl"
+    }
+  ],
+  "result": {
+    "item": "herb:og_packed_straight_bong"
+  }
+}

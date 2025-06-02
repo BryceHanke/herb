@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_f1_packed_straight_bong": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "herb:f1_packed_straight_bong"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "minecraft:unload_f1_packed_bowl"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_f1_packed_straight_bong",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "minecraft:unload_f1_packed_bowl"
+    ]
+  },
+  "sends_telemetry_event": false
+}

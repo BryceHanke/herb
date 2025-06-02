@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "herb:empty_bowl"
+    },
+    {
+      "item": "herb:cbc_ground_weed"
+    }
+  ],
+  "result": {
+    "item": "herb:cbc_packed_bowl"
+  }
+}
